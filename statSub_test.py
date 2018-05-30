@@ -248,7 +248,7 @@ print('-------')
 
 # Uses the numbers counted in the histogram to calculate a surface density: For each cell, the number of sources
 # divided by the area 
-sd = H/25.
+sd = H/(25. * (3600.**2.)) # converts 25 square degrees to square arcseconds
 print("sd:")
 print(sd)
 print('-------')
@@ -364,8 +364,8 @@ area = np.pi * distance**2. # in square Mpc
 # Calculate solid angle omega for every rad
 omega = []
 
-for i in range(len(DCMR_Mpc)):
-    omega.append((area / (DCMR_Mpc[i])**2.) * (180./np.pi)**2.) # in square degrees
+for i in range(len(kpc_DA)):
+    omega.append((np.pi * distance_kpc**2.)/(kpc_DA[i])**2.) # in square arcsec
 
 # print("rad is", rad)
 # print("omega is", omega)
