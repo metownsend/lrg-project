@@ -351,6 +351,7 @@ for i in range(len(ind)):
         near.append(hist2d)
 #         print(hist2d)
 
+print("shape of near")
 print(np.shape(near))
 
 # Calculates number of expected interloper galaxies by first calculating the solid angle omega enclosed in radius r from 
