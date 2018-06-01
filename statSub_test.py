@@ -29,13 +29,13 @@ lrg = 50
 survey = 1000
 
 # Fake coordinates for LRG sources
-random.seed(10)
+# random.seed(1)
 x0 = [random.uniform(0,5) for j in range(lrg)]
 
-random.seed(10)
+# random.seed(2)
 y0 = [random.uniform(0,5) for j in range(lrg)]
 
-y0 = random.sample(y0, len(y0))
+# y0 = random.sample(y0, len(y0))
 print("length of fake LRG sources (ra) = ", len(x0))
 print("length of fake LRG sources (dec) = ", len(y0))
 # print("x0 = ", x0)
@@ -43,10 +43,12 @@ print("length of fake LRG sources (dec) = ", len(y0))
 # print(type(y0))
 
 # Fake coordinates for survey sources
+# random.seed(3)
 x1 = [random.uniform(0,5) for j in range(survey)]
 
+# random.seed(4)
 y1 = [random.uniform(0,5) for j in range(survey)]
-y1 = random.sample(y1, len(y1))
+# y1 = random.sample(y1, len(y1))
     
 print("length of fake survey sources (ra) = ", len(x1))
 print("length of fake survey sources (dec) = ", len(y1))    
@@ -56,11 +58,11 @@ print("length of fake survey sources (dec) = ", len(y1))
 x_plus = np.concatenate([x0, x1])
 y_plus = np.concatenate([y0, y1])
 
-print("length of x_plus (ra) (lrgs + survey) =", len(x_plus))
-print("length of y_plus (dec) (lrg + survey) =", len(y_plus))
+# print("length of x_plus (ra) (lrgs + survey) =", len(x_plus))
+# print("length of y_plus (dec) (lrg + survey) =", len(y_plus))
 
 # Redshift for LRG 
-random.seed(10)
+# random.seed(0.2)
 z = [random.uniform(0.1,0.5) for j in range(lrg)]
     
 print("length of array of redshifts for fake LRGs =", len(z))
@@ -68,25 +70,48 @@ print("max z = ", np.amax(z))
 print("min z = ", np.amin(z))
 
 # Magnitudes for survey sources
+# random.seed(15)
 gmag_plus = [random.uniform(14,29) for j in range(len(x_plus))]
+# random.seed(16)
 rmag_plus = [random.uniform(13,24) for j in range(len(x_plus))]
 
 gmag_plus = np.array(gmag_plus)
 rmag_plus = np.array(rmag_plus)
 color_plus = gmag_plus - rmag_plus
     
-print("length of gmag for survey soruces =", len(gmag_plus))
-print("length of rmag for survey soruces =", len(rmag_plus))
-print("max gmag_plus = ", np.amax(gmag_plus))
-print("min gmag_plus = ", np.amin(gmag_plus))
-print("max rmag_plus = ", np.amax(rmag_plus))
-print("min rmag_plus = ", np.amin(rmag_plus))
-print("length of color_plus = ", len(color_plus))
-print("max color = ", np.amax(color_plus))
-print("min color = ", np.amin(color_plus))
+# print("length of gmag for survey soruces =", len(gmag_plus))
+# print("length of rmag for survey soruces =", len(rmag_plus))
+# print("max gmag_plus = ", np.amax(gmag_plus))
+# print("min gmag_plus = ", np.amin(gmag_plus))
+# print("max rmag_plus = ", np.amax(rmag_plus))
+# print("min rmag_plus = ", np.amin(rmag_plus))
+# print("length of color_plus = ", len(color_plus))
+# print("max color = ", np.amax(color_plus))
+# print("min color = ", np.amin(color_plus))
+
+# random.seed(15)
+gmag_survey = [random.uniform(14,29) for j in range(len(x1))]
+# random.seed(16)
+rmag_survey = [random.uniform(13,24) for j in range(len(x1))]
+
+gmag_survey = np.array(gmag_survey)
+rmag_survey = np.array(rmag_survey)
+color_survey = gmag_survey - rmag_survey
+    
+print("length of gmag for survey soruces =", len(gmag_survey))
+print("length of rmag for survey soruces =", len(rmag_survey))
+print("max gmag_plus = ", np.amax(gmag_survey))
+print("min gmag_plus = ", np.amin(gmag_survey))
+print("max rmag_plus = ", np.amax(rmag_survey))
+print("min rmag_plus = ", np.amin(rmag_survey))
+print("length of color_plus = ", len(color_survey))
+print("max color = ", np.amax(color_survey))
+print("min color = ", np.amin(color_survey))
 
 # Magnitudes for LRG sources
+# random.seed(20)
 gmag_lrg = [random.uniform(17,23) for j in range(lrg)]
+# random.seed(21)
 rmag_lrg = [random.uniform(16,21) for j in range(lrg)]
     
 print("length of gmag for survey soruces =", len(gmag_lrg))
@@ -241,7 +266,7 @@ yedges = np.array([-10., -8., -6., -4., -2., 0., 2., 4., 6., 8., 10., 12., 14., 
 # xedges =  [ 13.,  15.,  17.,   19.,  21., 24.]
 # yedges =  [ -10.,  -5.,   0.,   5.,  11., 16.]
 
-H, xedges, yedges = np.histogram2d(rmag_plus, color_plus, bins=(xedges,yedges), normed=False)
+H, xedges, yedges = np.histogram2d(rmag_survey, color_survey, bins=(xedges,yedges), normed=False)
 print("H:")
 print(H)
 print('-------')
@@ -260,7 +285,7 @@ ax.set_yticks(yedges, minor=True)
 ax.xaxis.grid(True, which='major')
 ax.yaxis.grid(True, which='minor')
 
-plt.scatter(rmag_plus, color_plus, s = 4, color='red')
+plt.scatter(rmag_survey, color_survey, s = 4, color='red')
 plt.scatter(rmag_lrg, color_lrg, s = 4, color='blue')
 plt.gca().invert_xaxis()
 plt.title("Color-Magnitude Diagram")
@@ -286,7 +311,7 @@ for i in range(len(kpc_DA)):
 print("dist is", dist)
 
 # Plots LRG sources and EDR sources
-plt.scatter(x_plus, y_plus, s = 3, color='red')
+plt.scatter(x1, y1, s = 3, color='red')
 plt.scatter(x0, y0, s = 3, color='blue')
 
 # Draws circle of some radius around the LRG sources
@@ -302,7 +327,7 @@ plt.show()
 # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
 # zip_list0 = list(zip(x0, y0))
 zip_list0 = list(zip(x0, y0)) # Fake LRG sources
-zip_list1 = list(zip(x_plus, y_plus)) # Fake EDR sources
+zip_list1 = list(zip(x1, y1)) # Fake EDR sources
 # print(type(zip_list))
 # print(zip_list)
 # print(zip_list0[0])
@@ -341,7 +366,7 @@ near = []
 # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
 for i in range(len(ind)):
     if len(ind[i]) == 0:
-        hist2d = np.zeros((len(xedges),len(yedges)))
+        hist2d = np.zeros((len(xedges)-1,len(yedges)-1))
         near.append(hist2d)
 #         print("list is empty")
     else:
@@ -353,6 +378,13 @@ for i in range(len(ind)):
 
 print("shape of near")
 print(np.shape(near))
+
+sumnear = []
+for i in range(len(near)):
+    sumnear.append(np.sum(near[i]))
+    
+nearmean = np.mean(sumnear)
+print("mean of near is", nearmean)
 
 # Calculates number of expected interloper galaxies by first calculating the solid angle omega enclosed in radius r from 
 # the LRG. Then find the number of interloper galaxies by multiplying omega by the surface density to find the 
@@ -384,12 +416,12 @@ for i in range(len(omega)):
 #     print(i)
 #     print(Nbkg[i])
     
-print(np.shape(Nbkg))
-print("Nbkg is", Nbkg[0])
-print(len(DCMR_Mpc))
+# print(np.shape(Nbkg))
+# print("Nbkg is", Nbkg[0])
+# print(len(DCMR_Mpc))
     
 # Plots LRG sources and EDR sources
-plt.scatter(x_plus, y_plus, s = 1, color='red')
+plt.scatter(x1, y1, s = 1, color='red')
 plt.scatter(x0, y0, s = 1, color='blue')
 
 circle = []
@@ -413,6 +445,23 @@ Nsat = np.array(near) - np.array(Nbkg)
 
 # print(len(Nsat))
 # print(np.shape(Nsat))
-print(Nsat[0])
+# print(Nsat[0])
+
+sumsat = []
+sumbkg = []
+for i in range(len(Nsat)):
+    sumsat.append(np.sum(Nsat[i]))
+
+for i in range(len(Nbkg)):
+    sumbkg.append(np.sum(Nbkg[i]))
+
+meansat = np.mean(sumsat)
+print("meansat is", meansat)
+
+sdsat = np.std(sumsat)
+print("sdsat is", sdsat)
+
+plt.hist(sumsat, bins=50)
+plt.show()
 
 print("End of program")
