@@ -9,6 +9,8 @@ from math import *
 import random
 from sklearn.neighbors import KDTree
 import random
+import pandas as pd
+from tabulate import tabulate
 
 # Define all relevant physical variables needed throughout the program, including:
 # - number of LRG sources
@@ -29,10 +31,10 @@ lrg = 50
 survey = 1000
 
 # Fake coordinates for LRG sources
-# random.seed(1)
+random.seed(1)
 x0 = [random.uniform(0,5) for j in range(lrg)]
 
-# random.seed(2)
+random.seed(2)
 y0 = [random.uniform(0,5) for j in range(lrg)]
 
 # y0 = random.sample(y0, len(y0))
@@ -43,10 +45,10 @@ print("length of fake LRG sources (dec) = ", len(y0))
 # print(type(y0))
 
 # Fake coordinates for survey sources
-# random.seed(3)
+random.seed(3)
 x1 = [random.uniform(0,5) for j in range(survey)]
 
-# random.seed(4)
+random.seed(4)
 y1 = [random.uniform(0,5) for j in range(survey)]
 # y1 = random.sample(y1, len(y1))
     
@@ -55,14 +57,14 @@ print("length of fake survey sources (dec) = ", len(y1))
 
 # In order for there to be at least one guaranteed satellite, combine the survey and lrg position arrays so that one
 # survey source position is the same as an LRG position
-x_plus = np.concatenate([x0, x1])
-y_plus = np.concatenate([y0, y1])
+# x_plus = np.concatenate([x0, x1])
+# y_plus = np.concatenate([y0, y1])
 
 # print("length of x_plus (ra) (lrgs + survey) =", len(x_plus))
 # print("length of y_plus (dec) (lrg + survey) =", len(y_plus))
 
 # Redshift for LRG 
-# random.seed(0.2)
+random.seed(0.2)
 z = [random.uniform(0.1,0.5) for j in range(lrg)]
     
 print("length of array of redshifts for fake LRGs =", len(z))
@@ -71,13 +73,13 @@ print("min z = ", np.amin(z))
 
 # Magnitudes for survey sources
 # random.seed(15)
-gmag_plus = [random.uniform(14,29) for j in range(len(x_plus))]
+# gmag_plus = [random.uniform(14,29) for j in range(len(x_plus))]
 # random.seed(16)
-rmag_plus = [random.uniform(13,24) for j in range(len(x_plus))]
-
-gmag_plus = np.array(gmag_plus)
-rmag_plus = np.array(rmag_plus)
-color_plus = gmag_plus - rmag_plus
+# rmag_plus = [random.uniform(13,24) for j in range(len(x_plus))]
+# 
+# gmag_plus = np.array(gmag_plus)
+# rmag_plus = np.array(rmag_plus)
+# color_plus = gmag_plus - rmag_plus
     
 # print("length of gmag for survey soruces =", len(gmag_plus))
 # print("length of rmag for survey soruces =", len(rmag_plus))
@@ -89,9 +91,9 @@ color_plus = gmag_plus - rmag_plus
 # print("max color = ", np.amax(color_plus))
 # print("min color = ", np.amin(color_plus))
 
-# random.seed(15)
+random.seed(15)
 gmag_survey = [random.uniform(14,29) for j in range(len(x1))]
-# random.seed(16)
+random.seed(16)
 rmag_survey = [random.uniform(13,24) for j in range(len(x1))]
 
 gmag_survey = np.array(gmag_survey)
@@ -109,9 +111,9 @@ print("max color = ", np.amax(color_survey))
 print("min color = ", np.amin(color_survey))
 
 # Magnitudes for LRG sources
-# random.seed(20)
+random.seed(20)
 gmag_lrg = [random.uniform(17,23) for j in range(lrg)]
-# random.seed(21)
+random.seed(21)
 rmag_lrg = [random.uniform(16,21) for j in range(lrg)]
     
 print("length of gmag for survey soruces =", len(gmag_lrg))
@@ -372,7 +374,7 @@ for i in range(len(ind)):
     else:
 #         print(ind[i])
 #         print(i)
-        hist2d, x_notuse, y_notuse = np.histogram2d(rmag_plus[ind[i]], color_plus[ind[i]], bins=[xedges, yedges], normed=False)
+        hist2d, x_notuse, y_notuse = np.histogram2d(rmag_survey[ind[i]], color_survey[ind[i]], bins=[xedges, yedges], normed=False)
         near.append(hist2d)
 #         print(hist2d)
 
@@ -449,11 +451,33 @@ Nsat = np.array(near) - np.array(Nbkg)
 
 sumsat = []
 sumbkg = []
+sumnear = []
+
 for i in range(len(Nsat)):
     sumsat.append(np.sum(Nsat[i]))
 
 for i in range(len(Nbkg)):
     sumbkg.append(np.sum(Nbkg[i]))
+    
+for i in range(len(near)):
+    sumnear.append(np.sum(near[i]))
+    
+d = {'projected radius': dist, 'number of near neighbors': num, 'number of interlopers': sumbkg, 'number of satellites': sumsat}
+df = pd.DataFrame(data=d)
+
+print(tabulate(df, headers='keys', tablefmt='latex'))
+
+meannear = np.mean(sumnear)
+print("nearmean is", meannear)
+
+sdnear = np.std(sumnear)
+print("sdnear", sdnear)
+
+meanbkg = np.mean(sumbkg)
+print("meankbg is", meanbkg)
+
+sdbkg = np.std(sumbkg)
+print("sdbkg is", sdbkg)
 
 meansat = np.mean(sumsat)
 print("meansat is", meansat)
