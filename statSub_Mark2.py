@@ -713,6 +713,8 @@ print(len(Nsat))
 
 print("end satellite galaxy calculation")
 
+print("end of program")
+
 # ------------------------------------------------------------------------------------------------------------
 
 
@@ -730,6 +732,128 @@ for i in range(len(Nbkg)):
 	# Sum up number of near neighbors for every LRG
 for i in range(len(near)):
 	sumnear.append(np.sum(near[i]))
+	
+	
+# Divvy up Nsat by redshift slice
+
+Nsat1z = Nsat[np.where(z_LRG < 0.2)]
+# print(len(Nsat1z))
+
+sumsat1z = []
+for i in range(len(Nsat1z)):
+	sumsat1z.append(np.sum(Nsat1z[i]))
+    
+# 0.2 <= z < 0.3
+Nsat2z = Nsat[np.where((z_LRG >= 0.2) & (0.3 > z_LRG))]
+# print(len(Nsat2z))
+
+sumsat2z = []
+for i in range(len(Nsat2z)):
+	sumsat2z.append(np.sum(Nsat2z[i]))
+
+# 0.3 <= z < 0.4
+Nsat3z = Nsat[np.where((z_LRG >= 0.3) & (0.4 > z_LRG))]
+# print(len(Nsat3z))
+
+sumsat3z = []
+for i in range(len(Nsat3z)):
+	sumsat3z.append(np.sum(Nsat3z[i]))
+    
+# 0.4 <= z < 0.5
+Nsat4z = Nsat[np.where((z_LRG >= 0.4) & (0.5 > z_LRG))]
+# print(len(Nsat4z))
+    
+sumsat4z = []
+for i in range(len(Nsat4z)):
+	sumsat4z.append(np.sum(Nsat4z[i]))
+    
+# 0.5 <= z < 0.6
+Nsat5z = Nsat[np.where((z_LRG >= 0.5) & (0.6 > z_LRG))]
+# print(len(Nsat5z))
+
+sumsat5z = []
+for i in range(len(Nsat5z)):
+	sumsat5z.append(np.sum(Nsat5z[i]))
+    
+# 0.6 <= z < 0.7
+Nsat6z = Nsat[np.where((z_LRG >= 0.6) & (0.7 > z_LRG))]
+# print(len(Nsat6z))
+
+sumsat6z = []
+for i in range(len(Nsat6z)):
+	sumsat6z.append(np.sum(Nsat6z[i]))
+    
+# z >= 0.7
+Nsat7z = Nsat[np.where(z_LRG >= 0.7)]
+# print(len(Nsat7z))
+
+sumsat7z = []
+for i in range(len(Nsat7z)):
+	sumsat7z.append(np.sum(Nsat7z[i]))
+	
+	
+# Divvy up Nsat by rmag slice
+
+rmag_LRG = np.array(rmag_LRG)
+    
+# bins of ~1 mag
+
+# 15 <= rmag < 16
+Nsat1r = Nsat[np.where((rmag_LRG >= 15.) & (16. > rmag_LRG))]
+# print(len(Nsat1))
+
+sumsat1r = []
+for i in range(len(Nsat1r)):
+	sumsat1r.append(np.sum(Nsat1r[i]))
+
+# 16 <= rmag < 17
+Nsat2r = Nsat[np.where((rmag_LRG >= 16.) & (17. > rmag_LRG))]
+# print(len(Nsat2))
+
+sumsat2r = []
+for i in range(len(Nsat2r)):
+	sumsat2r.append(np.sum(Nsat2r[i]))
+
+# 17 <= rmag < 18
+Nsat3r = Nsat[np.where((rmag_LRG >= 17.) & (18. > rmag_LRG))]
+# print(len(Nsat3))
+
+sumsat3r = []
+for i in range(len(Nsat3r)):
+	sumsat3r.append(np.sum(Nsat3r[i]))
+
+# 18 <= rmag < 19
+Nsat4r = Nsat[np.where((rmag_LRG >= 18.) & (19. > rmag_LRG))]
+# print(len(Nsat4))
+
+sumsat4r = []
+for i in range(len(Nsat4r)):
+	sumsat4r.append(np.sum(Nsat4r[i]))
+
+# 19 <= rmag < 20
+Nsat5r = Nsat[np.where((rmag_LRG >= 19.) & (20. > rmag_LRG))]
+# print(len(Nsat5))
+
+sumsat5r = []
+for i in range(len(Nsat5r)):
+	sumsat5r.append(np.sum(Nsat5r[i]))
+
+# 20 <= rmag < 21
+Nsat6r = Nsat[np.where((rmag_LRG >= 20.) & (21. > rmag_LRG))]
+# print(len(Nsat6))
+
+sumsat6r = []
+for i in range(len(Nsat6r)):
+	sumsat6r.append(np.sum(Nsat6r[i]))
+
+# rmag >= 21
+Nsat7r = Nsat[np.where(rmag_LRG >= 21.)]
+# print(len(Nsat7))
+
+sumsat7r = []
+for i in range(len(Nsat7r)):
+	sumsat7r.append(np.sum(Nsat7r[i]))
+    
 
 # Plots
 

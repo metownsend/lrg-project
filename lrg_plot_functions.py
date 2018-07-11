@@ -24,7 +24,7 @@ def totalPlots(Nsat, Nbkg, near):
 
 	meannear = np.mean(sumnear)
 	print("mean near neighbor is", meannear)
-
+	
 	sdnear = np.std(sumnear)
 	print("standard deviation of near neighbor is", sdnear)
 
@@ -36,21 +36,24 @@ def totalPlots(Nsat, Nbkg, near):
 
 	meansat = np.mean(sumsat)
 	print("mean number of satellites is", meansat)
+	
+	mediansat = np.median(sumsat)
+	print("median number of satellites is", mediansat)
 
 	sdsat = np.std(sumsat)
 	print("standard deviation of satellites is", sdsat)
 
 	plt.title("Histogram of the Number of Satellite Galaxies")
-	plt.hist(sumsat, bins=25)
+	plt.hist(sumsat, bins=100)
 	plt.axvline(linewidth=1, color='r')
 	plt.show()
 
 	plt.title("Histogram of the Number of Near Neighbors")
-	plt.hist(sumnear, bins=25)
+	plt.hist(sumnear, bins=100)
 	plt.show()
 
 	plt.title("Histogram of the Number of Expected Interlopers")
-	plt.hist(sumbkg, bins=25)
+	plt.hist(sumbkg, bins=100)
 	plt.show()
   
     
@@ -1334,7 +1337,6 @@ def boot_med_plot(niter, confint, boot_func, array):
 	with NumpyRNGContext(1):
 		bootmed = bootstrap(np.asarray(array), bootnum=niter, bootfunc=boot_func)
 #         bootmean = bootstrap(np.asarray(sumsat), bootnum=niter, bootfunc=np.mean)
-    
 
 # Compute confidence interval of median
 
@@ -1353,6 +1355,7 @@ def boot_med_plot(niter, confint, boot_func, array):
 	plt.show()
 
 	print("The median of Nsat:", np.median(array))
+	print("The median of bootmed:", np.median(bootmed))
 #     print("The mean of Nsat:", np.mean(sumsat))
 	print("Low 68% confidence interval:", sortmed[lowind])
 	print("High 68% confidence interval:", sortmed[highind])
