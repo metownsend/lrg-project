@@ -1346,7 +1346,7 @@ def boot_med_plot(niter, confint, boot_func, array):
 	highind = int(round((1-((1 - confint)/2))*niter, 2))
     
 	plt.title("Histogram of Nsat Bootstrapped Median")
-	plt.hist(bootmed, bins=25, color='purple', alpha=0.5)
+	plt.hist(bootmed, bins=50, color='indigo', alpha=0.5)
 # plt.hist(bootmean, bins=25, color='violet', alpha=0.5)
 	plt.axvline(x=sortmed[lowind])
 	plt.axvline(x=sortmed[highind])

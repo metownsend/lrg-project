@@ -9,6 +9,8 @@ from math import *
 from sklearn.neighbors import KDTree
 import healpy as hp
 from lrg_plot_functions import *
+from lrg_sum_functions import *
+from cosmo_Calc import *
 
 # ----------------------------------------------------------------------------------------
 
@@ -420,117 +422,117 @@ print("end data parsing")
 # I know this isn't ideal but for some reason the function won't import, even though it imports just fine in other
 # files in the same directory
 
-def cosmoCalcfunc(z):
-    import numpy as np
-    from math import sqrt
-    from math import exp
-    from math import sin
-    from math import pi
-
-# Calculate scale to get areas
-    H0 = 69.6
-    WM = 0.286
-    WV = 0.714
-# z = 0.209855
-
-# initialize constants
-
-    WR = 0.        # Omega(radiation)
-    WK = 0.        # Omega curvaturve = 1-Omega(total)
-    c = 299792.458 # velocity of light in km/sec
-    Tyr = 977.8    # coefficent for converting 1/H into Gyr
-    DTT = 0.5      # time from z to now in units of 1/H0
-    DTT_Gyr = []  # value of DTT in Gyr
-    age = 0.5      # age of Universe in units of 1/H0
-    age_Gyr = []  # value of age in Gyr
-    zage = 0.1     # age of Universe at redshift z in units of 1/H0
-    zage_Gyr = [] # value of zage in Gyr
-    DCMR = 0.0     # comoving radial distance in units of c/H0
-    DCMR_Mpc = [] 
-    DCMR_Gyr = []
-    DA = 0.0       # angular size distance
-    DA_Mpc = []
-    DA_Gyr = []
-    kpc_DA = []
-    DL = 0.0       # luminosity distance
-    DL_Mpc = []
-    DL_Gyr = []   # DL in units of billions of light years
-    V_Gpc = []
-    a = 1.0        # 1/(1+z), the scale factor of the Universe
-    az = 0.5       # 1/(1+z(object))
-
-    h = H0/100.
-    WR = 4.165E-5/(h*h)   # includes 3 massless neutrino species, T0 = 2.72528
-    WK = 1-WM-WR-WV
-
-    for j in range(len(z)):
-        az = 1.0/(1+1.0*z[j])
-        age = 0.
-        n=1000         # number of points in integrals
-        for i in range(n):
-            a = az*(i+0.5)/n
-            adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
-            age = age + 1./adot
-
-        zage = az*age/n
-        zage_Gyr.append((Tyr/H0)*zage)
-        DTT = 0.0
-        DCMR = 0.0
-
-	# do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
-        for i in range(n):
-            a = az+(1-az)*(i+0.5)/n
-            adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
-            DTT = DTT + 1./adot
-            DCMR = DCMR + 1./(a*adot)
-
-        DTT = (1.-az)*DTT/n
-        DCMR = (1.-az)*DCMR/n
-        age = DTT+zage
-        age_Gyr.append(age*(Tyr/H0))
-        DTT_Gyr.append((Tyr/H0)*DTT)
-        DCMR_Gyr.append((Tyr/H0)*DCMR)
-        DCMR_Mpc.append((c/H0)*DCMR)
-
-	# tangential comoving distance
-
-        ratio = 1.00
-        x = sqrt(abs(WK))*DCMR
-        if x > 0.1:
-            if WK > 0:
-                ratio =  0.5*(exp(x)-exp(-x))/x 
-            else:
-                ratio = sin(x)/x
-        else:
-            y = x*x
-            if WK < 0: y = -y
-            ratio = 1. + y/6. + y*y/120.
-        DCMT = ratio*DCMR
-        DA = az*DCMT
-        DA_Mpc.append((c/H0)*DA)
-        kpc_DA.append(DA_Mpc[j]/206.264806)
-        DA_Gyr.append((Tyr/H0)*DA)
-        DL = DA/(az*az)
-        DL_Mpc.append((c/H0)*DL)
-        DL_Gyr.append((Tyr/H0)*DL)
-
-	# comoving volume computation
-
-        ratio = 1.00
-        x = sqrt(abs(WK))*DCMR
-        if x > 0.1:
-            if WK > 0:
-                ratio = (0.125*(exp(2.*x)-exp(-2.*x))-x/2.)/(x*x*x/3.)
-            else:
-                ratio = (x/2. - sin(2.*x)/4.)/(x*x*x/3.)
-        else:
-            y = x*x
-            if WK < 0: y = -y
-            ratio = 1. + y/5. + (2./105.)*y*y
-        VCM = ratio*DCMR*DCMR*DCMR/3.
-        V_Gpc.append(4.*pi*((0.001*c/H0)**3)*VCM)
-        
-    return(DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc)
+# def cosmoCalcfunc(z):
+#     import numpy as np
+#     from math import sqrt
+#     from math import exp
+#     from math import sin
+#     from math import pi
+# 
+# # Calculate scale to get areas
+#     H0 = 69.6
+#     WM = 0.286
+#     WV = 0.714
+# # z = 0.209855
+# 
+# # initialize constants
+# 
+#     WR = 0.        # Omega(radiation)
+#     WK = 0.        # Omega curvaturve = 1-Omega(total)
+#     c = 299792.458 # velocity of light in km/sec
+#     Tyr = 977.8    # coefficent for converting 1/H into Gyr
+#     DTT = 0.5      # time from z to now in units of 1/H0
+#     DTT_Gyr = []  # value of DTT in Gyr
+#     age = 0.5      # age of Universe in units of 1/H0
+#     age_Gyr = []  # value of age in Gyr
+#     zage = 0.1     # age of Universe at redshift z in units of 1/H0
+#     zage_Gyr = [] # value of zage in Gyr
+#     DCMR = 0.0     # comoving radial distance in units of c/H0
+#     DCMR_Mpc = [] 
+#     DCMR_Gyr = []
+#     DA = 0.0       # angular size distance
+#     DA_Mpc = []
+#     DA_Gyr = []
+#     kpc_DA = []
+#     DL = 0.0       # luminosity distance
+#     DL_Mpc = []
+#     DL_Gyr = []   # DL in units of billions of light years
+#     V_Gpc = []
+#     a = 1.0        # 1/(1+z), the scale factor of the Universe
+#     az = 0.5       # 1/(1+z(object))
+# 
+#     h = H0/100.
+#     WR = 4.165E-5/(h*h)   # includes 3 massless neutrino species, T0 = 2.72528
+#     WK = 1-WM-WR-WV
+# 
+#     for j in range(len(z)):
+#         az = 1.0/(1+1.0*z[j])
+#         age = 0.
+#         n=1000         # number of points in integrals
+#         for i in range(n):
+#             a = az*(i+0.5)/n
+#             adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+#             age = age + 1./adot
+# 
+#         zage = az*age/n
+#         zage_Gyr.append((Tyr/H0)*zage)
+#         DTT = 0.0
+#         DCMR = 0.0
+# 
+# 	# do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
+#         for i in range(n):
+#             a = az+(1-az)*(i+0.5)/n
+#             adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
+#             DTT = DTT + 1./adot
+#             DCMR = DCMR + 1./(a*adot)
+# 
+#         DTT = (1.-az)*DTT/n
+#         DCMR = (1.-az)*DCMR/n
+#         age = DTT+zage
+#         age_Gyr.append(age*(Tyr/H0))
+#         DTT_Gyr.append((Tyr/H0)*DTT)
+#         DCMR_Gyr.append((Tyr/H0)*DCMR)
+#         DCMR_Mpc.append((c/H0)*DCMR)
+# 
+# 	# tangential comoving distance
+# 
+#         ratio = 1.00
+#         x = sqrt(abs(WK))*DCMR
+#         if x > 0.1:
+#             if WK > 0:
+#                 ratio =  0.5*(exp(x)-exp(-x))/x 
+#             else:
+#                 ratio = sin(x)/x
+#         else:
+#             y = x*x
+#             if WK < 0: y = -y
+#             ratio = 1. + y/6. + y*y/120.
+#         DCMT = ratio*DCMR
+#         DA = az*DCMT
+#         DA_Mpc.append((c/H0)*DA)
+#         kpc_DA.append(DA_Mpc[j]/206.264806)
+#         DA_Gyr.append((Tyr/H0)*DA)
+#         DL = DA/(az*az)
+#         DL_Mpc.append((c/H0)*DL)
+#         DL_Gyr.append((Tyr/H0)*DL)
+# 
+# 	# comoving volume computation
+# 
+#         ratio = 1.00
+#         x = sqrt(abs(WK))*DCMR
+#         if x > 0.1:
+#             if WK > 0:
+#                 ratio = (0.125*(exp(2.*x)-exp(-2.*x))-x/2.)/(x*x*x/3.)
+#             else:
+#                 ratio = (x/2. - sin(2.*x)/4.)/(x*x*x/3.)
+#         else:
+#             y = x*x
+#             if WK < 0: y = -y
+#             ratio = 1. + y/5. + (2./105.)*y*y
+#         VCM = ratio*DCMR*DCMR*DCMR/3.
+#         V_Gpc.append(4.*pi*((0.001*c/H0)**3)*VCM)
+#         
+#     return(DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc)
 
 DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc = cosmoCalcfunc(z_LRG)
 
@@ -716,143 +718,6 @@ print("end satellite galaxy calculation")
 print("end of program")
 
 # ------------------------------------------------------------------------------------------------------------
-
-
-# Add up satellites, background, and near neighbors
-sumsat = []
-sumbkg = []
-sumnear = []
-	
-	# Sum up number of satellite galaxies for every LRG
-for i in range(len(Nsat)):
-	sumsat.append(np.sum(Nsat[i]))
-	# Sum up number of background galaxies for every LRG
-for i in range(len(Nbkg)):
-	sumbkg.append(np.sum(Nbkg[i]))
-	# Sum up number of near neighbors for every LRG
-for i in range(len(near)):
-	sumnear.append(np.sum(near[i]))
-	
-	
-# Divvy up Nsat by redshift slice
-
-Nsat1z = Nsat[np.where(z_LRG < 0.2)]
-# print(len(Nsat1z))
-
-sumsat1z = []
-for i in range(len(Nsat1z)):
-	sumsat1z.append(np.sum(Nsat1z[i]))
-    
-# 0.2 <= z < 0.3
-Nsat2z = Nsat[np.where((z_LRG >= 0.2) & (0.3 > z_LRG))]
-# print(len(Nsat2z))
-
-sumsat2z = []
-for i in range(len(Nsat2z)):
-	sumsat2z.append(np.sum(Nsat2z[i]))
-
-# 0.3 <= z < 0.4
-Nsat3z = Nsat[np.where((z_LRG >= 0.3) & (0.4 > z_LRG))]
-# print(len(Nsat3z))
-
-sumsat3z = []
-for i in range(len(Nsat3z)):
-	sumsat3z.append(np.sum(Nsat3z[i]))
-    
-# 0.4 <= z < 0.5
-Nsat4z = Nsat[np.where((z_LRG >= 0.4) & (0.5 > z_LRG))]
-# print(len(Nsat4z))
-    
-sumsat4z = []
-for i in range(len(Nsat4z)):
-	sumsat4z.append(np.sum(Nsat4z[i]))
-    
-# 0.5 <= z < 0.6
-Nsat5z = Nsat[np.where((z_LRG >= 0.5) & (0.6 > z_LRG))]
-# print(len(Nsat5z))
-
-sumsat5z = []
-for i in range(len(Nsat5z)):
-	sumsat5z.append(np.sum(Nsat5z[i]))
-    
-# 0.6 <= z < 0.7
-Nsat6z = Nsat[np.where((z_LRG >= 0.6) & (0.7 > z_LRG))]
-# print(len(Nsat6z))
-
-sumsat6z = []
-for i in range(len(Nsat6z)):
-	sumsat6z.append(np.sum(Nsat6z[i]))
-    
-# z >= 0.7
-Nsat7z = Nsat[np.where(z_LRG >= 0.7)]
-# print(len(Nsat7z))
-
-sumsat7z = []
-for i in range(len(Nsat7z)):
-	sumsat7z.append(np.sum(Nsat7z[i]))
-	
-	
-# Divvy up Nsat by rmag slice
-
-rmag_LRG = np.array(rmag_LRG)
-    
-# bins of ~1 mag
-
-# 15 <= rmag < 16
-Nsat1r = Nsat[np.where((rmag_LRG >= 15.) & (16. > rmag_LRG))]
-# print(len(Nsat1))
-
-sumsat1r = []
-for i in range(len(Nsat1r)):
-	sumsat1r.append(np.sum(Nsat1r[i]))
-
-# 16 <= rmag < 17
-Nsat2r = Nsat[np.where((rmag_LRG >= 16.) & (17. > rmag_LRG))]
-# print(len(Nsat2))
-
-sumsat2r = []
-for i in range(len(Nsat2r)):
-	sumsat2r.append(np.sum(Nsat2r[i]))
-
-# 17 <= rmag < 18
-Nsat3r = Nsat[np.where((rmag_LRG >= 17.) & (18. > rmag_LRG))]
-# print(len(Nsat3))
-
-sumsat3r = []
-for i in range(len(Nsat3r)):
-	sumsat3r.append(np.sum(Nsat3r[i]))
-
-# 18 <= rmag < 19
-Nsat4r = Nsat[np.where((rmag_LRG >= 18.) & (19. > rmag_LRG))]
-# print(len(Nsat4))
-
-sumsat4r = []
-for i in range(len(Nsat4r)):
-	sumsat4r.append(np.sum(Nsat4r[i]))
-
-# 19 <= rmag < 20
-Nsat5r = Nsat[np.where((rmag_LRG >= 19.) & (20. > rmag_LRG))]
-# print(len(Nsat5))
-
-sumsat5r = []
-for i in range(len(Nsat5r)):
-	sumsat5r.append(np.sum(Nsat5r[i]))
-
-# 20 <= rmag < 21
-Nsat6r = Nsat[np.where((rmag_LRG >= 20.) & (21. > rmag_LRG))]
-# print(len(Nsat6))
-
-sumsat6r = []
-for i in range(len(Nsat6r)):
-	sumsat6r.append(np.sum(Nsat6r[i]))
-
-# rmag >= 21
-Nsat7r = Nsat[np.where(rmag_LRG >= 21.)]
-# print(len(Nsat7))
-
-sumsat7r = []
-for i in range(len(Nsat7r)):
-	sumsat7r.append(np.sum(Nsat7r[i]))
     
 
 # Plots
