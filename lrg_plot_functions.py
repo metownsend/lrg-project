@@ -43,19 +43,19 @@ def totalPlots(Nsat, Nbkg, near):
 	sdsat = np.std(sumsat)
 	print("standard deviation of satellites is", sdsat)
 
-	plt.figure(figsize=(8, 6))
-	plt.title("Histogram of the Number of Satellite Galaxies")
+	plt.rcParams["figure.figsize"] = [10, 8]
+	plt.title("Histogram of the Number of Satellite Galaxies", fontsize=15)
 	plt.hist(sumsat, bins=100)
 	plt.axvline(linewidth=1, color='r')
 	plt.show()
 
-	plt.figure(figsize=(8, 6))
-	plt.title("Histogram of the Number of Near Neighbors")
+	plt.rcParams["figure.figsize"] = [10, 8]
+	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
 	plt.hist(sumnear, bins=100)
 	plt.show()
 
-	plt.figure(figsize=(8, 6))
-	plt.title("Histogram of the Number of Expected Interlopers")
+	plt.rcParams["figure.figsize"] = [10, 8]
+	plt.title("Histogram of the Number of Expected Interlopers", fontsize=15)
 	plt.hist(sumbkg, bins=100)
 	plt.show()
   
@@ -69,7 +69,7 @@ def cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges):
 	import matplotlib.pyplot as plt
 	import numpy as np 
 
-	plot = fig, ax = plt.subplots(figsize=(8, 6))
+	plot = fig, ax = plt.subplots(figsize=(10, 8))
 	ax.set_xticks(xedges, minor=False)
 	ax.set_yticks(yedges, minor=True)
 	ax.xaxis.grid(True, which='major')
@@ -78,7 +78,7 @@ def cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges):
 	plt.scatter(rmag_BKG, color_BKG, s = 1, marker = '+', color='red', label="Background")
 	plt.scatter(rmag_LRG, color_LRG, s = 1, marker = '*', color='blue', label='LRGs')
 	plt.gca().invert_xaxis()
-	plt.title("Color-Magnitude Diagram")
+	plt.title("Color-Magnitude Diagram", fontsize=15)
 	plt.xlabel(r'$r-mag$')
 	plt.ylabel(r'$(g-r)$ $color$')
 	plt.legend(loc='upper right')
@@ -1301,12 +1301,17 @@ def magHist(gmag_BKG, rmag_BKG, zmag_BKG):
 	import matplotlib.pyplot as plt
 	import numpy as np 
 
-	figsize=(8, 6)
-	plt.title("Manitude Distribution")
+# 	figsize=(8, 6)
+	plt.rcParams["figure.figsize"] = [10,8]
+	plt.title("Manitude Distribution", fontsize = 15)
 	plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5, label='gmag')
 	plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5, label="rmag")
 	plt.hist(zmag_BKG, bins=50, color='lightblue', alpha=0.5, label='zmag')
-	plt.legend(loc="upper right")
+	plt.legend(loc="upper right", fontsize = 15)
+	plt.xlabel(r'$magnitude$', fontsize = 15)
+	plt.xticks(fontsize=10)
+	plt.ylabel(r'$counts$', fontsize = 15)
+	plt.yticks(fontsize=10)
 	plt.show()
 
 
@@ -1316,10 +1321,12 @@ def magHist(gmag_BKG, rmag_BKG, zmag_BKG):
 def zHist(z_LRG):
 
 	import matplotlib.pyplot as plt
-	import numpy as np 
+	import numpy as np
 
-	figsize=(8, 6)
-	plt.title("Redshift Distribution")
+	plt.rcParams["figure.figsize"] = [10, 8]
+	plt.title("Redshift Distribution", fontsize = 15)
+	plt.xlabel(r'$redshift', fontsize=15)
+	plt.ylabel(r'$counts$', fontsize=15)
 	plt.hist(z_LRG, bins=50)
 	plt.show()
     
@@ -1349,15 +1356,15 @@ def boot_med_plot(niter, confint, boot_func, array):
 	sortmed = sorted(bootmed)
 	lowind = int(round((1 - confint)/2*niter, 2))
 	highind = int(round((1-((1 - confint)/2))*niter, 2))
-    
-	figsize=(8, 6)
+
+	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of Bootstrapped Median")
 	plt.hist(bootmed, bins=50, color='indigo', alpha=0.5)
 # plt.hist(bootmean, bins=25, color='violet', alpha=0.5)
 	plt.axvline(x=sortmed[lowind])
 	plt.axvline(x=sortmed[highind])
-	plt.xlabel(r'$bootstrap$')
-	plt.ylabel(r'$counts$')
+	plt.xlabel(r'$bootstrap median$', fontsize=15)
+	plt.ylabel(r'$counts$', fontsize=15)
 	plt.show()
 
 	print("The median of Nsat:", np.median(array))
