@@ -670,23 +670,23 @@ print("end near neighbor calculation")
 # density to find the number of interloper galaxies as a function of color and magnitude.
 
 # Calculate solid angle omega for every radius ()
-omega = []
-
-for i in range(len(kpc_DA)):
-    omega.append((np.pi * distance_kpc**2.)/(kpc_DA[i])**2.) # in square arcsec
-
-# Multiply omega by the surface density
-Nbkg = []
-
-for i in range(len(omega)):
-    Nbkg.append(sd * omega[i])
-    
-# Plots LRG sources and EDR sources
-plt.title("RA vs Dec")
-plt.scatter(ra_BKG, dec_BKG, s = 1, marker = '+', color='red')
-plt.scatter(ra_LRG, dec_LRG, s = 1, marker = '*', color='blue')
-plt.xlabel(r'$RA$')
-plt.ylabel(r'$Dec$')
+# omega = []
+#
+# for i in range(len(kpc_DA)):
+#     omega.append((np.pi * distance_kpc**2.)/(kpc_DA[i])**2.) # in square arcsec
+#
+# # Multiply omega by the surface density
+# Nbkg = []
+#
+# for i in range(len(omega)):
+#     Nbkg.append(sd * omega[i])
+#
+# # Plots LRG sources and EDR sources
+# plt.title("RA vs Dec")
+# plt.scatter(ra_BKG, dec_BKG, s = 1, marker = '+', color='red')
+# plt.scatter(ra_LRG, dec_LRG, s = 1, marker = '*', color='blue')
+# plt.xlabel(r'$RA$')
+# plt.ylabel(r'$Dec$')
 
 # Plots circles around LRG sources 
 # circle = []
@@ -702,6 +702,83 @@ plt.ylabel(r'$Dec$')
 #     text.set_fontsize(7)
 # 
 # plt.show()
+
+
+# Calculates NUMBER OF EXPECTED INTERLOPER GALAXIES (Nbkg) by first calculating the solid angle omega enclosed in
+# radius distance_kpc from the LRG. Then find the number of interloper galaxies by multiplying omega by the surface
+# density to find the number of interloper galaxies as a function of color and magnitude.
+
+# Calculate solid angle omega for every radius ()
+omega = []
+
+for i in range(len(kpc_DA)):
+    omega.append((np.pi * distance_kpc ** 2.) / (kpc_DA[i]) ** 2.)  # in square arcsec
+
+# Counting the LOCAL BACKGROUND using KDTree
+# Result is an array of the number of near neighbors each LRG has
+
+ra_BKG = ra_ALL[np.where(no_LRG_cut)]
+dec_BKG = dec_ALL[np.where(no_LRG_cut)]
+
+# Distance from which we are looking for satellites around the LRGs
+local_distance = 5.  # in Mpc
+local_distance_kpc = local_distance * 10. ** 3.  # in kpc
+
+local_dist = []
+for i in range(len(kpc_DA)):
+    local_dist.append((local_distance_kpc / kpc_DA[i]) * 1. / 3600.)  # needs to be in degree for kd tree because
+    # coordinates are in degree
+
+# Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
+zip_list_LRG = list(zip(ra_LRG, dec_LRG))  # LRG sources
+zip_list_BKG = list(zip(ra_BKG, dec_BKG))  # survey sources
+
+# Creates a tree of EDR sources
+gal_tree = KDTree(zip_list_BKG)
+
+# returns a list of EDR sources that are within some radius r of an LRG
+local_nn = gal_tree.query_radius(zip_list_LRG, r=local_dist, count_only=True)
+
+# find indices of near neighbors
+# creates a list of arrays that include the indices of satellite galaxies per LRG. In general, some or all of these
+# arrays could be empty
+local_ind = gal_tree.query_radius(zip_list_LRG, r=local_dist)
+# print(ind)
+# print(type(ind[5]))
+# ind5 = ind[0]
+# print(ind5)
+# print(type(ind5[0]))
+
+# Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
+# LOCAL_BKG is the list of 2D arrays of survey galaxies as a funciton of color and magnitude
+local_bkg = []
+
+for i in range(len(local_ind)):
+    # Creates a zero array if there are no near neighbors
+    if len(ind[i]) == 0:
+        hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
+        local_bkg.append(hist2d)
+    # Creates a 2D histogram for satellite galaxies
+    else:
+        hist2d, x_notuse, y_notuse = np.histogram2d(rmag_BKG[local_ind[i]], color_BKG[local_ind[i]],
+                                                    bins=(xedges, yedges), normed=False)
+        local_bkg.append(hist2d)
+
+r = []
+for i in range(len(kpc_DA)):
+    r.append(distance_kpc / kpc_DA[i])
+
+sigma = []
+for i in range(len(r)):
+    sigma.append((local_bkg[i] / (np.pi * r[i] ** 2.)))
+
+print(np.shape(sigma))
+print(np.shape(omega))
+
+Nbkg = []
+for i in range(len(omega)):
+    Nbkg.append((sigma[i] * omega[i]) * ((np.pi * r[i] ** 2.) / (17.5 * 3600. ** 2.)))
+
 
 print("end background galaxy calculation")
 
