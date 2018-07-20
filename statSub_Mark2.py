@@ -755,7 +755,7 @@ local_bkg = []
 
 for i in range(len(local_ind)):
     # Creates a zero array if there are no near neighbors
-    if len(ind[i]) == 0:
+    if len(local_ind[i]) == 0:
         hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
         local_bkg.append(hist2d)
     # Creates a 2D histogram for satellite galaxies
