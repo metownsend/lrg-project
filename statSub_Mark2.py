@@ -11,6 +11,7 @@ import healpy as hp
 from lrg_plot_functions import *
 from lrg_sum_functions import *
 from cosmo_Calc import *
+from divideByTwo import *
 
 # ----------------------------------------------------------------------------------------
 
@@ -57,29 +58,6 @@ targets = []
 targets = SDSS_data.field('BOSS_TARGET1')
 
 # Section of code to find LRG targets
-
-def divideBy2(decNumber):
-
-	# from pythonds.basic.stack import Stack
-# 	import numpy as np
-
-	np.vectorize(decNumber)  
-	remstack = Stack()
-	
-	if decNumber == 0: return "0"
-	
-	while decNumber > 0:
-		rem = decNumber % 2
-		remstack.push(rem)
-		decNumber = decNumber // 2
-		
-	binString = ""
-	while not remstack.isEmpty():
-		binString = binString + str(remstack.pop())
-			
-	return binString
-	
-	
 	
 # Function to find LOWZ targets
 divideBy2Vec = np.vectorize(divideBy2)
@@ -110,8 +88,6 @@ for i in range(len(b)):
 		lrg.append(int(0))
 		
 lrg = np.array(lrg)
-# print('length of sdss lrg array: ', len(lrg))
-# print('length of lrg only array:', len(lrg[np.where(lrg == 1)]))
 
 # ------------------------------------------------------------------------------------------------------------
 
@@ -120,13 +96,10 @@ lrg = np.array(lrg)
 # Object ID from survey file; value -1 for non-matches
 objid_MATCHED = []
 objid_MATCHED = SpecObj_data.field('OBJID')
-# print(len(objid_LRG))
-# print(type(objid_LRG[1]))
 
 # Add bridkid
 brickid_MATCHED = []
 brickid_MATCHED = SpecObj_data.field('BRICKID')
-# print(len(brickid_LRG))
 
 # Add brickname
 brickname_MATCHED = []
@@ -169,7 +142,7 @@ robs_MATCHED = SpecObj_data.field('NOBS_R')
 zobs_MATCHED = []
 zobs_MATCHED = SpecObj_data.field('NOBS_Z')
 
-# Create a unique identifier by combinding BRICKID and OBJID
+# Create a unique identifier by combining BRICKID and OBJID
 
 id_MATCHED = []
 
@@ -180,7 +153,6 @@ for i in range(len(objid_MATCHED)):
         temp1 = str(brickid_MATCHED[i]) + str(objid_MATCHED[i])
         id_MATCHED.append(temp1)
 
-# print('length of row matched targets in SDSS and DECaLS: ', len(id_MATCHED)) 
 id_MATCHED = np.array(id_MATCHED)
 # ------------------------------------------------------------------------------------------------------------
 
@@ -242,12 +214,8 @@ id_ALL = []
 for i in range(len(objid_ALL)):
     temp2 = str(brickid_ALL[i]) + str(objid_ALL[i])
     id_ALL.append(temp2)
-    
-# print('length of DECaLS targets in brick: ', len(id_ALL))
 
 id_ALL = np.array(id_ALL)
-
-# print('length of id_ALL: ', len(id_ALL))
 
 # ------------------------------------------------------------------------------------------------------------
 
@@ -259,7 +227,6 @@ LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3) & (
 id_LRG = []
 id_LRG = np.array(id_LRG)
 id_LRG = id_MATCHED[np.where(LRG_cut)]
-# print('length of id_MATCHED with LRG_cut (id_LRG):', len(id_LRG))
 
 idcut = []
 
@@ -273,11 +240,6 @@ for i in range(len(id_ALL)):
         idcut.append(0)
 
 idcut = np.array(idcut)
-# print('length of idcut:', len(idcut))
-# print('length of idcut = 1 (is an LRG in DECaLS-only file):', len(idcut[np.where(idcut == 1)]))
-# print('length of idcut = 0 (is not an LRG in DECaLS-only file):', len(idcut[np.where(idcut == 0)]))
-
-# idcut1 = idcut[np.where(idcut == 1)] 
 
 z_lrg = []
 ra_lrg = []
@@ -295,10 +257,6 @@ ra_lrg = np.array(ra_lrg)
 ra_LRG = np.concatenate(ra_lrg)
 dec_lrg = np.array(dec_lrg)
 dec_LRG = np.concatenate(dec_lrg)
-
-# LRG_cut = ((id_cut_LRG == 1) & (gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1 ) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
-# & (brickid_LRG == brickid_ALL)
-# print(len(LOWZ_cut))
 
 # Cut out LRGs
 no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 3.) & (robs_ALL >= 3.) & (zobs_ALL >= 3.) & (gflux_ALL > 0.) & (rflux_ALL > 0.) & (zflux_ALL > 0.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
@@ -344,37 +302,11 @@ robs_BKG = robs_ALL[np.where(no_LRG_cut)]
 # Number of images in z for all galaxies in DECaLS
 zobs_BKG = zobs_ALL[np.where(no_LRG_cut)]
 
-# print('LRGs only')
-# print('length gobs:', len(gobs_LRG))
-# print('length robs;', len(robs_LRG))
-# print('length gflux:', len(gflux_LRG))
-# print('length rflux:', len(rflux_LRG))
-
 gmag_LRG = 22.5 - 2.5 * np.log10(gflux_LRG)
 rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
 zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
 
 color_LRG = gmag_LRG - rmag_LRG
-
-# print("length of gmag array = ", len(gmag_LRG))
-# print('shape of gmag array:', gmag_LRG.shape)
-# print("length of rmag array = ",len(rmag_LRG))
-# print("length of zmag array = ",len(zmag_LRG))
-# print("length of color array = ", len(color_LRG))
-# print("Max gmag = ", np.amax(gmag_LRG))
-# print("Min gmag = ", np.amin(gmag_LRG))
-# print("Max rmag = ", np.amax(rmag_LRG))
-# print("Min rmag = ", np.amin(rmag_LRG))
-# print("Max zmag = ", np.amax(zmag_LRG))
-# print("Min zmag = ", np.amin(zmag_LRG))
-# print("Min color = ", np.amin(color_LRG))
-# print("Max color = ", np.amax(color_LRG))
-# print("")
-# print('Background only')
-# print('length gobs:', len(gobs_BKG))
-# print('length robs:', len(robs_BKG))
-# print('length gflux:', len(gflux_BKG))
-# print('length rflux:', len(rflux_BKG))
 
 gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
 rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
@@ -382,157 +314,13 @@ zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
 
 color_BKG = gmag_BKG - rmag_BKG
 
-# print("length of gmag array = ", len(gmag_BKG))
-# print('shape of gmag array:', gmag_LRG.shape)
-# print("length of rmag array = ",len(rmag_BKG))
-# print("length of zmag array = ",len(zmag_BKG))
-# print("length of color array = ", len(color_BKG))
-# print("Max gmag = ", np.amax(gmag_BKG))
-# print("Min gmag = ", np.amin(gmag_BKG))
-# print("Max rmag = ", np.amax(rmag_BKG))
-# print("Min rmag = ", np.amin(rmag_BKG))
-# print("Max zmag = ", np.amax(zmag_BKG))
-# print("Min zmag = ", np.amin(zmag_BKG))
-# print("Min color = ", np.amin(color_BKG))
-# print("Max color = ", np.amax(color_BKG))
-
-# plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5)
-# plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5)
-# plt.hist(zmag_BKG, bins=50, color='lightblue', alpha=0.5)
-# plt.show()
-
-# print("")
-# # Only LRGs
-# print("")
-# print("Only LRGs")
-# print("Max z = ", np.amax(z))
-# print("Min z = ", np.amin(z))
-# print('shape of z_lrg:', z_lrg.shape)
-# plt.hist(z_LRG, bins=50)
-# plt.show()
-
 print("end data parsing")
 
 # ------------------------------------------------------------------------------------------------------------
 
 # cosmoCalc function to find scale (kpc_DA)
 # This is a modified Python Code for this cosmological calculator (http://www.astro.ucla.edu/~wright/CC.python),
-# Which is in turn modified from http: http://www.astro.ucla.edu/~wright/CosmoCalc.html. 
-
-# I know this isn't ideal but for some reason the function won't import, even though it imports just fine in other
-# files in the same directory
-
-# def cosmoCalcfunc(z):
-#     import numpy as np
-#     from math import sqrt
-#     from math import exp
-#     from math import sin
-#     from math import pi
-# 
-# # Calculate scale to get areas
-#     H0 = 69.6
-#     WM = 0.286
-#     WV = 0.714
-# # z = 0.209855
-# 
-# # initialize constants
-# 
-#     WR = 0.        # Omega(radiation)
-#     WK = 0.        # Omega curvaturve = 1-Omega(total)
-#     c = 299792.458 # velocity of light in km/sec
-#     Tyr = 977.8    # coefficent for converting 1/H into Gyr
-#     DTT = 0.5      # time from z to now in units of 1/H0
-#     DTT_Gyr = []  # value of DTT in Gyr
-#     age = 0.5      # age of Universe in units of 1/H0
-#     age_Gyr = []  # value of age in Gyr
-#     zage = 0.1     # age of Universe at redshift z in units of 1/H0
-#     zage_Gyr = [] # value of zage in Gyr
-#     DCMR = 0.0     # comoving radial distance in units of c/H0
-#     DCMR_Mpc = [] 
-#     DCMR_Gyr = []
-#     DA = 0.0       # angular size distance
-#     DA_Mpc = []
-#     DA_Gyr = []
-#     kpc_DA = []
-#     DL = 0.0       # luminosity distance
-#     DL_Mpc = []
-#     DL_Gyr = []   # DL in units of billions of light years
-#     V_Gpc = []
-#     a = 1.0        # 1/(1+z), the scale factor of the Universe
-#     az = 0.5       # 1/(1+z(object))
-# 
-#     h = H0/100.
-#     WR = 4.165E-5/(h*h)   # includes 3 massless neutrino species, T0 = 2.72528
-#     WK = 1-WM-WR-WV
-# 
-#     for j in range(len(z)):
-#         az = 1.0/(1+1.0*z[j])
-#         age = 0.
-#         n=1000         # number of points in integrals
-#         for i in range(n):
-#             a = az*(i+0.5)/n
-#             adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
-#             age = age + 1./adot
-# 
-#         zage = az*age/n
-#         zage_Gyr.append((Tyr/H0)*zage)
-#         DTT = 0.0
-#         DCMR = 0.0
-# 
-# 	# do integral over a=1/(1+z) from az to 1 in n steps, midpoint rule
-#         for i in range(n):
-#             a = az+(1-az)*(i+0.5)/n
-#             adot = sqrt(WK+(WM/a)+(WR/(a*a))+(WV*a*a))
-#             DTT = DTT + 1./adot
-#             DCMR = DCMR + 1./(a*adot)
-# 
-#         DTT = (1.-az)*DTT/n
-#         DCMR = (1.-az)*DCMR/n
-#         age = DTT+zage
-#         age_Gyr.append(age*(Tyr/H0))
-#         DTT_Gyr.append((Tyr/H0)*DTT)
-#         DCMR_Gyr.append((Tyr/H0)*DCMR)
-#         DCMR_Mpc.append((c/H0)*DCMR)
-# 
-# 	# tangential comoving distance
-# 
-#         ratio = 1.00
-#         x = sqrt(abs(WK))*DCMR
-#         if x > 0.1:
-#             if WK > 0:
-#                 ratio =  0.5*(exp(x)-exp(-x))/x 
-#             else:
-#                 ratio = sin(x)/x
-#         else:
-#             y = x*x
-#             if WK < 0: y = -y
-#             ratio = 1. + y/6. + y*y/120.
-#         DCMT = ratio*DCMR
-#         DA = az*DCMT
-#         DA_Mpc.append((c/H0)*DA)
-#         kpc_DA.append(DA_Mpc[j]/206.264806)
-#         DA_Gyr.append((Tyr/H0)*DA)
-#         DL = DA/(az*az)
-#         DL_Mpc.append((c/H0)*DL)
-#         DL_Gyr.append((Tyr/H0)*DL)
-# 
-# 	# comoving volume computation
-# 
-#         ratio = 1.00
-#         x = sqrt(abs(WK))*DCMR
-#         if x > 0.1:
-#             if WK > 0:
-#                 ratio = (0.125*(exp(2.*x)-exp(-2.*x))-x/2.)/(x*x*x/3.)
-#             else:
-#                 ratio = (x/2. - sin(2.*x)/4.)/(x*x*x/3.)
-#         else:
-#             y = x*x
-#             if WK < 0: y = -y
-#             ratio = 1. + y/5. + (2./105.)*y*y
-#         VCM = ratio*DCMR*DCMR*DCMR/3.
-#         V_Gpc.append(4.*pi*((0.001*c/H0)**3)*VCM)
-#         
-#     return(DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc)
+# Which is in turn modified from http: http://www.astro.ucla.edu/~wright/CosmoCalc.html.
 
 DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc = cosmoCalcfunc(z_LRG)
 
@@ -553,40 +341,10 @@ row = 10
 column = 10
 # creates histogram for survey sources; excludes LRGs
 H, xedges, yedges = np.histogram2d(rmag_BKG, color_BKG, normed=False)
-# print("H:")
-# print(H)
-# print('-------')
-# print('shape H')
-# print(np.shape(H))
 
 # Uses the numbers counted in the histogram to calculate a surface density: For each cell, the number of sources
 # divided by the area 
 sd = H/(17.5 * (3600.**2.)) # converts 25 square degrees to square arcseconds
-# print("sd:")
-# print(sd)
-# print('-------')
-
-# Scatter plot of points with bin lines drawn
-# fig, ax = plt.subplots()
-# ax.set_xticks(xedges, minor=False)
-# ax.set_yticks(yedges, minor=True)
-# ax.xaxis.grid(True, which='major')
-# ax.yaxis.grid(True, which='minor')
-
-# plt.scatter(rmag_BKG, color_BKG, s = 1, marker = '+', color='red')
-# plt.scatter(rmag_LRG, color_LRG, s = 1, marker = '*', color='blue')
-# plt.gca().invert_xaxis()
-# plt.title("Color-Magnitude Diagram")
-# plt.xlabel(r'$r-mag$')
-# plt.ylabel(r'$(g-r)$ $color$')
-# plt.show()
-
-# color codes bins by surface density with color bar; should make sense when compared to scatter plot
-# plt.imshow(sd, cmap=plt.cm.PuRd, extent=(xedges[0], xedges[len(xedges)-1], yedges[0], yedges[len(yedges)-1]))
-# plt.colorbar(orientation='vertical')
-# plt.gca().invert_xaxis()
-# plt.title("Surface Density Histogram")
-# plt.show()
 
 print("end surface density calculation")
 
@@ -598,11 +356,6 @@ print("end surface density calculation")
 ra_BKG = ra_ALL[np.where(no_LRG_cut)]
 dec_BKG = dec_ALL[np.where(no_LRG_cut)]
 
-# print("length ra_lrg:", len(ra_LRG))
-# print("length dec_lrg:", len(dec_LRG))
-# print("length ra_BKG:", len(ra_BKG))
-# print("length dec_BKG:", len(dec_BKG))
-
 # Distance from which we are looking for satellites around the LRGs
 distance = 0.5 # in Mpc
 distance_kpc = distance * 10.**3. # in kpc
@@ -610,9 +363,6 @@ distance_kpc = distance * 10.**3. # in kpc
 dist = []
 for i in range(len(kpc_DA)):
     dist.append((distance_kpc / kpc_DA[i]) * 1./3600.) 
-    
-# dist = np.concatenate(dist)
-# print('length dist:', len(dist))
 
 # print(type(dist))    
 # Plot RA/Dec plot with circles around LRGs

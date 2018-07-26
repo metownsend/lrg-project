@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" afterPath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_project_mass_plots-checkpoint.ipynb" afterPath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_project_mass_plots-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" afterPath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_project_mass_plots.ipynb" afterPath="$PROJECT_DIR$/Plots/LRG_project_mass_plots.ipynb" />
-      <change beforePath="$PROJECT_DIR$/lrg_sum_functions.py" afterPath="$PROJECT_DIR$/lrg_sum_functions.py" />
+      <change beforePath="$PROJECT_DIR$/statSub_Mark2.py" afterPath="$PROJECT_DIR$/statSub_Mark2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,14 +21,14 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="3150">
               <caret line="210" column="59" lean-forward="false" selection-start-line="210" selection-start-column="59" selection-end-line="210" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lrg_sum_functions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lrg_sum_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_sum_functions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -37,14 +38,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11280">
-              <caret line="752" column="77" lean-forward="false" selection-start-line="752" selection-start-column="77" selection-end-line="752" selection-end-column="77" />
+            <state relative-caret-position="5432">
+              <caret line="364" column="55" lean-forward="false" selection-start-line="364" selection-start-column="55" selection-end-line="364" selection-end-column="55" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="divideByTwo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/divideByTwo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,8 +69,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lrg_plot_functions.py" />
-        <option value="$PROJECT_DIR$/statSub_Mark2.py" />
         <option value="$PROJECT_DIR$/lrg_sum_functions.py" />
+        <option value="$PROJECT_DIR$/divideByTwo.py" />
+        <option value="$PROJECT_DIR$/statSub_Mark2.py" />
       </list>
     </option>
   </component>
@@ -84,6 +96,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -96,7 +109,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,6 +205,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lrg_sum_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19110">
           <caret line="1274" column="91" lean-forward="false" selection-start-line="1274" selection-start-column="91" selection-end-line="1274" selection-end-column="91" />
           <folding />
@@ -235,19 +263,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11280">
-          <caret line="752" column="77" lean-forward="false" selection-start-line="752" selection-start-column="77" selection-end-line="752" selection-end-column="77" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
+        <state relative-caret-position="3150">
           <caret line="210" column="59" lean-forward="false" selection-start-line="210" selection-start-column="59" selection-end-line="210" selection-end-column="59" />
           <folding />
         </state>
@@ -258,6 +276,24 @@
         <state relative-caret-position="375">
           <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/divideByTwo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5432">
+          <caret line="364" column="55" lean-forward="false" selection-start-line="364" selection-start-column="55" selection-end-line="364" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
