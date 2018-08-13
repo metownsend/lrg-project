@@ -382,8 +382,8 @@ for i in range(len(kpc_DA)):
 # plt.show()
 
 # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
-zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
-zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
+zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # LRG sources
+zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # EDR sources
 # print('len zip_list_LRG', len(zip_list_LRG))
 
 # Creates a tree of EDR sources
@@ -486,13 +486,20 @@ zip_list_BKG = list(zip(ra_BKG, dec_BKG))  # survey sources
 # Creates a tree of EDR sources
 gal_tree = KDTree(zip_list_BKG)
 
-# returns a list of EDR sources that are within some radius r of an LRG
+# returns the number of EDR sources that are within some radius r of an LRG
 local_nn = gal_tree.query_radius(zip_list_LRG, r=local_dist, count_only=True)
+print('local nn example:', local_nn[10])
+print('local nn example:', local_nn[100])
+print('local nn example:', local_nn[25])
 
 # find indices of near neighbors
 # creates a list of arrays that include the indices of satellite galaxies per LRG. In general, some or all of these
 # arrays could be empty
 local_ind = gal_tree.query_radius(zip_list_LRG, r=local_dist)
+
+print('local nn ind example:', len(local_ind[10]))
+print('local nn ind example:', len(local_ind[100]))
+print('local nn ind example:', len(local_ind[25]))
 # print(ind)
 # print(type(ind[5]))
 # ind5 = ind[0]
@@ -500,7 +507,7 @@ local_ind = gal_tree.query_radius(zip_list_LRG, r=local_dist)
 # print(type(ind5[0]))
 
 # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
-# LOCAL_BKG is the list of 2D arrays of survey galaxies as a funciton of color and magnitude
+# LOCAL_BKG is the list of 2D arrays of survey galaxies as a function of color and magnitude
 local_bkg = []
 
 for i in range(len(local_ind)):
@@ -516,7 +523,7 @@ for i in range(len(local_ind)):
 
 r = []
 for i in range(len(kpc_DA)):
-    r.append(distance_kpc / kpc_DA[i])
+    r.append(local_distance_kpc / kpc_DA[i])
 
 sigma = []
 for i in range(len(r)):
