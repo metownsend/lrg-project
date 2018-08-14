@@ -534,7 +534,7 @@ print(np.shape(omega))
 
 Nbkg = []
 for i in range(len(omega)):
-    Nbkg.append((sigma[i] * omega[i]) * ((np.pi * r[i] ** 2.) / (17.5 * 3600. ** 2.)))
+    Nbkg.append((sigma[i] * omega[i])) # * ((np.pi * r[i] ** 2.) / (17.5 * 3600. ** 2.)))
 
 
 print("end background galaxy calculation")
