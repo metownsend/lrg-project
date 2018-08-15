@@ -3,36 +3,16 @@
 # ----------------------------------------------------------------------------------------
 
 # Function to plot histograms for Nsat, Nbkg, and near
-def totalPlots(Nsat, Nbkg, near):
+def totalNsat(Nsat):
 
 	import matplotlib.pylab as plt 	
 	import numpy as np
 	
 	sumsat = []
-	sumbkg = []
-	sumnear = []
 	
 	# Sum up number of satellite galaxies for every LRG
 	for i in range(len(Nsat)):
 		sumsat.append(np.sum(Nsat[i]))
-	# Sum up number of background galaxies for every LRG
-	for i in range(len(Nbkg)):
-		sumbkg.append(np.sum(Nbkg[i]))
-	# Sum up number of near neighbors for every LRG
-	for i in range(len(near)):
-		sumnear.append(np.sum(near[i]))
-
-	meannear = np.mean(sumnear)
-	print("mean near neighbor is", meannear)
-	
-	sdnear = np.std(sumnear)
-	print("standard deviation of near neighbor is", sdnear)
-
-	meanbkg = np.mean(sumbkg)
-	print("mean interloper is", meanbkg)
-
-	sdbkg = np.std(sumbkg)
-	print("standard deviation of interloper is", sdbkg)
 
 	meansat = np.mean(sumsat)
 	print("mean number of satellites is", meansat)
@@ -47,17 +27,66 @@ def totalPlots(Nsat, Nbkg, near):
 	plt.title("Histogram of the Number of Satellite Galaxies", fontsize=15)
 	plt.hist(sumsat, bins=100)
 	plt.axvline(linewidth=1, color='r')
-	plt.show()
+	# plt.show()
+
+
+# ----------------------------------------------------------------------------------------
+
+
+# Function to plot histograms for Nsat, Nbkg, and near
+def totalNbkg(Nbkg):
+	import matplotlib.pylab as plt
+	import numpy as np
+
+	sumbkg = []
+
+	# Sum up number of background galaxies for every LRG
+	for i in range(len(Nbkg)):
+		sumbkg.append(np.sum(Nbkg[i]))
+
+	meanbkg = np.mean(sumbkg)
+	print("mean number of interlopers is", meanbkg)
+
+	medianbkg = np.median(sumbkg)
+	print("median number of interlopers is", medianbkg)
+
+	sdbkg = np.std(sumbkg)
+	print("standard deviation of interloper is", sdbkg)
 
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
 	plt.hist(sumnear, bins=100)
-	plt.show()
+	# plt.show()
+
+
+# ----------------------------------------------------------------------------------------
+
+
+# Function to plot histograms for Nsat, Nbkg, and near
+def totalNear(near):
+	import matplotlib.pylab as plt
+	import numpy as np
+
+	sumnear = []
+
+	# Sum up number of near neighbors for every LRG
+	for i in range(len(near)):
+		sumnear.append(np.sum(near[i]))
+
+	meannear = np.mean(sumnear)
+	print("mean number of near neighbors is", meannear)
+
+	mediannear = np.median(sumnear)
+	print("median number of near neighbors is", mediannear)
+
+	sdnear = np.std(sumnear)
+	print("standard deviation of near neighbor is", sdnear)
+
 
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Expected Interlopers", fontsize=15)
 	plt.hist(sumbkg, bins=100)
-	plt.show()
+	# plt.show()
   
     
 # ----------------------------------------------------------------------------------------
@@ -82,7 +111,7 @@ def cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges):
 	plt.xlabel(r'$r-mag$')
 	plt.ylabel(r'$(g-r)$ $color$')
 	plt.legend(loc='upper right')
-	plt.show()
+	# plt.show()
 
 
 # ----------------------------------------------------------------------------------------
@@ -168,18 +197,18 @@ def z_cut_Nsat(z_LRG, Nsat):
 
 	print('total number of Nsat arrays:', len(Nsat1z) + len(Nsat2z) + len(Nsat3z) + len(Nsat4z) + len(Nsat5z) + len(Nsat6z) + len(Nsat7z))
 
-	plt.title("Histogram of the Number of Satellite Galaxies at Different LRG Redshift Slices")
-	plt.hist(sumsat1z, bins=25, alpha=0.5, label='z < 0.2')
-	plt.hist(sumsat2z, bins=25, alpha=0.5, label='0.2 <= z < 0.3')
-	plt.hist(sumsat3z, bins=25, alpha=0.5, label='0.3 <= z < 0.4')
-	plt.hist(sumsat4z, bins=25, alpha=0.5, label='0.4 <= z < 0.5')
-	plt.hist(sumsat5z, bins=25, alpha=0.5, label='0.5 <= z < 0.6')
-	plt.hist(sumsat6z, bins=25, alpha=0.5, label='0.6 <= z < 0.7')
-	plt.hist(sumsat7z, bins=25, alpha=0.5, label='z >= 0.7')
-	plt.xlabel(r'$satellites$')
-	plt.ylabel(r'$counts$')
-	plt.legend(loc='upper right')
-	plt.show()
+	# plt.title("Histogram of the Number of Satellite Galaxies at Different LRG Redshift Slices")
+	# plt.hist(sumsat1z, bins=25, alpha=0.5, label='z < 0.2')
+	# plt.hist(sumsat2z, bins=25, alpha=0.5, label='0.2 <= z < 0.3')
+	# plt.hist(sumsat3z, bins=25, alpha=0.5, label='0.3 <= z < 0.4')
+	# plt.hist(sumsat4z, bins=25, alpha=0.5, label='0.4 <= z < 0.5')
+	# plt.hist(sumsat5z, bins=25, alpha=0.5, label='0.5 <= z < 0.6')
+	# plt.hist(sumsat6z, bins=25, alpha=0.5, label='0.6 <= z < 0.7')
+	# plt.hist(sumsat7z, bins=25, alpha=0.5, label='z >= 0.7')
+	# plt.xlabel(r'$satellites$')
+	# plt.ylabel(r'$counts$')
+	# plt.legend(loc='upper right')
+	# plt.show()
 
 	f, axarr = plt.subplots(4, 2, figsize=(15,15))
 	f.suptitle("Histogram of the Number of Satellite Galaxies at Different LRG Redshift Slices", fontsize=15, y=0.9)
@@ -220,7 +249,7 @@ def z_cut_Nsat(z_LRG, Nsat):
 	for ax in axarr.flat:
 		ax.set(xlabel='satellites', ylabel='counts')
 
-	plt.show()
+	# plt.show()
 
 
 # ----------------------------------------------------------------------------------------
@@ -362,7 +391,7 @@ def z_cut_near(z_LRG, near):
 	for ax in axarr.flat:
 		ax.set(xlabel='near neighbors', ylabel='counts')
 
-	plt.show()
+	# plt.show()
 
 
 # ----------------------------------------------------------------------------------------
@@ -452,18 +481,18 @@ def rmag_cut_Nsat(rmag_LRG, Nsat):
     
 	print('total number of Nsat arrays:', len(Nsat1r) + len(Nsat2r) + len(Nsat3r) + len(Nsat4r) + len(Nsat5r) + len(Nsat6r) + len(Nsat7r))
 
-	plt.title("Histogram of the Number of Satellite Galaxies at Different LRG rmag")
-	plt.hist(sumsat1r, bins=25, alpha=0.5, label='15 <= rmag < 16')
-	plt.hist(sumsat2r, bins=25, alpha=0.5, label='16 <= rmag < 17')
-	plt.hist(sumsat3r, bins=25, alpha=0.5, label='17 <= rmag < 18')
-	plt.hist(sumsat4r, bins=25, alpha=0.5, label='18 <= rmag < 19')
-	plt.hist(sumsat5r, bins=25, alpha=0.5, label='19 <= rmag < 20')
-	plt.hist(sumsat6r, bins=25, alpha=0.5, label='20 <= rmag < 21')
-	plt.hist(sumsat7r, bins=25, alpha=0.5, label='rmag >= 21')
-	plt.xlabel(r'$satellite$')
-	plt.ylabel(r'$counts$')
-	plt.legend(loc='upper right')
-	plt.show()
+	# plt.title("Histogram of the Number of Satellite Galaxies at Different LRG rmag")
+	# plt.hist(sumsat1r, bins=25, alpha=0.5, label='15 <= rmag < 16')
+	# plt.hist(sumsat2r, bins=25, alpha=0.5, label='16 <= rmag < 17')
+	# plt.hist(sumsat3r, bins=25, alpha=0.5, label='17 <= rmag < 18')
+	# plt.hist(sumsat4r, bins=25, alpha=0.5, label='18 <= rmag < 19')
+	# plt.hist(sumsat5r, bins=25, alpha=0.5, label='19 <= rmag < 20')
+	# plt.hist(sumsat6r, bins=25, alpha=0.5, label='20 <= rmag < 21')
+	# plt.hist(sumsat7r, bins=25, alpha=0.5, label='rmag >= 21')
+	# plt.xlabel(r'$satellite$')
+	# plt.ylabel(r'$counts$')
+	# plt.legend(loc='upper right')
+	# plt.show()
 
 	f, axarr = plt.subplots(4, 2, figsize=(15,15))
 	f.suptitle("Histogram of the Number of Satellite Galaxies at Different R-Magnitude Slices", fontsize=15, y=0.9)
@@ -504,7 +533,7 @@ def rmag_cut_Nsat(rmag_LRG, Nsat):
 	for ax in axarr.flat:
 		ax.set(xlabel='satellites', ylabel='counts')
 
-	plt.show()
+	# plt.show()
     
     
 # ----------------------------------------------------------------------------------------
@@ -604,19 +633,19 @@ def gmag_cut_Nsat(gmag_LRG, Nsat):
 
 	print('total number of Nsat arrays:', len(Nsat1g) + len(Nsat2g) + len(Nsat3g) + len(Nsat4g) + len(Nsat5g) + len(Nsat6g) + len(Nsat7g) + len(Nsat8g))
 
-	plt.title("Histogram of the Number of Satellite Galaxies at Different LRG gmag")               # alsdkfjalsdfjka;sldfkjlsdfjlsdjkflsdkjflsdkjf;lsdkjflsdkjfl
-	plt.hist(sumsat1g, bins=25, alpha=0.5, label='16 <= gmag < 17')
-	plt.hist(sumsat2g, bins=25, alpha=0.5, label='17 <= gmag < 18')
-	plt.hist(sumsat3g, bins=25, alpha=0.5, label='18 <= gmag < 19')
-	plt.hist(sumsat4g, bins=25, alpha=0.5, label='19 <= gmag < 20')
-	plt.hist(sumsat5g, bins=25, alpha=0.5, label='20 <= gmag < 21')
-	plt.hist(sumsat6g, bins=25, alpha=0.5, label='21 <= gmag < 22')
-	plt.hist(sumsat7g, bins=25, alpha=0.5, label='22 <= gmag < 23')
-	plt.hist(sumsat8g, bins=25, alpha=0.5, label='gmag >= 23')
-	plt.xlabel(r'$satellite$')
-	plt.ylabel(r'$counts$')
-	plt.legend(loc='upper right')
-	plt.show()
+	# plt.title("Histogram of the Number of Satellite Galaxies at Different LRG gmag")               # alsdkfjalsdfjka;sldfkjlsdfjlsdjkflsdkjflsdkjf;lsdkjflsdkjfl
+	# plt.hist(sumsat1g, bins=25, alpha=0.5, label='16 <= gmag < 17')
+	# plt.hist(sumsat2g, bins=25, alpha=0.5, label='17 <= gmag < 18')
+	# plt.hist(sumsat3g, bins=25, alpha=0.5, label='18 <= gmag < 19')
+	# plt.hist(sumsat4g, bins=25, alpha=0.5, label='19 <= gmag < 20')
+	# plt.hist(sumsat5g, bins=25, alpha=0.5, label='20 <= gmag < 21')
+	# plt.hist(sumsat6g, bins=25, alpha=0.5, label='21 <= gmag < 22')
+	# plt.hist(sumsat7g, bins=25, alpha=0.5, label='22 <= gmag < 23')
+	# plt.hist(sumsat8g, bins=25, alpha=0.5, label='gmag >= 23')
+	# plt.xlabel(r'$satellite$')
+	# plt.ylabel(r'$counts$')
+	# plt.legend(loc='upper right')
+	# plt.show()
 
 	f, axarr = plt.subplots(4, 2, figsize=(15,15))
 	f.suptitle("Histogram of the Number of Satellite Galaxies at Different G-Magnitude Slices", fontsize=15, y=0.9)
@@ -661,7 +690,7 @@ def gmag_cut_Nsat(gmag_LRG, Nsat):
 	for ax in axarr.flat:
 		ax.set(xlabel='satellites', ylabel='counts')
 
-	plt.show()
+	# plt.show()
     
 
 # ----------------------------------------------------------------------------------------
@@ -751,18 +780,18 @@ def zmag_cut_Nsat(zmag_LRG, Nsat):
 
 	print('total number of Nsat arrays:', len(Nsat1z) + len(Nsat2z) + len(Nsat3z) + len(Nsat4z) + len(Nsat5z) + len(Nsat6z) + len(Nsat7z))
 
-	plt.title("Histogram of the Number of Satellite Galaxies at Different LRG gmag")               # alsdkfjalsdfjka;sldfkjlsdfjlsdjkflsdkjflsdkjf;lsdkjflsdkjfl
-	plt.hist(sumsat1z, bins=25, alpha=0.5, label='14 <= zmag < 15')
-	plt.hist(sumsat2z, bins=25, alpha=0.5, label='15 <= zmag < 16')
-	plt.hist(sumsat3z, bins=25, alpha=0.5, label='16 <= zmag < 17')
-	plt.hist(sumsat4z, bins=25, alpha=0.5, label='17 <= zmag < 18')
-	plt.hist(sumsat5z, bins=25, alpha=0.5, label='18 <= zmag < 19')
-	plt.hist(sumsat6z, bins=25, alpha=0.5, label='19 <= zmag < 20')
-	plt.hist(sumsat7z, bins=25, alpha=0.5, label='zmag >= 20')
-	plt.xlabel(r'$satellite$')
-	plt.ylabel(r'$counts$')
-	plt.legend(loc='upper right')
-	plt.show()
+	# plt.title("Histogram of the Number of Satellite Galaxies at Different LRG gmag")               # alsdkfjalsdfjka;sldfkjlsdfjlsdjkflsdkjflsdkjf;lsdkjflsdkjfl
+	# plt.hist(sumsat1z, bins=25, alpha=0.5, label='14 <= zmag < 15')
+	# plt.hist(sumsat2z, bins=25, alpha=0.5, label='15 <= zmag < 16')
+	# plt.hist(sumsat3z, bins=25, alpha=0.5, label='16 <= zmag < 17')
+	# plt.hist(sumsat4z, bins=25, alpha=0.5, label='17 <= zmag < 18')
+	# plt.hist(sumsat5z, bins=25, alpha=0.5, label='18 <= zmag < 19')
+	# plt.hist(sumsat6z, bins=25, alpha=0.5, label='19 <= zmag < 20')
+	# plt.hist(sumsat7z, bins=25, alpha=0.5, label='zmag >= 20')
+	# plt.xlabel(r'$satellite$')
+	# plt.ylabel(r'$counts$')
+	# plt.legend(loc='upper right')
+	# plt.show()
 
 	f, axarr = plt.subplots(4, 2, figsize=(15,15))
 	f.suptitle("Histogram of the Number of Satellite Galaxies at Different Z-Magnitude Slices", fontsize=15, y=0.9)
@@ -803,7 +832,7 @@ def zmag_cut_Nsat(zmag_LRG, Nsat):
 	for ax in axarr.flat:
 		ax.set(xlabel='satellites', ylabel='counts')
 
-	plt.show()
+	# plt.show()
 
 
 
@@ -948,7 +977,7 @@ def rmag_cut_near(rmag_LRG, near):
 	for ax in axarr.flat:
 		ax.set(xlabel='near neighbors', ylabel='counts')
 
-	plt.show()
+	# plt.show()
 
 
 # ----------------------------------------------------------------------------------------
@@ -1107,7 +1136,7 @@ def gmag_cut_near(gmag_LRG, near):
 	for ax in axarr.flat:
 		ax.set(xlabel='near neighbors', ylabel='counts')
 	
-	plt.show()
+	# plt.show()
     
     
 # ----------------------------------------------------------------------------------------
@@ -1251,7 +1280,7 @@ def zmag_cut_near(zmag_LRG, near):
 	for ax in axarr.flat:
 		ax.set(xlabel='near neighbors', ylabel='counts')
 
-	plt.show()
+	# plt.show()
     
 
 # ----------------------------------------------------------------------------------------
@@ -1290,7 +1319,7 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	m = hp.ang2pix(nside, theta, phi)
 	map_ = np.bincount(m, minlength=npixel)
 	hp.gnomview(map_,rot=(-116.5,9.),xsize=225, flip='geo', title="All Sources in EDR Area")
-	plt.show()      
+	# plt.show()
 
 
 # ----------------------------------------------------------------------------------------
@@ -1312,8 +1341,7 @@ def magHist(gmag_BKG, rmag_BKG, zmag_BKG):
 	plt.xticks(fontsize=10)
 	plt.ylabel(r'$counts$', fontsize = 15)
 	plt.yticks(fontsize=10)
-	plt.show()
-
+	# plt.show()
 
 # ----------------------------------------------------------------------------------------
 	
@@ -1328,7 +1356,7 @@ def zHist(z_LRG):
 	plt.xlabel(r'$redshift', fontsize=15)
 	plt.ylabel(r'$counts$', fontsize=15)
 	plt.hist(z_LRG, bins=50)
-	plt.show()
+	# plt.show()
     
     
 # ----------------------------------------------------------------------------------------
@@ -1365,7 +1393,7 @@ def boot_med_plot(niter, confint, boot_func, array):
 	plt.axvline(x=sortmed[highind])
 	plt.xlabel(r'$bootstrap median$', fontsize=15)
 	plt.ylabel(r'$counts$', fontsize=15)
-	plt.show()
+	# plt.show()
 
 	print("The median of Nsat:", np.median(array))
 	print("The median of bootmed:", np.median(bootmed))
