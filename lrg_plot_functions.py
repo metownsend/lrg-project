@@ -54,8 +54,8 @@ def totalNbkg(Nbkg):
 	print("standard deviation of interloper is", sdbkg)
 
 	plt.rcParams["figure.figsize"] = [10, 8]
-	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
-	plt.hist(sumnear, bins=100)
+	plt.title("Histogram of the Number of Interlopers", fontsize=15)
+	plt.hist(sumbkg, bins=100)
 	# plt.show()
 
 
@@ -84,8 +84,8 @@ def totalNear(near):
 
 
 	plt.rcParams["figure.figsize"] = [10, 8]
-	plt.title("Histogram of the Number of Expected Interlopers", fontsize=15)
-	plt.hist(sumbkg, bins=100)
+	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
+	plt.hist(sumnear, bins=100)
 	# plt.show()
   
     
@@ -551,7 +551,6 @@ def gmag_cut_Nsat(gmag_LRG, Nsat):
 
 # 16 <= gmag < 17
 	Nsat1g = Nsat[np.where((gmag_LRG >= 16.) & (17. > gmag_LRG))]
-# print(len(Nsat1g))
 
 	sumsat1g = []
 	for i in range(len(Nsat1g)):
@@ -632,6 +631,7 @@ def gmag_cut_Nsat(gmag_LRG, Nsat):
 	print("mean number of satellites at gmag >= 23:", mean_sumsat8g)
 
 	print('total number of Nsat arrays:', len(Nsat1g) + len(Nsat2g) + len(Nsat3g) + len(Nsat4g) + len(Nsat5g) + len(Nsat6g) + len(Nsat7g) + len(Nsat8g))
+	# print(len(Nsat1g))
 
 	# plt.title("Histogram of the Number of Satellite Galaxies at Different LRG gmag")               # alsdkfjalsdfjka;sldfkjlsdfjlsdjkflsdkjflsdkjf;lsdkjflsdkjfl
 	# plt.hist(sumsat1g, bins=25, alpha=0.5, label='16 <= gmag < 17')
@@ -652,7 +652,7 @@ def gmag_cut_Nsat(gmag_LRG, Nsat):
 
 	axarr[0, 0].hist(sumsat1g, bins=25, color='lightblue', label='16 <= gmag < 17')
 	axarr[0, 0].legend(loc='upper right')
-	axarr[0, 0].axvline(linewidth=1, color='black')
+	# axarr[0, 0].axvline(linewidth=1, color='black')
 
 	axarr[0, 1].hist(sumsat2g, bins=25, color='orange', label='17 <= gmag < 18')
 	axarr[0, 1].legend(loc='upper right')
