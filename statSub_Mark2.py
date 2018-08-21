@@ -227,6 +227,7 @@ LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3) & (
 id_LRG = []
 id_LRG = np.array(id_LRG)
 id_LRG = id_MATCHED[np.where(LRG_cut)]
+print(len(id_LRG))
 
 idcut = []
 
@@ -244,15 +245,21 @@ idcut = np.array(idcut)
 z_lrg = []
 ra_lrg = []
 dec_lrg = []
+lrg_id = []
 for i in range(len(id_ALL)):
     if (idcut[i] == 1):
         z_lrg.append(z[np.where(id_MATCHED == id_ALL[i])])
         ra_lrg.append(ra_MATCHED[np.where(id_MATCHED == id_ALL[i])])
         dec_lrg.append(dec_MATCHED[np.where(id_MATCHED == id_ALL[i])])
+        lrg_id.append(id_MATCHED[np.where(id_MATCHED == id_ALL[i])])
 
 # print('length of z_lrg:', len(z_lrg))
 z_lrg = np.array(z_lrg)
 z_LRG = np.concatenate(z_lrg)
+print(len(z_LRG))
+lrg_id = np.array(lrg_id)
+LRG_id = np.concatenate(lrg_id)
+print(len(LRG_id))
 ra_lrg = np.array(ra_lrg)
 ra_LRG = np.concatenate(ra_lrg)
 dec_lrg = np.array(dec_lrg)
@@ -314,7 +321,12 @@ zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
 
 color_BKG = gmag_BKG - rmag_BKG
 
+with open('z.txt', 'w') as a:
+    for i in range(len(z_LRG)):
+        a.write("{}               {}\n".format(LRG_id[i], z_LRG[i]))
+
 print("end data parsing")
+
 
 # ------------------------------------------------------------------------------------------------------------
 
