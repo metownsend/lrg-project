@@ -121,13 +121,25 @@ dec_MATCHED = SpecObj_data.field('DEC')
 gflux_MATCHED = []
 gflux_MATCHED = SpecObj_data.field('FLUX_G')
 
+# error in gflux
+gflux_ivar_MATCHED = []
+gflux_ivar_MATCHED = SpecObj_data.field('flux_ivar_g')
+
 # flux_r
 rflux_MATCHED = []
 rflux_MATCHED = SpecObj_data.field('FLUX_R')
 
+# error in rflux
+rflux_ivar_MATCHED = []
+rflux_ivar_MATCHED = SpecObj_data.field('flux_ivar_r')
+
 # flux_z
 zflux_MATCHED = []
 zflux_MATCHED = SpecObj_data.field('FLUX_Z')
+
+# error in zflux
+zflux_ivar_MATCHED = []
+zflux_ivar_MATCHED = SpecObj_data.field('flux_ivar_z')
 
 # nobs == number of images that contribute to the central pixel
 # nobs_g
@@ -188,13 +200,25 @@ dec_ALL = DECaLS_data.field('DEC')
 gflux_ALL = []
 gflux_ALL = DECaLS_data.field('FLUX_G')
 
+# error in gflux
+gflux_ivar_ALL = []
+gflux_ivar_ALL = DECaLS_data.field('flux_ivar_g')
+
 # flux_r
 rflux_ALL = []
 rflux_ALL = DECaLS_data.field('FLUX_R')
 
+# error in rflux
+rflux_ivar_ALL = []
+rflux_ivar_ALL = DECaLS_data.field('flux_ivar_r')
+
 # flux_z
 zflux_ALL = []
 zflux_ALL = DECaLS_data.field('FLUX_Z')
+
+# error in zflux
+zflux_ivar_ALL = []
+zflux_ivar_ALL = DECaLS_data.field('flux_ivar_z')
 
 # nobs == number of images that contribute to the central pixel
 # nobs_g
@@ -321,9 +345,22 @@ zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
 
 color_BKG = gmag_BKG - rmag_BKG
 
-with open('z.txt', 'w') as a:
+# Error in gflux for only LRGs
+gflux_ivar_LRG = gflux_ivar_ALL[np.where(idcut == 1)]
+
+# Error in rflux for only LRGs
+rflux_ivar_LRG = rflux_ivar_ALL[np.where(idcut == 1)]
+
+# Error in zflux for only LRGs
+zflux_ivar_LRG = zflux_ivar_ALL[np.where(idcut == 1)]
+
+with open('lrg_project.cat', 'w') as a:
     for i in range(len(z_LRG)):
-        a.write("{}               {}\n".format(LRG_id[i], z_LRG[i]))
+        a.write("{}    {}    {}    {}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], gflux_ivar_LRG[i], rflux_LRG[i], rflux_ivar_LRG [i], zflux_LRG[i], zflux_ivar_LRG [i], z_LRG[i]))
+
+with open('lrg_project2.cat', 'w') as a:
+    for i in range(len(z_LRG)):
+        a.write("{}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], rflux_LRG[i], zflux_LRG[i], z_LRG[i]))
 
 print("end data parsing")
 
