@@ -2,15 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" afterPath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" afterPath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot8.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_gmag_boot8.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_redshift_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_rmag_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/Nsat_zmag_boot7.pdf" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/bootmed_Nsat.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/bootmed_Nsat.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/bootmed_near.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/bootmed_near.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/cmd.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/cmd.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/magDist.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/magDist.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot8.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_gmag_boot8.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_redshift_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_rmag_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_bins.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_bins.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot1.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot2.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot3.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot4.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot5.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot6.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot7.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/near_zmag_boot7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNbkg.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNbkg.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNear.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNear.pdf" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNsat.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/totalNsat.pdf" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/zDist.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/zDist.pdf" />
-      <change beforePath="$PROJECT_DIR$/lrg_plot_functions.py" afterPath="$PROJECT_DIR$/lrg_plot_functions.py" />
-      <change beforePath="$PROJECT_DIR$/lrg_project.cat" afterPath="$PROJECT_DIR$/lrg_project.cat" />
-      <change beforePath="$PROJECT_DIR$/lrg_project2.cat" afterPath="$PROJECT_DIR$/lrg_project2.cat" />
+      <change beforePath="$PROJECT_DIR$/statSub_Mark2.ipynb" afterPath="$PROJECT_DIR$/statSub_Mark2.ipynb" />
       <change beforePath="$PROJECT_DIR$/statSub_Mark2.py" afterPath="$PROJECT_DIR$/statSub_Mark2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +92,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
+            <state relative-caret-position="-486">
               <caret line="1317" column="0" lean-forward="false" selection-start-line="1317" selection-start-column="0" selection-end-line="1317" selection-end-column="0" />
               <folding />
             </state>
@@ -45,8 +112,8 @@
       <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2961">
-              <caret line="361" column="47" lean-forward="false" selection-start-line="361" selection-start-column="47" selection-end-line="361" selection-end-column="47" />
+            <state relative-caret-position="306">
+              <caret line="524" column="19" lean-forward="false" selection-start-line="524" selection-start-column="19" selection-end-line="524" selection-end-column="19" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -74,8 +141,8 @@
       <list>
         <option value="$PROJECT_DIR$/lrg_sum_functions.py" />
         <option value="$PROJECT_DIR$/divideByTwo.py" />
-        <option value="$PROJECT_DIR$/statSub_Mark2.py" />
         <option value="$PROJECT_DIR$/lrg_plot_functions.py" />
+        <option value="$PROJECT_DIR$/statSub_Mark2.py" />
       </list>
     </option>
   </component>
@@ -593,7 +660,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
+        <state relative-caret-position="-486">
           <caret line="1317" column="0" lean-forward="false" selection-start-line="1317" selection-start-column="0" selection-end-line="1317" selection-end-column="0" />
           <folding />
         </state>
@@ -601,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2961">
-          <caret line="361" column="47" lean-forward="false" selection-start-line="361" selection-start-column="47" selection-end-line="361" selection-end-column="47" />
+        <state relative-caret-position="306">
+          <caret line="524" column="19" lean-forward="false" selection-start-line="524" selection-start-column="19" selection-end-line="524" selection-end-column="19" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
