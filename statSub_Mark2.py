@@ -354,11 +354,13 @@ rflux_ivar_LRG = rflux_ivar_ALL[np.where(idcut == 1)]
 # Error in zflux for only LRGs
 zflux_ivar_LRG = zflux_ivar_ALL[np.where(idcut == 1)]
 
-with open('lrg_project.cat', 'w') as a:
+with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project.cat', 'w') as a:
+    a.write("# id F74 E74 F75 E75 F77 E77 z_spec\n# id gflux gflux_ivar rflux rflux_ivar zflux zflux_ivar z\n")
     for i in range(len(z_LRG)):
         a.write("{}    {}    {}    {}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], gflux_ivar_LRG[i], rflux_LRG[i], rflux_ivar_LRG [i], zflux_LRG[i], zflux_ivar_LRG [i], z_LRG[i]))
 
-with open('lrg_project2.cat', 'w') as a:
+with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project2.cat', 'w') as a:
+    a.write("# id F74 F75 F77 z_spec\n# id gflux rflux zflux z\n")
     for i in range(len(z_LRG)):
         a.write("{}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], rflux_LRG[i], zflux_LRG[i], z_LRG[i]))
 

@@ -27,6 +27,8 @@ def totalNsat(Nsat):
 	plt.title("Histogram of the Number of Satellite Galaxies", fontsize=15)
 	plt.hist(sumsat, bins=100)
 	plt.axvline(linewidth=1, color='r')
+	plt.xlabel(r'$Number$ $of$ $Satellite$ $Galaxies$', fontsize=15)
+	plt.ylabel(r'$counts$', fontsize=15)
 	# plt.show()
 
 
@@ -56,6 +58,8 @@ def totalNbkg(Nbkg):
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Interlopers", fontsize=15)
 	plt.hist(sumbkg, bins=100)
+	plt.xlabel(r'$Number$ $of$ $Interloper$ $Galaxies$', fontsize=15)
+	plt.ylabel(r'$counts$', fontsize=15)
 	# plt.show()
 
 
@@ -86,6 +90,8 @@ def totalNear(near):
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
 	plt.hist(sumnear, bins=100)
+	plt.xlabel(r'$Number$ $of$ $Near$ $Neighbors$', fontsize=15)
+	plt.ylabel(r'$counts$', fontsize=15)
 	# plt.show()
   
     
@@ -1353,7 +1359,7 @@ def zHist(z_LRG):
 
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Redshift Distribution", fontsize = 15)
-	plt.xlabel(r'$redshift', fontsize=15)
+	plt.xlabel(r'$redshift$', fontsize=15)
 	plt.ylabel(r'$counts$', fontsize=15)
 	plt.hist(z_LRG, bins=50)
 	# plt.show()
