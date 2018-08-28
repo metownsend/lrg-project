@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Mark2-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Mark2-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/statSub_Mark2.ipynb" afterPath="$PROJECT_DIR$/statSub_Mark2.ipynb" />
+      <change beforePath="$PROJECT_DIR$/statSub_Test.ipynb" afterPath="$PROJECT_DIR$/statSub_Test.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1763">
+            <state relative-caret-position="1468">
               <caret line="524" column="19" lean-forward="false" selection-start-line="524" selection-start-column="19" selection-end-line="524" selection-end-column="19" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -93,7 +92,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,6 +103,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -628,7 +627,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1763">
+        <state relative-caret-position="1468">
           <caret line="524" column="19" lean-forward="false" selection-start-line="524" selection-start-column="19" selection-end-line="524" selection-end-column="19" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
