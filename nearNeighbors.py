@@ -3,7 +3,7 @@
 # Counting NEAR NEIGHBORS (nn) using KDTree
 # Result is an array of the number of near neighbors each LRG has
 
-def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, xedges, yedges):
+def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, color_BKG, xedges, yedges):
 
     from astropy.io import fits
     from astropy.table import Table

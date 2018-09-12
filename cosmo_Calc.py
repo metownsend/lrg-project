@@ -114,5 +114,7 @@ def cosmoCalcfunc(z):
             ratio = 1. + y/5. + (2./105.)*y*y
         VCM = ratio*DCMR*DCMR*DCMR/3.
         V_Gpc.append(4.*pi*((0.001*c/H0)**3)*VCM)
+
+        print("end cosmoCalc")
         
     return(DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc)

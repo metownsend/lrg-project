@@ -19,7 +19,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # Redshift of galaxies according to sdss
     z = []
-    z = SDSS_data.field('Z') 
+    z = SDSS_data.field('Z')
 
     # Class of object
     gal_class = []
@@ -49,27 +49,26 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     def divideBy2(decNumber):
 
-	# from pythonds.basic.stack import Stack
+    # from pythonds.basic.stack import Stack
     # import numpy as np
 
-        np.vectorize(decNumber)  
+        np.vectorize(decNumber)
         remstack = Stack()
-	
+
         if decNumber == 0: return "0"
-	
+
         while decNumber > 0:
             rem = decNumber % 2
             remstack.push(rem)
             decNumber = decNumber // 2
-		
+
         binString = ""
         while not remstack.isEmpty():
             binString = binString + str(remstack.pop())
-			
+
         return binString
-	
-	
-	
+
+
     # Function to find LOWZ targets
     divideBy2Vec = np.vectorize(divideBy2)
 
@@ -81,8 +80,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     for i in range(len(a)):
         b.append(list((a[i])))
         b[i].reverse()
-	
-# print(b)
+
+    # print(b)
 
     lrg = []
 
@@ -96,12 +95,12 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
         except IndexError:
             pass
             lrg.append(int(0))
-		
+
     lrg = np.array(lrg)
     print('length of sdss lrg array: ', len(lrg))
     print('length of lrg only array:', len(lrg[np.where(lrg == 1)]))
 
-# ------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------
 
     # Read in data from SDSS row matched DECaLS file
 
@@ -119,7 +118,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # Only galaxies included
     gal_type_MATCHED = []
-    gal_type_MATCHED = SpecObj_data.field('TYPE') 
+    gal_type_MATCHED = SpecObj_data.field('TYPE')
 
     # RA
     ra_MATCHED = []
@@ -165,9 +164,9 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
             temp1 = str(brickid_MATCHED[i]) + str(objid_MATCHED[i])
             id_MATCHED.append(temp1)
 
-    print('length of row matched targets in SDSS and DECaLS: ', len(id_MATCHED)) 
-#     id_MATCHED = np.array(id_MATCHED)
-# ------------------------------------------------------------------------------------------------------------
+    print('length of row matched targets in SDSS and DECaLS: ', len(id_MATCHED))
+    id_MATCHED = np.array(id_MATCHED)
+    # ------------------------------------------------------------------------------------------------------------
 
     # Read in data from DECaLS bricks
 
@@ -186,7 +185,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # Only galaxies included
     gal_type_ALL = []
-    gal_type_ALL = DECaLS_data.field('TYPE') 
+    gal_type_ALL = DECaLS_data.field('TYPE')
 
     # RA
     ra_ALL = []
@@ -226,29 +225,29 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     for i in range(len(objid_ALL)):
         temp2 = str(brickid_ALL[i]) + str(objid_ALL[i])
         id_ALL.append(temp2)
-    
+
     print('length of DECaLS targets in brick: ', len(id_ALL))
 
     id_ALL = np.array(id_ALL)
 
     print('length of id_ALL: ', len(id_ALL))
 
-# ------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------
 
     # Make cuts to separate LRGs and background galaxies
 
     # Selects only LRGs (with other cuts)
-    LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (zflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
-
-    id_lrg = []
-    id_LRG = np.array(id_lrg)
+    LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (zflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
+    print(type(LRG_cut))
+    # id_LRG = []
+    # print(type(id_LRG))
     id_LRG = id_MATCHED[np.where(LRG_cut)]
     print('length of id_MATCHED with LRG_cut (id_LRG):', len(id_LRG))
 
     idcut = []
 
     # This creates a list that is the length of id_ALL that matches LRGs from the DECaLS/SDSS file to the DECaLS file
-    # Use id_cut_noLRG == 0 to get galaxy sources that are NOT identified LRGs 
+    # Use id_cut_noLRG == 0 to get galaxy sources that are NOT identified LRGs
     # For use in narrowing down DECaLS-only file (ie 'ALL')
     for i in range(len(id_ALL)):
         if any(id_LRG == id_ALL[i]):
@@ -278,9 +277,9 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     dec_lrg = np.array(dec_lrg)
     dec_LRG = np.concatenate(dec_lrg)
 
-# LRG_cut = ((id_cut_LRG == 1) & (gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1 ) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
-# & (brickid_LRG == brickid_ALL)
-# print(len(LOWZ_cut))
+    # LRG_cut = ((id_cut_LRG == 1) & (gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1 ) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
+    # & (brickid_LRG == brickid_ALL)
+    # print(len(LOWZ_cut))
 
     # Cut out LRGs
     no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 3.) & (robs_ALL >= 3.) & (zobs_ALL >= 3.) & (gflux_ALL > 0.) & (rflux_ALL > 0.) & (zflux_ALL > 0.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
@@ -345,10 +344,42 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     plt.hist(z_LRG, bins=50)
     plt.show()
-    
+
     ra_BKG = ra_ALL[np.where(no_LRG_cut)]
     dec_BKG = dec_ALL[np.where(no_LRG_cut)]
 
     print("end readData")
-    
-    return(ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG)
+
+    return ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG
+
+
+
+# from astropy.io import fits
+# from astropy.table import Table
+# import numpy as np
+# import matplotlib.pylab as plt
+# import matplotlib.lines as mlines
+# from matplotlib.legend import Legend
+# from pythonds.basic.stack import Stack
+# from math import *
+# from sklearn.neighbors import KDTree
+# import healpy as hp
+# from lrg_plot_functions import *
+# from lrg_sum_functions import *
+# from cosmo_Calc import *
+# from divideByTwo import *
+# from readData import *
+# from nearNeighbors import *
+# from localBKG import *
+#
+#
+# hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
+#                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
+# hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
+# hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+# SpecObj_data = hdulist[1].data
+# SDSS_data = hdulist2[1].data
+# DECaLS_data = hdulist3[1].data
+#
+#
+# ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG = readData(SpecObj_data, SDSS_data, DECaLS_data)
