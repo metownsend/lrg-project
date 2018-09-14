@@ -135,7 +135,7 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
                  
     Nbkg = np.asarray(Nbkg)
     
-    return(numbkg, med_local, sigma, omega, Nbkg, dist_r2, dist_r3, zip_list_LRG, zip_list_BKG)  # returns number of galaxies in annulus for every LRG, 
+    return(numbkg, med_local, sigma, omega, Nbkg, r2, dist_r2, r3, dist_r3, zip_list_LRG, zip_list_BKG)  # returns number of galaxies in annulus for every LRG,
                                                 # median number of galaxies in the annulus over all LRGs,
                                                 # the surface density sigma for each LRG, 
                                                 # the solid angle omega for each LRG, 

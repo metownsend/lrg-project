@@ -337,18 +337,18 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     color_BKG = gmag_BKG - rmag_BKG
 
-    plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5)
-    plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5)
-    plt.hist(zmag_BKG, bins=50, color='lightblue', alpha=0.5)
-    plt.show()
-
-    plt.hist(z_LRG, bins=50)
-    plt.show()
+    # plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5)
+    # plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5)
+    # plt.hist(zmag_BKG, bins=50, color='lightblue', alpha=0.5)
+    # plt.show()
+    #
+    # plt.hist(z_LRG, bins=50)
+    # plt.show()
 
     ra_BKG = ra_ALL[np.where(no_LRG_cut)]
     dec_BKG = dec_ALL[np.where(no_LRG_cut)]
 
-    print("end readData")
+    # print("end readData")
 
     return ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG
 
