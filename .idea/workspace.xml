@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Test-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Test-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_modules-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_modules-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/findRadius.py" afterPath="$PROJECT_DIR$/findRadius.py" />
+      <change beforePath="$PROJECT_DIR$/statSub_Test.ipynb" afterPath="$PROJECT_DIR$/statSub_Test.ipynb" />
+      <change beforePath="$PROJECT_DIR$/statSub_modules.ipynb" afterPath="$PROJECT_DIR$/statSub_modules.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +40,7 @@
       <file leaf-file-name="cosmo_Calc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cosmo_Calc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1770">
+            <state relative-caret-position="1010">
               <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
               <folding />
             </state>
@@ -59,7 +62,7 @@
       <file leaf-file-name="localBKG.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
+            <state relative-caret-position="894">
               <caret line="137" column="67" lean-forward="false" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
               <folding />
             </state>
@@ -69,8 +72,8 @@
       <file leaf-file-name="findRadius.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/findRadius.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="82" column="109" lean-forward="false" selection-start-line="82" selection-start-column="109" selection-end-line="82" selection-end-column="109" />
+            <state relative-caret-position="276">
+              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -186,8 +189,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,7 +213,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.statSub">
+  <component name="RunManager" selected="Python.findRadius">
+    <configuration name="findRadius" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lrg-project" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/findRadius.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="lrg_sum_functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,18 +304,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.lrg_sum_functions" />
       <item index="1" class="java.lang.String" itemvalue="Python.readData" />
       <item index="2" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
       <item index="3" class="java.lang.String" itemvalue="Python.statSub" />
+      <item index="4" class="java.lang.String" itemvalue="Python.findRadius" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.statSub" />
-        <item index="1" class="java.lang.String" itemvalue="Python.readData" />
-        <item index="2" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.lrg_sum_functions" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.findRadius" />
+        <item index="1" class="java.lang.String" itemvalue="Python.statSub" />
+        <item index="2" class="java.lang.String" itemvalue="Python.readData" />
+        <item index="3" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.lrg_sum_functions" />
       </list>
     </recent_temporary>
   </component>
@@ -739,14 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cosmo_Calc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statSub.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1515">
@@ -754,6 +769,22 @@
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cosmo_Calc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1010">
+          <caret line="118" column="8" lean-forward="false" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localBKG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="137" column="67" lean-forward="false" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -765,18 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/localBKG.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="137" column="67" lean-forward="false" selection-start-line="137" selection-start-column="67" selection-end-line="137" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/findRadius.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="82" column="109" lean-forward="false" selection-start-line="82" selection-start-column="109" selection-end-line="82" selection-end-column="109" />
+        <state relative-caret-position="276">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding />
         </state>
       </provider>
