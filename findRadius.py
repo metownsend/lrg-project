@@ -7,7 +7,7 @@ def findRadius(radius_inner, radius_outer, kpc_DA)
     from sklearn.neighbors import KDTree
 
     # Distance from which we are looking for satellites around the LRGs
-    # distance_r2 = 5.  # in Mpc
+    # radius_inner = 5.  # in Mpc
     radius_inner_kpc = radius_inner * 10. ** 3.  # in kpc
 
     radius_inner_arcsec = []
@@ -15,7 +15,7 @@ def findRadius(radius_inner, radius_outer, kpc_DA)
         radius_inner_arcsec.append(radius_inner_kpc / kpc_DA[i]) # only using for bkg array so only need dist_inner in arcsec
 
     # Distance from which we are looking for satellites around the LRGs
-    radius_outer = 15.  # in Mpc
+    # radius_outer = 15.  # in Mpc
     radius_outer_kpc = radius_outer * 10. ** 3.  # in kpc
 
     radius_outer = []
@@ -48,8 +48,8 @@ def findRadius(radius_inner, radius_outer, kpc_DA)
     dist_outer_Mpc = dist_outer_kpc * (1. / 1000.)
     # print(d_r3_Mpc)
 
-    # print(ind_r3[2][np.where((d_r3_Mpc[2] >= 3.) & (d_r3_Mpc[2] < 3.5))])
 
+    # Creates CMDs of sources within the search radius for each LRG
     bkg_kpc = []
     for i in range(len(ind_outer)):
         # Creates a zero array if there are no near neighbors
@@ -68,28 +68,38 @@ def findRadius(radius_inner, radius_outer, kpc_DA)
     for i in range(len(ind_outer)):
         # Creates a zero array if there are no near neighbors
         if len(ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]) == 0:
-            temp_kpc = np.zeros((len(xedges) - 1, len(yedges) - 1))
-            bkg_kpc.append(temp_kpc)
+            temp_arcsec = np.zeros((len(xedges) - 1, len(yedges) - 1))
+            bkg_arcsec.append(temp_arcsec)
         # Creates a 2D histogram for satellite galaxies
         else:
-            temp_kpc, x_notuse, y_notuse = np.histogram2d(rmag_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]],
+            temp_arcsec, x_notuse, y_notuse = np.histogram2d(rmag_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]],
                 color_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]], bins=(xedges, yedges),
                 normed=False)
-            bkg_kpc.append(temp_kpc)
+            bkg_arcsec.append(temp_arcsec)
 
 
     # Area of an annulus A = pi * (outer radius**2 - inner radius**2)
 
     # This area calculation only works for physical radius. Look at localBKG.py for how to get area in arcsec
-    A_kpc = np.pi * (radius_outer** 2. - radius_inner** 2.)
+    area_kpc = np.pi * (radius_outer** 2. - radius_inner** 2.)
+
+    # area of annulus in arcsec
+    area_annulus = []
+    for i in range(len(dist_outer_arcsec)):
+        area_annulus.append((np.pi * (dist_outer_arcsec[i] ** 2. - radius_inner_arcsec[i] ** 2.)))
 
     sigma_kpc = []
     for i in range(len(bkg_kpc)):
-        sigma_kpc.append(bkg[i] / A_kpc)
+        sigma_kpc.append(bkg_kpc[i] / area_kpc)
+
+    sigma_arcsec = []
+    for i in range(len(bkg_arcsec)):
+        sigma_arcsec.append(bkg_arcsec[i] / area_arcsec[i])
 
     sum_sigma_kpc = np.sum(sigma_kpc)
-    # print(sum_sigma1)
+    sum_sigma_arcsec = np.sum(sigma_arcsec)
 
-    error_kpc = np.sqrt(sum_sigma)/sum_sigma
+    error_kpc = np.sqrt(sum_sigma_kpc) / sum_sigma_kpc
+    error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
-    return(sum_sigma_kpc, error_kpc, dist_outer_arcsec, dist_outer_kpc, radius_inner_kpc, radius_outer_kpc,
+    return(sum_sigma_kpc, sum_sigma_arcsec, error_kpc, error_arcsec, dist_outer_arcsec, dist_outer_kpc, radius_inner_kpc, radius_outer_kpc_
