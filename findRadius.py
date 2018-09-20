@@ -52,14 +52,14 @@ def findRadius(radius_inner, radius_outer, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_
     bkg_kpc = []
     for i in range(len(ind_outer)):
         # Creates a zero array if there are no near neighbors
-        if len(ind_outer[i]) == 0:
+        if len(ind_outer[i][np.where((dist_outer_kpc[i] >= radius_inner_kpc) & (dist_outer_kpc[i] < radius_outer_kpc))]) == 0:
             temp_kpc = np.zeros((len(xedges) - 1, len(yedges) - 1))
             bkg_kpc.append(temp_kpc)
         # Creates a 2D histogram for satellite galaxies
         else:
             temp_kpc, x_notuse, y_notuse = np.histogram2d(
-                rmag_BKG[ind_outer[i][np.where((dist_outer_kpc[i] >= radius_inner_kpc) & (dist_outer_kpc[i] <= radius_outer_kpc))]],
-                color_BKG[ind_outer[i][np.where((dist_outer_kpc[i] >= radius_inner_kpc) & (dist_outer_kpc[i] <= radius_outer_kpc))]], bins=(xedges, yedges),
+                rmag_BKG[ind_outer[i][np.where((dist_outer_kpc[i] >= radius_inner_kpc) & (dist_outer_kpc[i] < radius_outer_kpc))]],
+                color_BKG[ind_outer[i][np.where((dist_outer_kpc[i] >= radius_inner_kpc) & (dist_outer_kpc[i] < radius_outer_kpc))]], bins=(xedges, yedges),
                 normed=False)
             bkg_kpc.append(temp_kpc)
 
@@ -67,13 +67,13 @@ def findRadius(radius_inner, radius_outer, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_
     bkg_arcsec = []
     for i in range(len(ind_outer)):
         # Creates a zero array if there are no near neighbors
-        if len(ind_outer[i]) == 0:
+        if len(ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]) == 0:
             temp_arcsec = np.zeros((len(xedges) - 1, len(yedges) - 1))
             bkg_arcsec.append(temp_arcsec)
         # Creates a 2D histogram for satellite galaxies
         else:
-            temp_arcsec, x_notuse, y_notuse = np.histogram2d(rmag_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] <= radius_outer_arcsec[i]))]],
-                color_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] <= radius_outer_arcsec[i]))]], bins=(xedges, yedges),
+            temp_arcsec, x_notuse, y_notuse = np.histogram2d(rmag_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] > radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]],
+                color_BKG[ind_outer[i][np.where((dist_outer_arcsec[i] >= radius_inner_arcsec[i]) & (dist_outer_arcsec[i] < radius_outer_arcsec[i]))]], bins=(xedges, yedges),
                 normed=False)
             bkg_arcsec.append(temp_arcsec)
 
@@ -84,24 +84,25 @@ def findRadius(radius_inner, radius_outer, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_
     area_kpc = np.pi * (radius_outer**2. - radius_inner**2.)
 
     # area of annulus in arcsec
-    area_annulus = []
-    for i in range(len(radius_outer_arcsec)):
-        area_annulus.append((np.pi * (radius_outer_arcsec[i] ** 2. - radius_inner_arcsec[i] ** 2.)))
+    # area_annulus = []
+    # for i in range(len(radius_outer_arcsec)):
+    #     area_annulus.append((np.pi * (radius_outer_arcsec[i] ** 2. - radius_inner_arcsec[i] ** 2.)))
 
     # Calculate the surface density sigma for each LRG
     sigma_kpc = []
     for i in range(len(bkg_kpc)):
         sigma_kpc.append(bkg_kpc[i] / area_kpc)
 
-    sigma_arcsec = []
-    for i in range(len(bkg_arcsec)):
-        sigma_arcsec.append(bkg_arcsec[i] / area_annulus[i])
+    # sigma_arcsec = []
+    # for i in range(len(bkg_arcsec)):
+    #     sigma_arcsec.append(bkg_arcsec[i] / area_annulus[i])
 
     sum_sigma_kpc = np.sum(sigma_kpc)
-    sum_sigma_arcsec = np.sum(sigma_arcsec)
+    # sum_sigma_arcsec = np.sum(sigma_arcsec)
 
-    # error_kpc = np.sqrt(sum_sigma_kpc) / sum_sigma_kpc
+    error_kpc = np.sqrt(sum_sigma_kpc) / sum_sigma_kpc
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
     # return(sum_sigma_kpc, sum_sigma_arcsec, error_kpc, error_arcsec, dist_outer_arcsec, dist_outer_kpc, radius_inner_kpc, radius_outer_kpc)
-    return(sum_sigma_kpc, sum_sigma_arcsec, dist_outer_arcsec, dist_outer_kpc, radius_inner_kpc, radius_outer_kpc, bkg_arcsec, ind_outer)
+    # return(sum_sigma_kpc, sum_sigma_arcsec, dist_outer_arcsec, dist_outer_kpc, radius_inner_kpc, radius_outer_kpc, bkg_arcsec, ind_outer)
+    return(sum_sigma_kpc, error_kpc, dist_outer_kpc, radius_inner_kpc, bkg_kpc, dist_outer, radius_outer_kpc)
