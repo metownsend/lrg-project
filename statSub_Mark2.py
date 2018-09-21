@@ -17,10 +17,18 @@ from divideByTwo import *
 
 # Reading in data and assigning it to variables even though Greg seems to think it's a waste of time.
 
-hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
+# hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
+#                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
+# hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
+# hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+# SpecObj_data = hdulist[1].data
+# SDSS_data = hdulist2[1].data
+# DECaLS_data = hdulist3[1].data
+
+hdulist = fits.open('/Users/mindy/Research/Data/lrgProjectData/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
-hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
-hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+hdulist2 = fits.open('/Users/mindy/Research/Data/lrgProjectData/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
+hdulist3 = fits.open('/Users/mindy/Research/Data/lrgProjectData/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
 SpecObj_data = hdulist[1].data
 SDSS_data = hdulist2[1].data
 DECaLS_data = hdulist3[1].data
@@ -346,25 +354,25 @@ zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
 color_BKG = gmag_BKG - rmag_BKG
 
 # Error in gflux for only LRGs
-gflux_ivar_LRG = gflux_ivar_ALL[np.where(idcut == 1)]
+# gflux_ivar_LRG = gflux_ivar_ALL[np.where(idcut == 1)]
+#
+# # Error in rflux for only LRGs
+# rflux_ivar_LRG = rflux_ivar_ALL[np.where(idcut == 1)]
+#
+# # Error in zflux for only LRGs
+# zflux_ivar_LRG = zflux_ivar_ALL[np.where(idcut == 1)]
 
-# Error in rflux for only LRGs
-rflux_ivar_LRG = rflux_ivar_ALL[np.where(idcut == 1)]
-
-# Error in zflux for only LRGs
-zflux_ivar_LRG = zflux_ivar_ALL[np.where(idcut == 1)]
-
-with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project.cat', 'w') as a:
-    a.write("# id F74 E74 F75 E75 F77 E77 z_spec\n# id gflux gflux_ivar rflux rflux_ivar zflux zflux_ivar z\n")
-    for i in range(len(z_LRG)):
-        a.write("{}    {}    {}    {}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], gflux_ivar_LRG[i], rflux_LRG[i], rflux_ivar_LRG [i], zflux_LRG[i], zflux_ivar_LRG [i], z_LRG[i]))
-
-with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project2.cat', 'w') as a:
-    a.write("# id F74 F75 F77 z_spec\n# id gflux rflux zflux z\n")
-    for i in range(len(z_LRG)):
-        a.write("{}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], rflux_LRG[i], zflux_LRG[i], z_LRG[i]))
-
-print("end data parsing")
+# with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project.cat', 'w') as a:
+#     a.write("# id F74 E74 F75 E75 F77 E77 z_spec\n# id gflux gflux_ivar rflux rflux_ivar zflux zflux_ivar z\n")
+#     for i in range(len(z_LRG)):
+#         a.write("{}    {}    {}    {}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], gflux_ivar_LRG[i], rflux_LRG[i], rflux_ivar_LRG [i], zflux_LRG[i], zflux_ivar_LRG [i], z_LRG[i]))
+#
+# with open('/Users/mtownsend/FAST_v1.0/project1/lrg_project2.cat', 'w') as a:
+#     a.write("# id F74 F75 F77 z_spec\n# id gflux rflux zflux z\n")
+#     for i in range(len(z_LRG)):
+#         a.write("{}    {}    {}    {}    {}\n".format(LRG_id[i], gflux_LRG[i], rflux_LRG[i], zflux_LRG[i], z_LRG[i]))
+#
+# print("end data parsing")
 
 
 # ------------------------------------------------------------------------------------------------------------
