@@ -12,23 +12,23 @@ from lrg_plot_functions import *
 from lrg_sum_functions import *
 from cosmo_Calc import *
 from divideByTwo import *
+from scipy import stats
 
 # ----------------------------------------------------------------------------------------
 
 # Reading in data and assigning it to variables even though Greg seems to think it's a waste of time.
 
-# hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
-#                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
-# hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
-# hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
-# SpecObj_data = hdulist[1].data
-# SDSS_data = hdulist2[1].data
-# DECaLS_data = hdulist3[1].data
-
-hdulist = fits.open('/Users/mindy/Research/Data/lrgProjectData/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
+hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
-hdulist2 = fits.open('/Users/mindy/Research/Data/lrgProjectData/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
-hdulist3 = fits.open('/Users/mindy/Research/Data/lrgProjectData/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
+hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+
+
+# hdulist = fits.open('/Users/mindy/Research/Data/lrgProjectData/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
+#                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
+# hdulist2 = fits.open('/Users/mindy/Research/Data/lrgProjectData/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
+# hdulist3 = fits.open('/Users/mindy/Research/Data/lrgProjectData/sweep-240p005-250p010.fits') # this is one sweep file of the DECaLS data
+
 SpecObj_data = hdulist[1].data
 SDSS_data = hdulist2[1].data
 DECaLS_data = hdulist3[1].data

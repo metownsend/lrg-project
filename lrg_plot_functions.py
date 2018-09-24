@@ -7,6 +7,7 @@ def totalNsat(Nsat):
 
 	import matplotlib.pylab as plt 	
 	import numpy as np
+	from scipy import stats
 	
 	sumsat = []
 	
@@ -22,6 +23,9 @@ def totalNsat(Nsat):
 
 	sdsat = np.std(sumsat)
 	print("standard deviation of satellites is", sdsat)
+
+	sterr = stats.sem(sumsat)
+	print("standard error is", sterr)
 
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Satellite Galaxies", fontsize=15)
