@@ -1330,7 +1330,7 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	m = hp.ang2pix(nside, theta, phi)
 	map_ = np.bincount(m, minlength=npixel)
 	# hp.gnomview(map_,rot=(-116.5,9.),xsize=225, flip='geo', title="All Sources in EDR Area")
-	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="Only LRGs in EDR Area")
+	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="All Sources in EDR Area")
 
 	# plt.show()
 
