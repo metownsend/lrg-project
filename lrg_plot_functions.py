@@ -1313,12 +1313,13 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	ra_BKG_mag_cut = ra_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
 	dec_BKG_mag_cut = dec_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
 
-	theta, phi = np.radians(90-dec_LRG), np.radians(ra_LRG)
-	nside = 512
-	npixel= hp.nside2npix(nside)
-	m = hp.ang2pix(nside, theta, phi)
-	map_ = np.bincount(m, minlength=npixel)
-	hp.gnomview(map_,rot=(-116.5,9.),xsize=225,flip='geo', title="Only LRGs in EDR Area")
+	# theta, phi = np.radians(90-dec_LRG), np.radians(ra_LRG)
+	# nside = 512
+	# npixel= hp.nside2npix(nside)
+	# m = hp.ang2pix(nside, theta, phi)
+	# map_ = np.bincount(m, minlength=npixel)
+	# # hp.gnomview(map_,rot=(-116.5,9.),xsize=225,flip='geo', title="Only LRGs in EDR Area")
+	# hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="Only LRGs in EDR Area")
 
 	ra = np.concatenate([ra_LRG, ra_BKG_mag_cut])
 	dec = np.concatenate([dec_LRG, dec_BKG_mag_cut])
@@ -1328,7 +1329,9 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	npixel= hp.nside2npix(nside)
 	m = hp.ang2pix(nside, theta, phi)
 	map_ = np.bincount(m, minlength=npixel)
-	hp.gnomview(map_,rot=(-116.5,9.),xsize=225, flip='geo', title="All Sources in EDR Area")
+	# hp.gnomview(map_,rot=(-116.5,9.),xsize=225, flip='geo', title="All Sources in EDR Area")
+	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="Only LRGs in EDR Area")
+
 	# plt.show()
 
 
