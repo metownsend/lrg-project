@@ -43,6 +43,7 @@ def totalNsat(Nsat):
 def totalNbkg(Nbkg):
 	import matplotlib.pylab as plt
 	import numpy as np
+	from scipy import stats
 
 	sumbkg = []
 
@@ -59,6 +60,9 @@ def totalNbkg(Nbkg):
 	sdbkg = np.std(sumbkg)
 	print("standard deviation of interloper is", sdbkg)
 
+	sterrbkg = stats.sem(sumbkg)
+	print("standard error is", sterrbkg)
+
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Interlopers", fontsize=15)
 	plt.hist(sumbkg, bins=100)
@@ -74,6 +78,7 @@ def totalNbkg(Nbkg):
 def totalNear(near):
 	import matplotlib.pylab as plt
 	import numpy as np
+	from scipy import stats
 
 	sumnear = []
 
@@ -90,6 +95,8 @@ def totalNear(near):
 	sdnear = np.std(sumnear)
 	print("standard deviation of near neighbor is", sdnear)
 
+	sterrNear = stats.sem(sumnear)
+	print("standard error is", sterrNear)
 
 	plt.rcParams["figure.figsize"] = [10, 8]
 	plt.title("Histogram of the Number of Near Neighbors", fontsize=15)
