@@ -77,7 +77,7 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedge
     # print(sum_sigma_kpc)
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
 
-    error_kpc = np.sqrt(sum_sigma_kpc) # / sum_sigma_kpc
+    error_kpc = np.sqrt(sum_sigma_kpc) / sum_sigma_kpc
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
