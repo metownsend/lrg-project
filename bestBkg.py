@@ -6,6 +6,7 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedge
     # a must be greater than b by at least 1
 
     import numpy as np
+    from astropy import stats
 
     # dist_outer is given in degree, since that is the input. This converts degree to arcsecond and kpc
     dist_outer_arcsec = []
@@ -77,7 +78,8 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedge
     # print(sum_sigma_kpc)
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
 
-    error_kpc = np.sqrt(sum_sigma_kpc) / sum_sigma_kpc
+    error_kpc = np.sqrt(sum_sigma_kpc) / area_kpc
+    # lower_CI_kpc, upper_CI_kpc = stats.poisson_conf_interval(sum_sigma_kpc, interval='root-n')
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
