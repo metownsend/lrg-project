@@ -1,7 +1,7 @@
 
 # A function to determine how far from the LRG we should go to get appropriate background
 
-def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedges, rmag_survey, color_survey):
+def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, rmag_survey, color_survey):
 
     # a must be greater than b by at least 1
 
@@ -9,34 +9,37 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedge
     from astropy import stats
 
     # dist_outer is given in degree, since that is the input. This converts degree to arcsecond and kpc
-    dist_outer_arcsec = []
-    temp1 = []
-    for i in range(len(kpc_DA)):
-        for j in range(len(dist_outer[i])):
-            x = np.float64(dist_outer[i][j] / kpc_DA[i])
-            #         print(type(x))
-            temp1.append(x)
-        dist_outer_arcsec.append(temp1)
-        temp1 = []
+    # dist_outer_arcsec = []
+    # temp1 = []
+    # for i in range(len(kpc_DA)):
+    #     for j in range(len(dist_outer[i])):
+    #         x = np.float64(dist_outer[i][j] / kpc_DA[i])
+    #         #         print(type(x))
+    #         temp1.append(x)
+    #     dist_outer_arcsec.append(temp1)
+    #     temp1 = []
+    #
+    # dist_outer_kpc = []
+    # temp2 = []
+    # for i in range(len(kpc_DA)):
+    #     for j in range(len(dist_outer[i])):
+    #         y = np.float64(dist_outer[i][j] * 3600. * kpc_DA[i])
+    #         temp2.append(y)
+    #     dist_outer_kpc.append(temp2)
+    #     temp2 = []
+    #
+    # # defines inner and outer radius for search annulus
+    # inner_radius = (radius_outer_kpc / a) * b
+    # outer_radius = (radius_outer_kpc / a) * (b + 1.)
 
-    dist_outer_kpc = []
-    temp2 = []
-    for i in range(len(kpc_DA)):
-        for j in range(len(dist_outer[i])):
-            y = np.float64(dist_outer[i][j] * 3600. * kpc_DA[i])
-            temp2.append(y)
-        dist_outer_kpc.append(temp2)
-        temp2 = []
-
-    # defines inner and outer radius for search annulus
-    inner_radius = (radius_outer_kpc / a) * b
-    outer_radius = (radius_outer_kpc / a) * (b + 1.)
+    inner_radius = (radius_outer / a) * float(b)
+    outer_radius = (radius_outer / a) * (float(b) + 1.)
 
     # creates a list of arrays of indices in dist_outer_kpc that include sources within search annulus
     dist_index = []
-    for i in range(len(dist_outer_kpc)):
+    for i in range(len(dist_outer)):
         index = \
-        np.where((np.asarray(dist_outer_kpc[i]) > inner_radius) & (np.asarray(dist_outer_kpc[i]) < outer_radius))[0]
+        np.where((np.asarray(dist_outer[i]) > inner_radius) & (np.asarray(dist_outer[i]) < outer_radius))[0]
         dist_index.append(index)
         index = []
 
@@ -83,4 +86,4 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer_kpc, kpc_DA, xedges, yedge
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
-    return (sum_sigma_kpc, outer_radius, inner_radius, bkg_kpc, error_kpc)
+    return (sum_sigma_kpc, outer_radius, inner_radius, bkg_kpc, error_kpc, sigma_kpc)
