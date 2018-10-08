@@ -50,40 +50,40 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
         ind.append(t)
 
     # creates a CMD of only sources in search annulus
-    bkg_kpc = []
+    bkg = []
     for i in range(len(ind)):
         # Creates a zero array if there are no near neighbors
         if len(ind[i]) == 0:
-            temp_kpc1 = np.zeros((len(xedges) - 1, len(yedges) - 1))
-            bkg_kpc.append(temp_kpc1)
+            temp1 = np.zeros((len(xedges) - 1, len(yedges) - 1))
+            bkg.append(temp1)
         #         print("1")
         # Creates a 2D histogram for satellite galaxies
         else:
-            temp_kpc2, x_notuse, y_notuse = np.histogram2d(rmag_survey[ind[i]], color_survey[ind[i]],
+            temp2, x_notuse, y_notuse = np.histogram2d(rmag_survey[ind[i]], color_survey[ind[i]],
                                                            bins=(xedges, yedges), normed=False)
-            bkg_kpc.append(temp_kpc2)
+            bkg.append(temp2)
     #         print("2")
 
     # This area calculation only works for physical radius. Look at localBKG.py for how to get area in arcsec
-    area_kpc = np.pi * ((outer_radius) ** 2. - (inner_radius) ** 2.)
+    area = np.pi * ((outer_radius) ** 2. - (inner_radius) ** 2.)
     # print(area_kpc)
 
     # Calculate the surface density sigma for each LRG
-    sigma_kpc = []
-    for i in range(len(bkg_kpc)):
-        sigma_kpc.append(bkg_kpc[i] / area_kpc)
+    sigma = []
+    for i in range(len(bkg)):
+        sigma.append(bkg[i] / area)
 
     # sigma_arcsec = []
     # for i in range(len(bkg_arcsec)):
     #     sigma_arcsec.append(bkg_arcsec[i] / area_annulus[i])
 
-    sum_sigma_kpc = np.sum(sigma_kpc)
+    sum_sigma = np.sum(sigma)
     # print(sum_sigma_kpc)
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
 
-    error_kpc = np.sqrt(sum_sigma_kpc) / area_kpc
+    error = np.sqrt(sum_sigma) / area
     # lower_CI_kpc, upper_CI_kpc = stats.poisson_conf_interval(sum_sigma_kpc, interval='root-n')
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
-    return (sum_sigma_kpc, outer_radius, inner_radius, bkg_kpc, error_kpc, sigma_kpc)
+    return (sum_sigma, outer_radius, inner_radius, bkg, error, sigma)
