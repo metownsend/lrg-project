@@ -46,7 +46,8 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
     # matches dist_index indices to actual indices of sources in their ra/dec arrays
     ind = []
     for i in range(len(ind_outer)):
-        t = ind_outer[i][dist_index[i]]
+        # t = ind_outer[i][dist_index[i]] # use for a list of LRGs
+        t = ind_outer[dist_index[i]] # use for single LRG
         ind.append(t)
 
     # creates a CMD of only sources in search annulus
@@ -86,4 +87,4 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
-    return (sum_sigma, outer_radius, inner_radius, bkg, error, sigma)
+    return (sum_sigma, outer_radius, inner_radius, bkg, error, sigma, area)
