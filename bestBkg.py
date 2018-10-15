@@ -1,7 +1,7 @@
 
 # A function to determine how far from the LRG we should go to get appropriate background
 
-def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, rmag_survey, color_survey):
+def bestBKG(a, b, dist_outer, ind_outer, radius_max, kpc_DA, xedges, yedges, rmag_survey, color_survey):
 
     # a must be greater than b by at least 1
 
@@ -32,8 +32,8 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
     # inner_radius = (radius_outer_kpc / a) * b
     # outer_radius = (radius_outer_kpc / a) * (b + 1.)
 
-    inner_radius = (radius_outer / a) * float(b)
-    outer_radius = (radius_outer / a) * (float(b) + 1.)
+    inner_radius = (radius_max / a) * float(b)
+    outer_radius = (radius_max / a) * (float(b) + 1.)
 
     # creates a list of arrays of indices in dist_outer_kpc that include sources within search annulus
     dist_index = []
@@ -68,7 +68,7 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
     #         print("2")
 
     # This area calculation only works for physical radius. Look at localBKG.py for how to get area in arcsec
-    area = np.pi * ((outer_radius) ** 2. - (inner_radius) ** 2.)
+    area = np.pi * (outer_radius ** 2. - inner_radius ** 2.)
     # print(area_kpc)
 
     # Calculate the surface density sigma for each LRG
@@ -80,7 +80,9 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_outer, kpc_DA, xedges, yedges, r
     # for i in range(len(bkg_arcsec)):
     #     sigma_arcsec.append(bkg_arcsec[i] / area_annulus[i])
 
-    sum_sigma = np.sum(sigma)
+    # sum_sigma = []
+    # for i in range(len(sigma)):
+    sum_sigma = np.sum(sigma[i])
     # print(sum_sigma_kpc)
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
 
