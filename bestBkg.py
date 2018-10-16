@@ -1,7 +1,7 @@
 
 # A function to determine how far from the LRG we should go to get appropriate background
 
-def bestBKG(a, b, dist_outer, ind_outer, radius_max, kpc_DA, xedges, yedges, rmag_survey, color_survey):
+def bestBKG(a, b, dist_outer, ind_outer, radius_max, xedges, yedges, rmag_survey, color_survey):
 
     # a must be greater than b by at least 1
 
@@ -48,8 +48,8 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_max, kpc_DA, xedges, yedges, rma
     # matches dist_index indices to actual indices of sources in their ra/dec arrays
     ind = []
     for i in range(len(ind_outer)):
-        t = ind_outer[i][dist_index[i]] # use for a list of LRGs
-        # t = ind_outer[dist_index[i]] # use for single LRG
+        # t = ind_outer[i][dist_index[i]] # use for a list of LRGs
+        t = ind_outer[dist_index[i]] # use for single LRG
         ind.append(t)
 
     # creates a CMD of only sources in search annulus
@@ -82,13 +82,14 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_max, kpc_DA, xedges, yedges, rma
 
     # sum_sigma = []
     # for i in range(len(sigma)):
-    sum_sigma = np.sum(sigma[i])
+    sum_sigma = np.sum(sigma)
     # print(sum_sigma_kpc)
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
+    sumbkg = np.sum(bkg)
 
     error = np.sqrt(sum_sigma) / area
     # lower_CI_kpc, upper_CI_kpc = stats.poisson_conf_interval(sum_sigma_kpc, interval='root-n')
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
 
-    return (sum_sigma, outer_radius, inner_radius, bkg, error, sigma, area)
+    return (sum_sigma, outer_radius, inner_radius, sumbkg, error, sigma, area)
