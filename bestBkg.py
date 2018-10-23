@@ -74,7 +74,7 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_max, xedges, yedges, rmag_survey
     # Calculate the surface density sigma for each LRG
     sigma = []
     for i in range(len(bkg)):
-        sigma.append(bkg[i] / area)
+        sigma.append(np.sum(bkg[i]) / area)
 
     # sigma_arcsec = []
     # for i in range(len(bkg_arcsec)):
@@ -87,7 +87,9 @@ def bestBKG(a, b, dist_outer, ind_outer, radius_max, xedges, yedges, rmag_survey
     # sum_sigma_arcsec = np.sum(sigma_arcsec)
     sumbkg = np.sum(bkg)
 
-    error = np.sqrt(sum_sigma) / area
+    error = []
+    for i in range(len(bkg)):
+        error.append(np.sqrt(np.sum(bkg[i])) / area)
     # lower_CI_kpc, upper_CI_kpc = stats.poisson_conf_interval(sum_sigma_kpc, interval='root-n')
     # print(error_kpc)
     # error_arcsec = np.sqrt(sum_sigma_arcsec) / sum_sigma_arcsec
