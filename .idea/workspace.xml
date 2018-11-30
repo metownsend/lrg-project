@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/bestBKG_test-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/bestBKG_test-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_modules-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_modules-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/bestBKG_test.ipynb" afterPath="$PROJECT_DIR$/bestBKG_test.ipynb" />
       <change beforePath="$PROJECT_DIR$/statSub_modules.ipynb" afterPath="$PROJECT_DIR$/statSub_modules.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +20,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20345">
+            <state relative-caret-position="20370">
               <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
               <folding />
             </state>
@@ -70,8 +72,8 @@
       <file leaf-file-name="statSub.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statSub.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="990">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -101,7 +103,7 @@
       <file leaf-file-name="bestBkg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bestBkg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
+            <state relative-caret-position="1336">
               <caret line="91" column="52" lean-forward="false" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
               <folding />
             </state>
@@ -175,6 +177,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,8 +190,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -762,7 +764,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20345">
+        <state relative-caret-position="20370">
           <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
           <folding />
         </state>
@@ -770,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="990">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -780,7 +782,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bestBkg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
+        <state relative-caret-position="1336">
           <caret line="91" column="52" lean-forward="false" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
           <folding />
         </state>
