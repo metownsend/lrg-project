@@ -1310,7 +1310,7 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 
 	import matplotlib.pyplot as plt
 	import numpy as np 
-	import healpy as hp
+	from astropy_healpix import healpy as hp
 	
 #     %matplotlib inline
 
