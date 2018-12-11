@@ -1317,8 +1317,8 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 # ra_LRG_mag_cut = ra_LRG[np.where((gmag_LRG > 24.) & (rmag_LRG > 24.) & (zmag_LRG > 24.))]
 # dec_LRG_mag_cut = dec_LRG[np.where((gmag_LRG > 24.) & (rmag_LRG > 24.) & (zmag_LRG > 24.))]
 
-	ra_BKG_mag_cut = ra_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
-	dec_BKG_mag_cut = dec_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
+	# ra_BKG_mag_cut = ra_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
+	# dec_BKG_mag_cut = dec_BKG[np.where((gmag_BKG < 21.) & (rmag_BKG < 21.) & (zmag_BKG < 21.))]
 
 	# theta, phi = np.radians(90-dec_LRG), np.radians(ra_LRG)
 	# nside = 512
