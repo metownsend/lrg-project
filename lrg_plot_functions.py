@@ -1328,8 +1328,8 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	# # hp.gnomview(map_,rot=(-116.5,9.),xsize=225,flip='geo', title="Only LRGs in EDR Area")
 	# hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="Only LRGs in EDR Area")
 
-	ra = np.concatenate([ra_LRG, ra_BKG_mag_cut])
-	dec = np.concatenate([dec_LRG, dec_BKG_mag_cut])
+	ra = np.concatenate([ra_LRG, ra_BKG])
+	dec = np.concatenate([dec_LRG, dec_BKG])
 
 	theta, phi = np.radians(90-dec), np.radians(ra)
 	nside = 512
