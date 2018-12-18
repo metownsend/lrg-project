@@ -1306,7 +1306,7 @@ def zmag_cut_near(zmag_LRG, near):
 # Use HEALPix/Healpy to plot of sources over the sky
 
 # add flip='geo' to make it look like the RA-Dec plot
-def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
+def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG, x):
 
 	import matplotlib.pyplot as plt
 	import numpy as np 
@@ -1331,13 +1331,13 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG):
 	ra = np.concatenate([ra_LRG, ra_BKG])
 	dec = np.concatenate([dec_LRG, dec_BKG])
 
-	theta, phi = np.radians(90-dec), np.radians(ra)
-	nside = 512
+	theta, phi = np.radians(90.-dec_BKG), np.radians(ra_BKG)
+	nside = 1024
 	npixel= hp.nside2npix(nside)
 	m = hp.ang2pix(nside, theta, phi)
 	map_ = np.bincount(m, minlength=npixel)
-	# hp.gnomview(map_,rot=(-116.5,9.),xsize=225, flip='geo', title="All Sources in EDR Area")
-	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title="All Sources in EDR Area")
+	# hp.gnomview(map_,rot=(-116.5, 8.25),xsize=225, flip='geo', title="All Sources in EDR Area")
+	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title='BKG Sources in C-M bin {}'.format(str(x)))
 
 	# plt.show()
 

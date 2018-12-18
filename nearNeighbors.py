@@ -53,4 +53,4 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, c
             hist2d, x_notuse, y_notuse = np.histogram2d(rmag_BKG[ind[i]], color_BKG[ind[i]], bins=(xedges, yedges), normed=False)
             near.append(hist2d)
     
-    return(distance_kpc, near)
+    return(distance_kpc, near, gal_tree)
