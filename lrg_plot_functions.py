@@ -1331,13 +1331,13 @@ def healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG, x):
 	ra = np.concatenate([ra_LRG, ra_BKG])
 	dec = np.concatenate([dec_LRG, dec_BKG])
 
-	theta, phi = np.radians(90.-dec_BKG), np.radians(ra_BKG)
-	nside = 1024
+	theta, phi = np.radians(90.-dec), np.radians(ra)
+	nside = 256
 	npixel= hp.nside2npix(nside)
 	m = hp.ang2pix(nside, theta, phi)
 	map_ = np.bincount(m, minlength=npixel)
 	# hp.gnomview(map_,rot=(-116.5, 8.25),xsize=225, flip='geo', title="All Sources in EDR Area")
-	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title='BKG Sources in C-M bin {}'.format(str(x)))
+	hp.gnomview(map_, rot=(-116.5, 8.25), xsize=225, flip='geo', title='All Sources in C-M bin {}'.format(str(x)))
 
 	# plt.show()
 

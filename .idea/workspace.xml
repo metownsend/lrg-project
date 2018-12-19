@@ -2,12 +2,311 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" afterPath="$PROJECT_DIR$/Plots/.ipynb_checkpoints/LRG_Project_Plots-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" afterPath="$PROJECT_DIR$/Plots/LRG_Project_Plots.ipynb" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_1.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_10.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_10.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_100.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_100.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_11.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_11.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_12.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_12.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_13.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_13.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_14.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_14.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_15.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_15.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_16.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_16.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_17.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_17.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_18.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_18.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_19.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_19.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_2.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_20.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_20.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_21.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_21.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_22.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_22.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_23.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_23.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_24.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_24.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_25.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_25.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_26.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_26.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_27.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_27.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_28.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_28.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_29.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_29.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_3.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_30.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_30.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_31.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_31.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_32.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_32.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_33.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_33.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_34.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_34.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_35.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_35.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_36.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_36.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_37.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_37.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_38.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_38.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_39.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_39.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_4.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_40.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_40.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_41.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_41.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_42.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_42.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_43.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_43.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_44.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_44.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_45.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_45.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_46.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_46.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_47.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_47.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_48.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_48.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_49.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_49.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_5.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_50.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_50.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_51.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_51.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_52.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_52.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_53.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_53.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_54.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_54.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_55.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_55.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_56.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_56.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_57.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_57.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_58.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_58.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_59.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_59.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_6.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_60.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_60.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_61.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_61.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_62.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_62.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_63.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_63.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_64.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_64.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_65.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_65.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_66.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_66.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_67.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_67.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_68.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_68.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_69.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_69.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_7.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_70.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_70.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_71.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_71.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_72.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_72.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_73.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_73.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_74.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_74.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_75.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_75.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_76.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_76.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_77.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_77.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_78.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_78.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_79.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_79.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_8.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_8.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_80.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_80.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_81.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_81.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_82.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_82.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_83.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_83.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_84.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_84.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_85.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_85.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_86.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_86.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_87.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_87.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_88.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_88.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_89.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_89.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_9.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_9.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_90.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_90.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_91.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_91.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_92.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_92.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_93.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_93.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_94.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_94.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_95.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_95.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_96.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_96.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_97.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_97.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_98.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_98.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_99.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_BKG_bins_99.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_1.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_10.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_10.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_100.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_100.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_11.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_11.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_12.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_12.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_13.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_13.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_14.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_14.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_15.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_15.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_16.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_16.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_17.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_17.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_18.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_18.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_19.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_19.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_2.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_20.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_20.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_21.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_21.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_22.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_22.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_23.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_23.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_24.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_24.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_25.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_25.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_26.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_26.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_27.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_27.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_28.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_28.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_29.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_29.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_3.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_30.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_30.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_31.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_31.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_32.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_32.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_33.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_33.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_34.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_34.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_35.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_35.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_36.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_36.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_37.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_37.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_38.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_38.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_39.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_39.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_4.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_40.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_40.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_41.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_41.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_42.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_42.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_43.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_43.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_44.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_44.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_45.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_45.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_46.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_46.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_47.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_47.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_48.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_48.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_49.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_49.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_5.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_50.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_50.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_51.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_51.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_52.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_52.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_53.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_53.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_54.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_54.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_55.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_55.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_56.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_56.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_57.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_57.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_58.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_58.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_59.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_59.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_6.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_60.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_60.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_61.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_61.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_62.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_62.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_63.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_63.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_64.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_64.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_65.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_65.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_66.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_66.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_67.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_67.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_68.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_68.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_69.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_69.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_7.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_70.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_70.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_71.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_71.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_72.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_72.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_73.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_73.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_74.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_74.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_75.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_75.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_76.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_76.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_77.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_77.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_78.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_78.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_79.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_79.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_8.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_8.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_80.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_80.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_81.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_81.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_82.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_82.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_83.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_83.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_84.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_84.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_85.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_85.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_86.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_86.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_87.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_87.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_88.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_88.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_89.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_89.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_9.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_9.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_90.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_90.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_91.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_91.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_92.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_92.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_93.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_93.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_94.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_94.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_95.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_95.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_96.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_96.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_97.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_97.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_98.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_98.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_99.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_LRG_bins_99.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_1.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_1.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_10.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_10.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_100.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_100.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_11.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_11.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_12.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_12.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_13.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_13.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_14.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_14.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_15.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_15.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_16.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_16.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_17.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_17.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_18.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_18.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_19.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_19.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_2.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_2.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_20.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_20.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_21.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_21.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_22.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_22.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_23.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_23.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_24.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_24.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_25.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_25.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_26.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_26.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_27.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_27.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_28.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_28.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_29.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_29.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_3.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_3.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_30.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_30.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_31.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_31.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_32.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_32.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_33.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_33.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_34.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_34.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_35.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_35.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_36.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_36.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_37.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_37.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_38.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_38.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_39.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_39.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_4.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_4.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_40.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_40.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_41.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_41.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_42.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_42.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_43.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_43.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_44.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_44.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_45.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_45.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_46.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_46.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_47.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_47.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_48.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_48.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_49.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_49.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_5.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_5.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_50.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_50.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_51.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_51.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_52.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_52.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_53.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_53.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_54.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_54.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_55.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_55.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_56.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_56.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_57.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_57.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_58.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_58.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_59.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_59.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_6.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_6.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_60.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_60.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_61.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_61.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_62.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_62.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_63.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_63.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_64.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_64.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_65.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_65.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_66.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_66.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_67.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_67.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_68.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_68.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_69.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_69.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_7.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_7.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_70.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_70.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_71.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_71.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_72.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_72.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_73.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_73.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_74.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_74.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_75.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_75.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_76.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_76.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_77.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_77.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_78.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_78.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_79.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_79.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_8.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_8.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_80.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_80.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_81.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_81.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_82.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_82.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_83.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_83.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_84.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_84.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_85.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_85.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_86.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_86.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_87.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_87.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_88.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_88.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_89.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_89.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_9.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_9.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_90.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_90.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_91.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_91.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_92.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_92.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_93.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_93.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_94.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_94.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_95.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_95.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_96.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_96.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_97.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_97.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_98.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_98.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_99.pdf" afterPath="$PROJECT_DIR$/Plots/HEALPix_Plots/HEALPix_bins_99.pdf" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/cmd.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/cmd.pdf" />
+      <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/healpix.pdf" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/healpix.pdf" />
       <change beforePath="$PROJECT_DIR$/lrg_plot_functions.py" afterPath="$PROJECT_DIR$/lrg_plot_functions.py" />
-      <change beforePath="$PROJECT_DIR$/nearNeighbors.py" afterPath="$PROJECT_DIR$/nearNeighbors.py" />
-      <change beforePath="$PROJECT_DIR$/statSub_Mark2.py" afterPath="$PROJECT_DIR$/statSub_Mark2.py" />
+      <change beforePath="$PROJECT_DIR$/readData.py" afterPath="$PROJECT_DIR$/readData.py" />
       <change beforePath="$PROJECT_DIR$/statSub_modules.ipynb" afterPath="$PROJECT_DIR$/statSub_modules.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,18 +321,18 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="1328" column="97" lean-forward="false" selection-start-line="1328" selection-start-column="97" selection-end-line="1328" selection-end-column="97" />
+            <state relative-caret-position="443">
+              <caret line="1334" column="15" lean-forward="false" selection-start-line="1334" selection-start-column="15" selection-end-line="1334" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="statSub_Mark2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3361">
-              <caret line="268" column="113" lean-forward="true" selection-start-line="268" selection-start-column="113" selection-end-line="268" selection-end-column="113" />
+            <state relative-caret-position="386">
+              <caret line="411" column="40" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="411" selection-end-column="40" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -66,9 +365,21 @@
       <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="257" column="17" lean-forward="true" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HEALPixPlots.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HEALPixPlots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +397,7 @@
       <file leaf-file-name="bestBkg.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bestBkg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
+            <state relative-caret-position="645">
               <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding />
             </state>
@@ -130,25 +441,26 @@
         <option value="$PROJECT_DIR$/divideByTwo.py" />
         <option value="$PROJECT_DIR$/cosmo_Calc.py" />
         <option value="$PROJECT_DIR$/localBKG.py" />
-        <option value="$PROJECT_DIR$/readData.py" />
         <option value="$PROJECT_DIR$/statSub.py" />
         <option value="$PROJECT_DIR$/findRadius.py" />
         <option value="$PROJECT_DIR$/bestBkg.py" />
         <option value="$PROJECT_DIR$/localBKG.ipynb" />
         <option value="$PROJECT_DIR$/nearNeighbors.py" />
-        <option value="$PROJECT_DIR$/lrg_plot_functions.py" />
         <option value="$PROJECT_DIR$/statSub_Mark2.py" />
+        <option value="$PROJECT_DIR$/readData.py" />
+        <option value="$PROJECT_DIR$/lrg_plot_functions.py" />
+        <option value="$PROJECT_DIR$/HEALPixPlots.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="257" />
+    <option name="x" value="256" />
     <option name="y" value="112" />
     <option name="width" value="2089" />
     <option name="height" value="1178" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -161,21 +473,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lrg-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lrg-project" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -197,7 +495,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.findRadius">
+  <component name="RunManager" selected="Python.HEALPixPlots">
+    <configuration name="HEALPixPlots" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="lrg-project" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HEALPixPlots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="findRadius" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -211,24 +527,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lrg-project" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/findRadius.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="lrg_sum_functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lrg-project" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lrg_sum_functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,19 +587,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.lrg_sum_functions" />
-      <item index="1" class="java.lang.String" itemvalue="Python.readData" />
-      <item index="2" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.statSub" />
-      <item index="4" class="java.lang.String" itemvalue="Python.findRadius" />
+      <item index="0" class="java.lang.String" itemvalue="Python.readData" />
+      <item index="1" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.statSub" />
+      <item index="3" class="java.lang.String" itemvalue="Python.findRadius" />
+      <item index="4" class="java.lang.String" itemvalue="Python.HEALPixPlots" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.findRadius" />
-        <item index="1" class="java.lang.String" itemvalue="Python.statSub" />
-        <item index="2" class="java.lang.String" itemvalue="Python.readData" />
-        <item index="3" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.lrg_sum_functions" />
+        <item index="0" class="java.lang.String" itemvalue="Python.HEALPixPlots" />
+        <item index="1" class="java.lang.String" itemvalue="Python.readData" />
+        <item index="2" class="java.lang.String" itemvalue="Python.findRadius" />
+        <item index="3" class="java.lang.String" itemvalue="Python.statSub" />
+        <item index="4" class="java.lang.String" itemvalue="Python.statSub_Mark2" />
       </list>
     </recent_temporary>
   </component>
@@ -322,19 +620,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="257" y="112" width="2089" height="1178" extended-state="0" />
+    <frame x="256" y="112" width="2089" height="1178" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -349,18 +647,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/divideByTwo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4725">
@@ -722,24 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bestBkg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
+        <state relative-caret-position="645">
           <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="1328" column="97" lean-forward="false" selection-start-line="1328" selection-start-column="97" selection-end-line="1328" selection-end-column="97" />
           <folding />
         </state>
       </provider>
@@ -756,8 +1031,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_Mark2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3361">
-          <caret line="268" column="113" lean-forward="true" selection-start-line="268" selection-start-column="113" selection-end-line="268" selection-end-column="113" />
+        <state relative-caret-position="386">
+          <caret line="411" column="40" lean-forward="false" selection-start-line="402" selection-start-column="0" selection-end-line="411" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="257" column="17" lean-forward="true" selection-start-line="257" selection-start-column="17" selection-end-line="257" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="1334" column="15" lean-forward="false" selection-start-line="1334" selection-start-column="15" selection-end-line="1334" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HEALPixPlots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
