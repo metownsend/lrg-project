@@ -7,7 +7,6 @@ from matplotlib.legend import Legend
 from pythonds.basic.stack import Stack
 from math import *
 from sklearn.neighbors import KDTree
-import healpy as hp
 from lrg_plot_functions import *
 from lrg_sum_functions import *
 from cosmo_Calc import *
@@ -37,7 +36,7 @@ SpecObj_data = hdulist[1].data
 SDSS_data = hdulist2[1].data
 DECaLS_data = hdulist3[1].data
 
-ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG = readData(SpecObj_data, SDSS_data, DECaLS_data)
+id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
 
 print("end readdata")
 
@@ -52,19 +51,19 @@ sd = H/(17.5 * (3600.**2.)) # converts 25 square degrees to square arcseconds
 
 print("end surface density calculation")
 
-# cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges)
+cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges)
 
 # plt.savefig("/Users/mtownsend/anaconda/GitHub/lrg-project/Plots/LRG_science_plots/cmd.pdf")
-
-# print('end CMD')
 
 # plt.scatter(ra_BKG, dec_BKG, s=1, color='blue')
 # plt.scatter(ra_LRG, dec_LRG, s=1, color='red')
 # plt.rcParams["figure.figsize"] = [15, 15]
 # plt.show()
 
-healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG, 1)
-plt.show()
+print('end CMD')
+
+# healpix(ra_BKG, dec_BKG, ra_LRG, dec_LRG, gmag_BKG, rmag_BKG, zmag_BKG, 1)
+# plt.show()
 
 # plt.savefig("/Users/mtownsend/anaconda/GitHub/lrg-project/Plots/LRG_science_plots/healpix.pdf")
 # # plt.savefig("/Users/mindy/Research/Plots/LRG_Project_Plots/healpix.pdf")
@@ -91,5 +90,34 @@ print('end healpix')
 #         # plt.show()
 #
 # print('end binned healpix')
+
+# Find out which sources are in which bin
+
+ra = np.concatenate([ra_LRG, ra_BKG])
+dec = np.concatenate([dec_LRG, dec_BKG])
+
+theta = []
+phi = []
+for i in range(len(ra)):
+    theta.append(np.radians(90.-dec[i]))
+    phi.append(np.radians(ra[i]))
+
+nside = 256
+npixel = hp.nside2npix(nside)
+
+#
+all_pixels = hp.query_strip(nside, np.radians(90.-np.amax(dec)), np.radians(90.-np.amin(dec)), inclusive=True)
+
+pixel = []
+for i in range(len(theta)):
+    pixel.append(hp.ang2pix(nside, theta[i], phi[i], nest=False, lonlat=False))
+
+# n = 0
+new_array = []
+for i in range(len(all_pixels)):
+    temp = id_ALL[np.where(pixel == all_pixels[i])]
+    new_array.append(temp)
+
+print(len(new_array))
 
 print("end")

@@ -1,23 +1,23 @@
 
-# from astropy.io import fits
-# from astropy.table import Table
-# import numpy as np
-# import matplotlib.pylab as plt
-# import matplotlib.lines as mlines
-# from matplotlib.legend import Legend
-# from pythonds.basic.stack import Stack
-# from math import *
-# from sklearn.neighbors import KDTree
-# import healpy as hp
-# from lrg_plot_functions import *
-# from lrg_sum_functions import *
-# from cosmo_Calc import *
-# from divideByTwo import *
-# # from readData import *
-# from nearNeighbors import *
-# from localBKG import *
-#
-#
+from astropy.io import fits
+from astropy.table import Table
+import numpy as np
+import matplotlib.pylab as plt
+import matplotlib.lines as mlines
+from matplotlib.legend import Legend
+from pythonds.basic.stack import Stack
+from math import *
+from sklearn.neighbors import KDTree
+import healpy as hp
+from lrg_plot_functions import *
+from lrg_sum_functions import *
+from cosmo_Calc import *
+from divideByTwo import *
+# from readData import *
+from nearNeighbors import *
+from localBKG import *
+
+
 # hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr7-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
 #                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
 # hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
@@ -195,6 +195,15 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     zobs_MATCHED = []
     zobs_MATCHED = SpecObj_data.field('NOBS_Z')
 
+    # depth in g
+    depth_g_MATCHED = DECaLS_data.field('galdepth_g')
+
+    # depth in r
+    depth_r_MATCHED = DECaLS_data.field('galdepth_r')
+
+    # depth in z
+    depth_z_MATCHED = DECaLS_data.field('galdepth_z')
+
     # Create a unique identifier by combinding BRICKID and OBJID
 
     id_MATCHED = []
@@ -261,6 +270,15 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # nobs_z
     zobs_ALL = []
     zobs_ALL = DECaLS_data.field('NOBS_Z')
+
+    # depth in g
+    depth_g_ALL = DECaLS_data.field('galdepth_g')
+
+    # depth in r
+    depth_r_ALL = DECaLS_data.field('galdepth_r')
+
+    # depth in z
+    depth_z_ALL = DECaLS_data.field('galdepth_z')
 
 
 
@@ -383,6 +401,26 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     color_BKG = gmag_BKG - rmag_BKG
 
+    # depth cuts
+
+    # depth in g for only LRGs
+    gdepth_LRG = depth_g_ALL[np.where(idcut == 1)]
+
+    # depth in r for only LRGs
+    rdepth_LRG = depth_r_ALL[np.where(idcut == 1)]
+
+    # depth in z for only LRGs
+    zdepth_LRG = depth_z_ALL[np.where(idcut == 1)]
+
+    # depth in g for all galaxies in DECaLS
+    gdepth_BKG = depth_g_ALL[np.where(no_LRG_cut)]
+
+    # depth in r for all galaxies in DECaLS
+    rdepth_BKG = depth_r_ALL[np.where(no_LRG_cut)]
+
+    # depth in z for all galaxies in DECaLS
+    zdepth_BKG = depth_z_ALL[np.where(no_LRG_cut)]
+
     # plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5)
     # plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5)
     # plt.hist(zmag_BKG, bins=50, color='lightblue', alpha=0.5)
@@ -396,15 +434,23 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # print("end readData")
 
-    return ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG
 
 
 
-# ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG = readData(SpecObj_data, SDSS_data, DECaLS_data)
-#
+# id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
+
 # plt.scatter(ra_BKG, dec_BKG, s=1, color='blue')
 # plt.scatter(ra_LRG, dec_LRG, s=1, color='red')
 # plt.rcParams["figure.figsize"] = [15, 15]
 # plt.show()
 #
-# print('end readData')
+# row = 10
+# column = 10
+# # creates histogram for survey sources; excludes LRGs
+# H, xedges, yedges = np.histogram2d(rmag_BKG, color_BKG, normed=False)
+#
+# cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges)
+# plt.show()
+
+print('end readData')
