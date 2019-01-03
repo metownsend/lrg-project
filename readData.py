@@ -1,21 +1,21 @@
 
-from astropy.io import fits
-from astropy.table import Table
-import numpy as np
-import matplotlib.pylab as plt
-import matplotlib.lines as mlines
-from matplotlib.legend import Legend
-from pythonds.basic.stack import Stack
-from math import *
-from sklearn.neighbors import KDTree
-import healpy as hp
-from lrg_plot_functions import *
-from lrg_sum_functions import *
-from cosmo_Calc import *
-from divideByTwo import *
-# from readData import *
-from nearNeighbors import *
-from localBKG import *
+# from astropy.io import fits
+# from astropy.table import Table
+# import numpy as np
+# import matplotlib.pylab as plt
+# import matplotlib.lines as mlines
+# from matplotlib.legend import Legend
+# from pythonds.basic.stack import Stack
+# from math import *
+# from sklearn.neighbors import KDTree
+# import healpy as hp
+# from lrg_plot_functions import *
+# from lrg_sum_functions import *
+# from cosmo_Calc import *
+# from divideByTwo import *
+# # from readData import *
+# from nearNeighbors import *
+# from localBKG import *
 
 
 # hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr7-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
@@ -453,4 +453,4 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 # cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges)
 # plt.show()
 
-print('end readData')
+# print('end readData')
