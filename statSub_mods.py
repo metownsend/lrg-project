@@ -44,6 +44,7 @@ id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BK
 
 ra_cut_LRG = ra_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 dec_cut_LRG = dec_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+gdepth_cut_LRG = gdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 
 print("end readdata")
 
@@ -89,6 +90,9 @@ nside = 1024
 npixel = hp.nside2npix(nside)
 ra = np.concatenate([ra_LRG, ra_BKG])
 dec = np.concatenate([dec_LRG, dec_BKG])
+galdepth_g = np.concatenate([gdepth_cut_LRG, gdepth_BKG])
+print('galdepth: ', galdepth_g)
+print('length galdepth: ', len(galdepth_g))
 
 # Make HEALPix map
 # Convert ra/dec into theta/phi
@@ -106,8 +110,12 @@ for i in range(len(ra)):
     theta.append(np.radians(90 - dec[i]))
     phi.append(np.radians(ra[i]))
 
+print('length phi: ', len(phi))
 # Convert angles theta and phi to pixel numbers
 pixnums = hp.ang2pix(nside, theta, phi, nest=True)
+print('pixnums: ', pixnums)
+print(pixnums[0])
+print('length pixnums: ', len(pixnums))
 # print(len(pix))
 # print(type(pix))
 # print(pix.shape)
@@ -116,9 +124,38 @@ pixnums = hp.ang2pix(nside, theta, phi, nest=True)
 
 # Create a HEALPix map from pix
 mapp = np.bincount(pixnums, minlength=npixel)
+print('map where ne 0: ', mapp[np.where(mapp > 0)])
+print('length map ne 0: ', len(mapp[np.where(mapp > 0)]))
+print('length map: ', len(mapp))
 
 # Plot mapp
-hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
+# hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
+
+# plt.show()
+
+pixorder = np.argsort(pixnums)
+print('length pixorder: ', len(pixorder))
+pixels, pixcnts = np.unique(pixnums, return_counts=True)
+print('length pixels: ', len(pixels))
+print('length pixcnts: ', len(pixcnts))
+pixcnts = np.insert(pixcnts, 0, 0)
+pixcnts = np.cumsum(pixcnts)
+
+# print(pixels)
+# print(pixcnts)
+
+hpxinfo = [0] * len(pixorder)
+for i in range(len(pixcnts)-1):
+    inds = pixorder[pixcnts[i]:pixcnts[i+1]] # try making this an array to see if it works then
+    print(inds)
+    pix = pixnums[inds]
+    hpxinfo[inds] = (np.median(galdepth_g[inds]))
+
+print('length hpxinfo: ', len(hpxinfo))
+print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
+print('hpxinfo: ', hpxinfo)
+
+hp.gnomview(hpxinfo, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
 
 plt.show()
 
