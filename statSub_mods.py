@@ -88,20 +88,23 @@ min_radius = 0.4
 max_radius = 1.0
 nside = 1024
 npixel = hp.nside2npix(nside)
-ra = np.concatenate([ra_LRG, ra_BKG])
-dec = np.concatenate([dec_LRG, dec_BKG])
+ra = np.concatenate([ra_cut_LRG, ra_BKG])
+dec = np.concatenate([dec_cut_LRG, dec_BKG])
 galdepth_g = np.concatenate([gdepth_cut_LRG, gdepth_BKG])
 print('galdepth: ', galdepth_g)
 print('length galdepth: ', len(galdepth_g))
+print('length ra: ', len(ra))
+print('length dec: ', len(dec))
+print('type of array: ', type(galdepth_g))
 
 # Make HEALPix map
 # Convert ra/dec into theta/phi
-theta_cut_LRG = []
-phi_cut_LRG = []
-
-for i in range(len(ra_cut_LRG)):
-    theta_cut_LRG.append(np.radians(90. - dec_cut_LRG[i]))
-    phi_cut_LRG.append(np.radians(ra_cut_LRG[i]))
+# theta_cut_LRG = []
+# phi_cut_LRG = []
+#
+# for i in range(len(ra_cut_LRG)):
+#     theta_cut_LRG.append(np.radians(90. - dec_cut_LRG[i]))
+#     phi_cut_LRG.append(np.radians(ra_cut_LRG[i]))
 
 theta = []
 phi = []
@@ -116,11 +119,7 @@ pixnums = hp.ang2pix(nside, theta, phi, nest=True)
 print('pixnums: ', pixnums)
 print(pixnums[0])
 print('length pixnums: ', len(pixnums))
-# print(len(pix))
-# print(type(pix))
-# print(pix.shape)
-# print(pix)
-# print(len(ra))
+
 
 # Create a HEALPix map from pix
 mapp = np.bincount(pixnums, minlength=npixel)
@@ -135,8 +134,9 @@ print('length map: ', len(mapp))
 
 pixorder = np.argsort(pixnums)
 print('length pixorder: ', len(pixorder))
-pixels, pixcnts = np.unique(pixnums, return_counts=True)
+pixels, pixinverse, pixcnts = np.unique(pixnums, return_inverse=True, return_counts=True)
 print('length pixels: ', len(pixels))
+print('length pixinverse: ', len(pixinverse))
 print('length pixcnts: ', len(pixcnts))
 pixcnts = np.insert(pixcnts, 0, 0)
 pixcnts = np.cumsum(pixcnts)
@@ -144,19 +144,25 @@ pixcnts = np.cumsum(pixcnts)
 # print(pixels)
 # print(pixcnts)
 
-hpxinfo = [0] * len(pixorder)
+hpxinfo = []
+pix = []
 for i in range(len(pixcnts)-1):
-    inds = pixorder[pixcnts[i]:pixcnts[i+1]] # try making this an array to see if it works then
-    print(inds)
-    pix = pixnums[inds]
-    hpxinfo[inds] = (np.median(galdepth_g[inds]))
+    inds = pixorder[pixcnts[i]:pixcnts[i+1]]
+    # print(type(inds[0]))
+    pix.append(pixnums[inds][0])
+    # print(pix)
+    hpxinfo.append(np.median(galdepth_g[inds]))
 
 print('length hpxinfo: ', len(hpxinfo))
-print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
+print('pix: ', pix)
+print('pixinverse: ', pixinverse)
+# galdepth_med = hpxinfo[pixorder]
+# print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 print('hpxinfo: ', hpxinfo)
 
-hp.gnomview(hpxinfo, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
+# hp.gnomview(hpxinfo, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
 
+plt.scatter(pix, hpxinfo, s = 1)
 plt.show()
 
 print('end program')
