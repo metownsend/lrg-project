@@ -45,14 +45,18 @@ id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BK
 ra_cut_LRG = ra_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 dec_cut_LRG = dec_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 gdepth_cut_LRG = gdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+rdepth_cut_LRG = rdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+zdepth_cut_LRG = zdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 
 print("end readdata")
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-# plt.scatter(ra_BKG, dec_BKG, s=1, color='blue')
-# plt.scatter(ra_LRG, dec_LRG, s=1, color='red')
+# plt.scatter(ra_BKG, dec_BKG, s=0.5, color='blue')
+# plt.scatter(ra_LRG, dec_LRG, s=0.5, color='red')
 # plt.rcParams["figure.figsize"] = [15, 15]
+# plt.xlabel(r'$RA$')
+# plt.ylabel(r'Dec')
 # plt.show()
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -88,9 +92,12 @@ min_radius = 0.4
 max_radius = 1.0
 nside = 1024
 npixel = hp.nside2npix(nside)
-ra = np.concatenate([ra_cut_LRG, ra_BKG])
-dec = np.concatenate([dec_cut_LRG, dec_BKG])
-galdepth_g = np.concatenate([gdepth_cut_LRG, gdepth_BKG])
+print('npixel: ', npixel)
+ra = np.concatenate([ra_LRG, ra_BKG])
+dec = np.concatenate([dec_LRG, dec_BKG])
+galdepth_g = np.concatenate([gdepth_LRG, gdepth_BKG])
+galdepth_r = np.concatenate([rdepth_LRG, rdepth_BKG])
+galdepth_z = np.concatenate([zdepth_LRG, zdepth_BKG])
 print('galdepth: ', galdepth_g)
 print('length galdepth: ', len(galdepth_g))
 print('length ra: ', len(ra))
@@ -124,13 +131,13 @@ print('length pixnums: ', len(pixnums))
 # Create a HEALPix map from pix
 mapp = np.bincount(pixnums, minlength=npixel)
 print('map where ne 0: ', mapp[np.where(mapp > 0)])
-print('length map ne 0: ', len(mapp[np.where(mapp > 0)]))
+print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 print('length map: ', len(mapp))
 
 # Plot mapp
-# hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
+hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
 
-# plt.show()
+plt.show()
 
 pixorder = np.argsort(pixnums)
 print('length pixorder: ', len(pixorder))
@@ -144,25 +151,34 @@ pixcnts = np.cumsum(pixcnts)
 # print(pixels)
 # print(pixcnts)
 
-hpxinfo = []
+depth_g = np.full(npixel, -1)
+depth_r = np.full(npixel, -1)
+depth_z = np.full(npixel, -1)
+# print('length hpxinfo: ', len(hpxinfo))
 pix = []
 for i in range(len(pixcnts)-1):
     inds = pixorder[pixcnts[i]:pixcnts[i+1]]
     # print(type(inds[0]))
-    pix.append(pixnums[inds][0])
+    pix = pixnums[inds][0]
     # print(pix)
-    hpxinfo.append(np.median(galdepth_g[inds]))
+    depth_g[pix] = np.median(galdepth_g[inds])
+    depth_r[pix] = np.median(galdepth_r[inds])
+    depth_z[pix] = np.median(galdepth_z[inds])
 
-print('length hpxinfo: ', len(hpxinfo))
-print('pix: ', pix)
-print('pixinverse: ', pixinverse)
+# print('length hpxinfo: ', len(hpxinfo))
+# print('pix: ', pix)
+# print('pixinverse: ', pixinverse)
 # galdepth_med = hpxinfo[pixorder]
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
-print('hpxinfo: ', hpxinfo)
+# print('hpxinfo: ', hpxinfo)
 
-# hp.gnomview(hpxinfo, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True)
+hp.gnomview(depth_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_g (all)')
+plt.show()
 
-plt.scatter(pix, hpxinfo, s = 1)
+hp.gnomview(depth_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_r (all)')
+plt.show()
+
+hp.gnomview(depth_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_z (all)')
 plt.show()
 
 print('end program')
