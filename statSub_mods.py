@@ -40,13 +40,40 @@ DECaLS_data = hdulist3[1].data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
+id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
 
 ra_cut_LRG = ra_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 dec_cut_LRG = dec_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 gdepth_cut_LRG = gdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 rdepth_cut_LRG = rdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 zdepth_cut_LRG = zdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+
+# five_sig_g_flux_LRG = 5. / np.sqrt(gdepth_LRG)
+# five_sig_g_flux_BKG = 5. / np.sqrt(gdepth_BKG)
+#
+# five_sig_r_flux_LRG = 5. / np.sqrt(rdepth_LRG)
+# five_sig_r_flux_BKG = 5. / np.sqrt(rdepth_BKG)
+#
+# five_sig_z_flux_LRG = 5. / np.sqrt(zdepth_LRG)
+# five_sig_z_flux_BKG = 5. / np.sqrt(zdepth_BKG)
+# #
+# five_sig_g_mag_LRG = -2.5*(np.log10(5. / np.sqrt(gdepth_LRG[np.where(gdepth_LRG > 0.)])) - 9.)
+# five_sig_g_mag_BKG = -2.5*(np.log10(5. / np.sqrt(gdepth_BKG[np.where(gdepth_BKG > 0.)])) - 9.)
+#
+# five_sig_r_mag_LRG = -2.5*(np.log10(5. / np.sqrt(rdepth_LRG[np.where(rdepth_LRG > 0.)])) - 9.)
+# five_sig_r_mag_BKG = -2.5*(np.log10(5. / np.sqrt(rdepth_BKG[np.where(rdepth_BKG > 0.)])) - 9.)
+#
+# five_sig_z_mag_LRG = -2.5*(np.log10(5. / np.sqrt(zdepth_LRG[np.where(zdepth_LRG > 0.)])) - 9.)
+# five_sig_z_mag_BKG = -2.5*(np.log10(5. / np.sqrt(zdepth_BKG[np.where(zdepth_BKG > 0.)])) - 9.)
+
+# five_sig_g_mag_LRG = -2.5*(np.log10(5. / np.sqrt(gdepth_LRG)) - 9.)
+# five_sig_g_mag_BKG = -2.5*(np.log10(5. / np.sqrt(gdepth_BKG)) - 9.)
+#
+# five_sig_r_mag_LRG = -2.5*(np.log10(5. / np.sqrt(rdepth_LRG)) - 9.)
+# five_sig_r_mag_BKG = -2.5*(np.log10(5. / np.sqrt(rdepth_BKG)) - 9.)
+#
+# five_sig_z_mag_LRG = -2.5*(np.log10(5. / np.sqrt(zdepth_LRG)) - 9.)
+# five_sig_z_mag_BKG = -2.5*(np.log10(5. / np.sqrt(zdepth_BKG)) - 9.)
 
 print("end readdata")
 
@@ -98,11 +125,37 @@ dec = np.concatenate([dec_LRG, dec_BKG])
 galdepth_g = np.concatenate([gdepth_LRG, gdepth_BKG])
 galdepth_r = np.concatenate([rdepth_LRG, rdepth_BKG])
 galdepth_z = np.concatenate([zdepth_LRG, zdepth_BKG])
-print('galdepth: ', galdepth_g)
-print('length galdepth: ', len(galdepth_g))
-print('length ra: ', len(ra))
-print('length dec: ', len(dec))
-print('type of array: ', type(galdepth_g))
+# five_sig_flux_g = np.concatenate([five_sig_g_flux_LRG, five_sig_g_flux_BKG])
+# five_sig_mag_g = np.concatenate([five_sig_g_mag_LRG, five_sig_g_mag_BKG])
+# five_sig_flux_r = np.concatenate([five_sig_r_flux_LRG, five_sig_r_flux_BKG])
+# five_sig_mag_r = np.concatenate([five_sig_r_mag_LRG, five_sig_r_mag_BKG])
+# five_sig_flux_z = np.concatenate([five_sig_z_flux_LRG, five_sig_z_flux_BKG])
+# five_sig_mag_z = np.concatenate([five_sig_z_mag_LRG, five_sig_z_mag_BKG])
+gobs = np.concatenate([gobs_LRG, gobs_BKG])
+robs = np.concatenate([robs_LRG, robs_BKG])
+zobs = np.concatenate([zobs_LRG, zobs_BKG])
+
+
+plt.title("Nobs Distribution")
+plt.xlabel(r'$nobs$')
+plt.ylabel(r'$counts$')
+plt.hist(gobs, color='green', alpha=0.5, label='gmag', bins=50)
+plt.hist(robs, color='red', alpha=0.5, label='rmag', bins=50)
+plt.hist(zobs, color='blue', alpha=0.5, label='zmag', bins=50)
+plt.legend(loc="upper right", fontsize = 15)
+plt.show()
+
+
+# print('galdepth: ', galdepth_g)
+print('length galdepth_g: ', len(galdepth_g))
+print('length galdepth_g ne 0: ', len(galdepth_g[np.where(galdepth_g > 0.)]))
+print('length galdepth_r: ', len(galdepth_r))
+print('length galdepth_r ne 0: ', len(galdepth_r[np.where(galdepth_r > 0.)]))
+print('length galdepth_z: ', len(galdepth_z))
+print('length galdepth_z ne 0: ', len(galdepth_z[np.where(galdepth_z > 0.)]))
+# print('length ra: ', len(ra))
+# print('length dec: ', len(dec))
+# print('type of array: ', type(galdepth_g))
 
 # Make HEALPix map
 # Convert ra/dec into theta/phi
@@ -135,9 +188,9 @@ print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 print('length map: ', len(mapp))
 
 # Plot mapp
-hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
+# hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
 
-plt.show()
+# plt.show()
 
 pixorder = np.argsort(pixnums)
 print('length pixorder: ', len(pixorder))
@@ -154,6 +207,9 @@ pixcnts = np.cumsum(pixcnts)
 depth_g = np.full(npixel, -1)
 depth_r = np.full(npixel, -1)
 depth_z = np.full(npixel, -1)
+array_g = np.full(npixel, -999)
+array_r = np.full(npixel, -999)
+array_z = np.full(npixel, -999)
 # print('length hpxinfo: ', len(hpxinfo))
 pix = []
 for i in range(len(pixcnts)-1):
@@ -161,9 +217,21 @@ for i in range(len(pixcnts)-1):
     # print(type(inds[0]))
     pix = pixnums[inds][0]
     # print(pix)
-    depth_g[pix] = np.median(galdepth_g[inds])
-    depth_r[pix] = np.median(galdepth_r[inds])
-    depth_z[pix] = np.median(galdepth_z[inds])
+    # array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
+    # array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
+    # array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
+    array_g[pix] = np.median(gobs[inds])
+    array_r[pix] = np.median(robs[inds])
+    array_z[pix] = np.median(zobs[inds])
+
+
+
+# five_sig_flux_g = np.concatenate([five_sig_g_flux_LRG, five_sig_g_flux_BKG])
+# five_sig_mag_g = np.concatenate([five_sig_g_mag_LRG, five_sig_g_mag_BKG])
+# five_sig_flux_r = np.concatenate([five_sig_r_flux_LRG, five_sig_r_flux_BKG])
+# five_sig_mag_r = np.concatenate([five_sig_r_mag_LRG, five_sig_r_mag_BKG])
+# five_sig_flux_z = np.concatenate([five_sig_z_flux_LRG, five_sig_z_flux_BKG])
+# five_sig_mag_z = np.concatenate([five_sig_z_mag_LRG, five_sig_z_mag_BKG])
 
 # print('length hpxinfo: ', len(hpxinfo))
 # print('pix: ', pix)
@@ -172,13 +240,17 @@ for i in range(len(pixcnts)-1):
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 # print('hpxinfo: ', hpxinfo)
 
-hp.gnomview(depth_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_g (all)')
+# five_sig_gmag = -2.5*(np.log10(5. / np.sqrt(array_g)) - 9.)
+# five_sig_rmag = -2.5*(np.log10(5. / np.sqrt(array_r)) - 9.)
+# five_sig_zmag = -2.5*(np.log10(5. / np.sqrt(array_z)) - 9.)
+
+hp.gnomview(array_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs (all)')
 plt.show()
 
-hp.gnomview(depth_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_r (all)')
+hp.gnomview(array_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs (all)')
 plt.show()
 
-hp.gnomview(depth_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median galdepth_z (all)')
+hp.gnomview(array_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs (all)')
 plt.show()
 
 print('end program')
