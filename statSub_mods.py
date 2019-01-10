@@ -136,14 +136,14 @@ robs = np.concatenate([robs_LRG, robs_BKG])
 zobs = np.concatenate([zobs_LRG, zobs_BKG])
 
 
-plt.title("Nobs Distribution")
-plt.xlabel(r'$nobs$')
-plt.ylabel(r'$counts$')
-plt.hist(gobs, color='green', alpha=0.5, label='gmag', bins=50)
-plt.hist(robs, color='red', alpha=0.5, label='rmag', bins=50)
-plt.hist(zobs, color='blue', alpha=0.5, label='zmag', bins=50)
-plt.legend(loc="upper right", fontsize = 15)
-plt.show()
+# plt.title("Nobs Distribution")
+# plt.xlabel(r'$nobs$')
+# plt.ylabel(r'$counts$')
+# plt.hist(gobs, color='green', alpha=0.5, label='gmag', bins=50)
+# plt.hist(robs, color='red', alpha=0.5, label='rmag', bins=50)
+# plt.hist(zobs, color='blue', alpha=0.5, label='zmag', bins=50)
+# plt.legend(loc="upper right", fontsize = 15)
+# plt.show()
 
 
 # print('galdepth: ', galdepth_g)
@@ -207,9 +207,9 @@ pixcnts = np.cumsum(pixcnts)
 depth_g = np.full(npixel, -1)
 depth_r = np.full(npixel, -1)
 depth_z = np.full(npixel, -1)
-array_g = np.full(npixel, -999)
-array_r = np.full(npixel, -999)
-array_z = np.full(npixel, -999)
+array_g = np.full(npixel, -1)
+array_r = np.full(npixel, -1)
+array_z = np.full(npixel, -1)
 # print('length hpxinfo: ', len(hpxinfo))
 pix = []
 for i in range(len(pixcnts)-1):
@@ -221,10 +221,13 @@ for i in range(len(pixcnts)-1):
     # array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     # array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
     array_g[pix] = np.median(gobs[inds])
+    # print('array_g: ', array_g[pix])
+    # print(gobs[inds])
+    # print('median:', np.median(gobs[inds]))
     array_r[pix] = np.median(robs[inds])
     array_z[pix] = np.median(zobs[inds])
 
-
+# print(array_g[np.where(array_g > -999)])
 
 # five_sig_flux_g = np.concatenate([five_sig_g_flux_LRG, five_sig_g_flux_BKG])
 # five_sig_mag_g = np.concatenate([five_sig_g_mag_LRG, five_sig_g_mag_BKG])
@@ -244,13 +247,13 @@ for i in range(len(pixcnts)-1):
 # five_sig_rmag = -2.5*(np.log10(5. / np.sqrt(array_r)) - 9.)
 # five_sig_zmag = -2.5*(np.log10(5. / np.sqrt(array_z)) - 9.)
 
-hp.gnomview(array_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs (all)')
+hp.gnomview(map=array_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs (all)')
 plt.show()
 
-hp.gnomview(array_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs (all)')
-plt.show()
+# hp.gnomview(array_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs (all)')
+# plt.show()
 
-hp.gnomview(array_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs (all)')
-plt.show()
+# hp.gnomview(array_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs (all)')
+# plt.show()
 
 print('end program')

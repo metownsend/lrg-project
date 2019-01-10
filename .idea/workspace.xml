@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/readData.py" afterPath="$PROJECT_DIR$/readData.py" />
       <change beforePath="$PROJECT_DIR$/statSub_mods.py" afterPath="$PROJECT_DIR$/statSub_mods.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +16,8 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="1358" column="48" lean-forward="true" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
+            <state relative-caret-position="20370">
+              <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -39,8 +38,8 @@
       <file leaf-file-name="statSub_mods.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_mods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1138">
-              <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+            <state relative-caret-position="421">
+              <caret line="249" column="105" lean-forward="false" selection-start-line="249" selection-start-column="105" selection-end-line="249" selection-end-column="105" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -73,8 +72,8 @@
       <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="436" column="272" lean-forward="true" selection-start-line="436" selection-start-column="214" selection-end-line="436" selection-end-column="272" />
+            <state relative-caret-position="1232">
+              <caret line="424" column="57" lean-forward="true" selection-start-line="424" selection-start-column="57" selection-end-line="424" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -165,8 +164,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="281" />
     <option name="y" value="54" />
-    <option name="width" value="1997" />
-    <option name="height" value="1190" />
+    <option name="width" value="2073" />
+    <option name="height" value="1266" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -329,13 +328,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="281" y="54" width="1997" height="1190" extended-state="0" />
+    <frame x="281" y="54" width="2073" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40703517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -749,24 +748,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="1358" column="48" lean-forward="true" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
+        <state relative-caret-position="20370">
+          <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="436" column="272" lean-forward="true" selection-start-line="436" selection-start-column="214" selection-end-line="436" selection-end-column="272" />
+        <state relative-caret-position="1232">
+          <caret line="424" column="57" lean-forward="true" selection-start-line="424" selection-start-column="57" selection-end-line="424" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_mods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1138">
-          <caret line="139" column="18" lean-forward="false" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+        <state relative-caret-position="421">
+          <caret line="249" column="105" lean-forward="false" selection-start-line="249" selection-start-column="105" selection-end-line="249" selection-end-column="105" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
