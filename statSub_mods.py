@@ -188,9 +188,8 @@ print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 print('length map: ', len(mapp))
 
 # Plot mapp
-# hp.gnomview(mapp, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
-
-# plt.show()
+hp.gnomview(mapp, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
+plt.show()
 
 pixorder = np.argsort(pixnums)
 print('length pixorder: ', len(pixorder))
@@ -204,12 +203,12 @@ pixcnts = np.cumsum(pixcnts)
 # print(pixels)
 # print(pixcnts)
 
-depth_g = np.full(npixel, -1)
-depth_r = np.full(npixel, -1)
-depth_z = np.full(npixel, -1)
-array_g = np.full(npixel, -1)
-array_r = np.full(npixel, -1)
-array_z = np.full(npixel, -1)
+depth_g = np.full(npixel, -1.)
+depth_r = np.full(npixel, -1.)
+depth_z = np.full(npixel, -1.)
+array_g = np.full(npixel, -1.)
+array_r = np.full(npixel, -1.)
+array_z = np.full(npixel, -1.)
 # print('length hpxinfo: ', len(hpxinfo))
 pix = []
 for i in range(len(pixcnts)-1):
@@ -217,15 +216,15 @@ for i in range(len(pixcnts)-1):
     # print(type(inds[0]))
     pix = pixnums[inds][0]
     # print(pix)
-    # array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
-    # array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
-    # array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
-    array_g[pix] = np.median(gobs[inds])
+    array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
+    array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
+    array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
+    # array_g[pix] = np.median(gobs[inds])
     # print('array_g: ', array_g[pix])
     # print(gobs[inds])
     # print('median:', np.median(gobs[inds]))
-    array_r[pix] = np.median(robs[inds])
-    array_z[pix] = np.median(zobs[inds])
+    # array_r[pix] = np.median(robs[inds])
+    # array_z[pix] = np.median(zobs[inds])
 
 # print(array_g[np.where(array_g > -999)])
 
@@ -243,17 +242,18 @@ for i in range(len(pixcnts)-1):
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 # print('hpxinfo: ', hpxinfo)
 
-# five_sig_gmag = -2.5*(np.log10(5. / np.sqrt(array_g)) - 9.)
-# five_sig_rmag = -2.5*(np.log10(5. / np.sqrt(array_r)) - 9.)
-# five_sig_zmag = -2.5*(np.log10(5. / np.sqrt(array_z)) - 9.)
+masked_map = hp.ma(array_g, badval = -1)
 
-hp.gnomview(map=array_g, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs (all)')
+hp.gnomview(array_g, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gmag depth (nobs >= 2)')
 plt.show()
 
-# hp.gnomview(array_r, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs (all)')
+hp.gnomview(masked_map[0], xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gmag depth (nobs >= 2)')
+plt.show()
+#
+# hp.gnomview(array_r, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 2)')
 # plt.show()
 
-# hp.gnomview(array_z, xsize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs (all)')
+# hp.gnomview(array_z, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zmag depth (nobs >= 2)')
 # plt.show()
 
 print('end program')

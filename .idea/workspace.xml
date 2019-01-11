@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/readData.py" afterPath="$PROJECT_DIR$/readData.py" />
       <change beforePath="$PROJECT_DIR$/statSub_mods.py" afterPath="$PROJECT_DIR$/statSub_mods.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +40,8 @@
       <file leaf-file-name="statSub_mods.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_mods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="249" column="105" lean-forward="false" selection-start-line="249" selection-start-column="105" selection-end-line="249" selection-end-column="105" />
+            <state relative-caret-position="424">
+              <caret line="249" column="24" lean-forward="false" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="24" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -72,8 +74,8 @@
       <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="424" column="57" lean-forward="true" selection-start-line="424" selection-start-column="57" selection-end-line="424" selection-end-column="57" />
+            <state relative-caret-position="145">
+              <caret line="301" column="79" lean-forward="false" selection-start-line="301" selection-start-column="79" selection-end-line="301" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -162,8 +164,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="281" />
-    <option name="y" value="54" />
+    <option name="x" value="241" />
+    <option name="y" value="36" />
     <option name="width" value="2073" />
     <option name="height" value="1266" />
   </component>
@@ -328,7 +330,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="281" y="54" width="2073" height="1266" extended-state="0" />
+    <frame x="241" y="36" width="2073" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -756,16 +758,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="424" column="57" lean-forward="true" selection-start-line="424" selection-start-column="57" selection-end-line="424" selection-end-column="57" />
+        <state relative-caret-position="145">
+          <caret line="301" column="79" lean-forward="false" selection-start-line="301" selection-start-column="79" selection-end-line="301" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_mods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="249" column="105" lean-forward="false" selection-start-line="249" selection-start-column="105" selection-end-line="249" selection-end-column="105" />
+        <state relative-caret-position="424">
+          <caret line="249" column="24" lean-forward="false" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="24" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
