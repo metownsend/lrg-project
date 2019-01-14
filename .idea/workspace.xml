@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/readData.py" afterPath="$PROJECT_DIR$/readData.py" />
       <change beforePath="$PROJECT_DIR$/statSub_mods.py" afterPath="$PROJECT_DIR$/statSub_mods.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20370">
-              <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
+            <state relative-caret-position="20445">
+              <caret line="1363" column="16" lean-forward="false" selection-start-line="1354" selection-start-column="4" selection-end-line="1363" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -40,8 +39,8 @@
       <file leaf-file-name="statSub_mods.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/statSub_mods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="249" column="24" lean-forward="false" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="24" />
+            <state relative-caret-position="-6">
+              <caret line="230" column="13" lean-forward="false" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -74,7 +73,7 @@
       <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="4515">
               <caret line="301" column="79" lean-forward="false" selection-start-line="301" selection-start-column="79" selection-end-line="301" selection-end-column="79" />
               <folding />
             </state>
@@ -164,8 +163,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="241" />
-    <option name="y" value="36" />
+    <option name="x" value="168" />
+    <option name="y" value="23" />
     <option name="width" value="2073" />
     <option name="height" value="1266" />
   </component>
@@ -330,7 +329,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="241" y="36" width="2073" height="1266" extended-state="0" />
+    <frame x="168" y="23" width="2073" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -748,26 +747,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
+    <entry file="file://$PROJECT_DIR$/readData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20370">
-          <caret line="1358" column="48" lean-forward="false" selection-start-line="1358" selection-start-column="4" selection-end-line="1358" selection-end-column="48" />
+        <state relative-caret-position="4515">
+          <caret line="301" column="79" lean-forward="false" selection-start-line="301" selection-start-column="79" selection-end-line="301" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readData.py">
+    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="301" column="79" lean-forward="false" selection-start-line="301" selection-start-column="79" selection-end-line="301" selection-end-column="79" />
+        <state relative-caret-position="20445">
+          <caret line="1363" column="16" lean-forward="false" selection-start-line="1354" selection-start-column="4" selection-end-line="1363" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statSub_mods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="249" column="24" lean-forward="false" selection-start-line="249" selection-start-column="24" selection-end-line="249" selection-end-column="24" />
+        <state relative-caret-position="-6">
+          <caret line="230" column="13" lean-forward="false" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>

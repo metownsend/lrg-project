@@ -203,9 +203,9 @@ pixcnts = np.cumsum(pixcnts)
 # print(pixels)
 # print(pixcnts)
 
-depth_g = np.full(npixel, -1.)
-depth_r = np.full(npixel, -1.)
-depth_z = np.full(npixel, -1.)
+nobs_g = np.full(npixel, -1.)
+nobs_r = np.full(npixel, -1.)
+nobs_z = np.full(npixel, -1.)
 array_g = np.full(npixel, -1.)
 array_r = np.full(npixel, -1.)
 array_z = np.full(npixel, -1.)
@@ -219,12 +219,16 @@ for i in range(len(pixcnts)-1):
     array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
     array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
-    # array_g[pix] = np.median(gobs[inds])
+    nobs_g[pix] = np.median(gobs[inds])
     # print('array_g: ', array_g[pix])
     # print(gobs[inds])
     # print('median:', np.median(gobs[inds]))
-    # array_r[pix] = np.median(robs[inds])
-    # array_z[pix] = np.median(zobs[inds])
+    nobs_r[pix] = np.median(robs[inds])
+    nobs_z[pix] = np.median(zobs[inds])
+
+sorted_array = np.sort(array_g[np.where(array_g != -1.)])
+cutlen = len(sorted_array) * 0.98
+print(cutlen)
 
 # print(array_g[np.where(array_g > -999)])
 
@@ -242,18 +246,106 @@ for i in range(len(pixcnts)-1):
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 # print('hpxinfo: ', hpxinfo)
 
-masked_map = hp.ma(array_g, badval = -1)
-
-hp.gnomview(array_g, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gmag depth (nobs >= 2)')
-plt.show()
-
-hp.gnomview(masked_map[0], xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gmag depth (nobs >= 2)')
-plt.show()
+# masked_map_g = np.zeros(len(array_g))
+# masked_map_g[(array_g == -1.)] = 1
 #
+# mg = hp.ma(array_g)
+# mg.mask = masked_map_g
+#
+# masked_map_r = np.zeros(len(array_r))
+# masked_map_r[(array_r == -1.)] = 1
+#
+# mr = hp.ma(array_r)
+# mr.mask = masked_map_r
+#
+# masked_map_z = np.zeros(len(array_z))
+# masked_map_z[(array_z == -1.)] = 1
+#
+# mz = hp.ma(array_z)
+# mz.mask = masked_map_z
+
+# hp.gnomview(array_g, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='unmasked')
+# plt.show()
+
+# hp.gnomview(mg, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gmag depth (nobs >= 3)')
+# plt.show()
+
+# hp.gnomview(mr, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 3)')
+# plt.show()
+
+# hp.gnomview(mz, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zmag depth (nobs >= 3)')
+# plt.show()
+
 # hp.gnomview(array_r, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 2)')
 # plt.show()
 
 # hp.gnomview(array_z, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zmag depth (nobs >= 2)')
 # plt.show()
+
+# plt.scatter(nobs_g, array_g, s=0.5, c='green')
+# plt.xlabel(r'$gobs$')
+# plt.ylabel(r'depth')
+# plt.xlim(0., 32.)
+# plt.ylim(23.5, 26.)
+# plt.title('gobs vs. limiting depth (gmag; nobs >= 2)')
+# plt.show()
+#
+# plt.scatter(nobs_r, array_r, s=0.5, c='red')
+# plt.xlabel(r'$robs$')
+# plt.ylabel(r'depth')
+# plt.xlim(0., 26.)
+# plt.ylim(23., 25.5)
+# plt.title('robs vs. limiting depth (rmag; nobs >= 2)')
+# plt.show()
+#
+# plt.scatter(nobs_z, array_z, s=0.5, c='blue')
+# plt.xlabel(r'$zobs$')
+# plt.ylabel(r'depth')
+# plt.xlim(0.,18.)
+# plt.ylim(22., 24.5)
+# plt.title('zobs vs. limiting depth (zmag; nobs >= 2)')
+# plt.show()
+
+# plt.scatter(nobs_g, mapp, s=0.5, c='green')
+# plt.xlabel(r'$gobs$')
+# plt.ylabel(r'$number$ $of$ $sources$')
+# plt.xlim(0.)
+# plt.ylim(0.)
+# plt.title('gobs vs. number of sources (gmag; nobs >= 2)')
+# plt.show()
+#
+# plt.scatter(nobs_r, mapp, s=0.5, c='red')
+# plt.xlabel(r'$robs$')
+# plt.ylabel(r'$number$ $of$ $sources$')
+# plt.xlim(0.)
+# plt.ylim(0.)
+# plt.title('robs vs. number of sources (rmag; nobs >= 2)')
+# plt.show()
+#
+# plt.scatter(nobs_z, mapp, s=0.5, c='blue')
+# plt.xlabel(r'$zobs$')
+# plt.ylabel(r'$number$ $of$ $sources$')
+# plt.xlim(0.)
+# plt.ylim(0.)
+# plt.title('zobs vs. number of sources (zmag; nobs >= 2)')
+# plt.show()
+
+plt.title("Limiting Magnitude Distribution (gmag)")
+plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
+plt.xlabel(r'$limiting$ $gmag$')
+plt.ylabel(r'$counts$')
+plt.show()
+
+plt.title("Limiting Magnitude Distribution (rmag)")
+plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
+plt.xlabel(r'$limiting$ $rmag$')
+plt.ylabel(r'$counts$')
+plt.show()
+
+plt.title("Limiting Magnitude Distribution (zmag)")
+plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
+plt.xlabel(r'$limiting$ $zmag$')
+plt.ylabel(r'$counts$')
+plt.show()
 
 print('end program')
