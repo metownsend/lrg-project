@@ -220,15 +220,23 @@ for i in range(len(pixcnts)-1):
     array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
     nobs_g[pix] = np.median(gobs[inds])
-    # print('array_g: ', array_g[pix])
-    # print(gobs[inds])
-    # print('median:', np.median(gobs[inds]))
     nobs_r[pix] = np.median(robs[inds])
     nobs_z[pix] = np.median(zobs[inds])
 
-sorted_array = np.sort(array_g[np.where(array_g != -1.)])
-cutlen = len(sorted_array) * 0.98
-print(cutlen)
+# sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
+# reverse_sorted_g = sorted_array_g[::-1]
+# cutlen_g = len(reverse_sorted_g) * 0.98
+# ng = np.rint(cutlen_g)
+#
+# sorted_array_r = np.sort(array_r[np.where(array_r != -1.)])
+# reverse_sorted_r = sorted_array_r[::-1]
+# cutlen_r = len(reverse_sorted_r) * 0.98
+# nr = np.rint(cutlen_r)
+#
+# sorted_array_z = np.sort(array_z[np.where(array_z != -1.)])
+# reverse_sorted_z = sorted_array_z[::-1]
+# cutlen_z = len(reverse_sorted_z) * 0.98
+# nz = np.rint(cutlen_z)
 
 # print(array_g[np.where(array_g > -999)])
 
@@ -330,22 +338,67 @@ print(cutlen)
 # plt.title('zobs vs. number of sources (zmag; nobs >= 2)')
 # plt.show()
 
+# plt.title("Limiting Magnitude Distribution (gmag)")
+# plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
+# plt.xlabel(r'$limiting$ $gmag$')
+# plt.ylabel(r'$counts$')
+# plt.gca().invert_xaxis()
+# plt.axvline(x=reverse_sorted_g[np.int64(ng)] , linewidth=1, color='black')
+# plt.text(24.1, 350, '{} mag'.format(np.around(reverse_sorted_g[np.int64(ng)], decimals=2)), fontsize=8)
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (rmag)")
+# plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
+# plt.xlabel(r'$limiting$ $rmag$')
+# plt.ylabel(r'$counts$')
+# plt.gca().invert_xaxis()
+# plt.axvline(x=reverse_sorted_r[np.int64(nr)] , linewidth=1, color='black')
+# plt.text(23.3, 550, '{} mag'.format(np.around(reverse_sorted_r[np.int64(nr)], decimals=2)), fontsize=8)
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (zmag)")
+# plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
+# plt.xlabel(r'$limiting$ $zmag$')
+# plt.ylabel(r'$counts$')
+# plt.gca().invert_xaxis()
+# plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
+# plt.text(22.4, 450, '{} mag'.format(np.around(reverse_sorted_z[np.int64(nz)], decimals=2)), fontsize=8)
+# plt.show()
+
+depth_g_bin_1 = array_g[np.where((-1. < nobs_g) & (3 >= nobs_g))]
+depth_g_bin_2 = array_g[np.where(nobs_g > 3)]
+depth_r_bin_1 = array_r[np.where((-1. < nobs_r) & (3 >= nobs_r))]
+depth_r_bin_2 = array_r[np.where(nobs_r > 3)]
+depth_z_bin_1 = array_z[np.where((-1. < nobs_z) & (3 >= nobs_z))]
+depth_z_bin_2 = array_z[np.where(nobs_z > 3)]
+
 plt.title("Limiting Magnitude Distribution (gmag)")
-plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
+plt.hist(depth_g_bin_1, bins=50, color='lightgreen', alpha=0.5, label='gobs < 3')
+plt.hist(depth_g_bin_2, bins=50, color='darkgreen', alpha=0.5, label='gobs > 3')
 plt.xlabel(r'$limiting$ $gmag$')
 plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.gca().invert_xaxis()
 plt.show()
 
 plt.title("Limiting Magnitude Distribution (rmag)")
-plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
+plt.hist(depth_r_bin_1, bins=50, color='indianred', alpha=0.5, label='robs < 3')
+plt.hist(depth_r_bin_2, bins=50, color='darkred', alpha=0.5, label='robs > 3')
 plt.xlabel(r'$limiting$ $rmag$')
 plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.gca().invert_xaxis()
 plt.show()
 
 plt.title("Limiting Magnitude Distribution (zmag)")
-plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
+plt.hist(depth_z_bin_1, bins=50, color='cornflowerblue', alpha=0.5, label='zobs < 3')
+plt.hist(depth_z_bin_2, bins=50, color='darkblue', alpha=0.5, label='zobs > 3')
 plt.xlabel(r'$limiting$ $zmag$')
 plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.gca().invert_xaxis()
 plt.show()
+
+
 
 print('end program')
