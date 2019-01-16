@@ -122,6 +122,9 @@ npixel = hp.nside2npix(nside)
 print('npixel: ', npixel)
 ra = np.concatenate([ra_LRG, ra_BKG])
 dec = np.concatenate([dec_LRG, dec_BKG])
+gmag = np.concatenate([gmag_LRG, gmag_BKG])
+rmag = np.concatenate([rmag_LRG, rmag_BKG])
+zmag = np.concatenate([zmag_LRG, zmag_BKG])
 galdepth_g = np.concatenate([gdepth_LRG, gdepth_BKG])
 galdepth_r = np.concatenate([rdepth_LRG, rdepth_BKG])
 galdepth_z = np.concatenate([zdepth_LRG, zdepth_BKG])
@@ -219,24 +222,24 @@ for i in range(len(pixcnts)-1):
     array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
     array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
-    nobs_g[pix] = np.median(gobs[inds])
-    nobs_r[pix] = np.median(robs[inds])
-    nobs_z[pix] = np.median(zobs[inds])
+    # nobs_g[pix] = np.median(gobs[inds])
+    # nobs_r[pix] = np.median(robs[inds])
+    # nobs_z[pix] = np.median(zobs[inds])
 
-# sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
-# reverse_sorted_g = sorted_array_g[::-1]
-# cutlen_g = len(reverse_sorted_g) * 0.98
-# ng = np.rint(cutlen_g)
-#
-# sorted_array_r = np.sort(array_r[np.where(array_r != -1.)])
-# reverse_sorted_r = sorted_array_r[::-1]
-# cutlen_r = len(reverse_sorted_r) * 0.98
-# nr = np.rint(cutlen_r)
-#
-# sorted_array_z = np.sort(array_z[np.where(array_z != -1.)])
-# reverse_sorted_z = sorted_array_z[::-1]
-# cutlen_z = len(reverse_sorted_z) * 0.98
-# nz = np.rint(cutlen_z)
+sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
+reverse_sorted_g = sorted_array_g[::-1]
+cutlen_g = len(reverse_sorted_g) * 0.98
+ng = np.rint(cutlen_g)
+
+sorted_array_r = np.sort(array_r[np.where(array_r != -1.)])
+reverse_sorted_r = sorted_array_r[::-1]
+cutlen_r = len(reverse_sorted_r) * 0.98
+nr = np.rint(cutlen_r)
+
+sorted_array_z = np.sort(array_z[np.where(array_z != -1.)])
+reverse_sorted_z = sorted_array_z[::-1]
+cutlen_z = len(reverse_sorted_z) * 0.98
+nz = np.rint(cutlen_z)
 
 # print(array_g[np.where(array_g > -999)])
 
@@ -365,40 +368,62 @@ for i in range(len(pixcnts)-1):
 # plt.text(22.4, 450, '{} mag'.format(np.around(reverse_sorted_z[np.int64(nz)], decimals=2)), fontsize=8)
 # plt.show()
 
-depth_g_bin_1 = array_g[np.where((-1. < nobs_g) & (3 >= nobs_g))]
-depth_g_bin_2 = array_g[np.where(nobs_g > 3)]
-depth_r_bin_1 = array_r[np.where((-1. < nobs_r) & (3 >= nobs_r))]
-depth_r_bin_2 = array_r[np.where(nobs_r > 3)]
-depth_z_bin_1 = array_z[np.where((-1. < nobs_z) & (3 >= nobs_z))]
-depth_z_bin_2 = array_z[np.where(nobs_z > 3)]
-
-plt.title("Limiting Magnitude Distribution (gmag)")
-plt.hist(depth_g_bin_1, bins=50, color='lightgreen', alpha=0.5, label='gobs < 3')
-plt.hist(depth_g_bin_2, bins=50, color='darkgreen', alpha=0.5, label='gobs > 3')
-plt.xlabel(r'$limiting$ $gmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
+plt.scatter(zmag, gmag, s=0.5, c='purple')
+plt.xlabel(r'$zmag$')
+plt.ylabel(r'$gmag$')
+# plt.xlim(0.)
+# plt.ylim(0.)
+plt.title('zmag vs gmag')
 plt.gca().invert_xaxis()
+plt.gca().invert_yaxis()
+plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
+plt.axhline(y=reverse_sorted_g[np.int64(ng)], linewidth=1, color='black')
 plt.show()
 
-plt.title("Limiting Magnitude Distribution (rmag)")
-plt.hist(depth_r_bin_1, bins=50, color='indianred', alpha=0.5, label='robs < 3')
-plt.hist(depth_r_bin_2, bins=50, color='darkred', alpha=0.5, label='robs > 3')
-plt.xlabel(r'$limiting$ $rmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
+plt.scatter(zmag, rmag, s=0.5, c='mediumvioletred')
+plt.xlabel(r'$zmag$')
+plt.ylabel(r'$rmag$')
+# plt.xlim(0.)
+# plt.ylim(0.)
+plt.title('zmag vs rmag')
 plt.gca().invert_xaxis()
+plt.gca().invert_yaxis()
+plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
+plt.axhline(y=reverse_sorted_r[np.int64(nr)], linewidth=1, color='black')
 plt.show()
 
-plt.title("Limiting Magnitude Distribution (zmag)")
-plt.hist(depth_z_bin_1, bins=50, color='cornflowerblue', alpha=0.5, label='zobs < 3')
-plt.hist(depth_z_bin_2, bins=50, color='darkblue', alpha=0.5, label='zobs > 3')
-plt.xlabel(r'$limiting$ $zmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
-plt.gca().invert_xaxis()
-plt.show()
+# depth_g_bin_1 = array_g[np.where((-1. < nobs_g) & (3 >= nobs_g))]
+# depth_g_bin_2 = array_g[np.where(nobs_g > 3)]
+# depth_r_bin_1 = array_r[np.where((-1. < nobs_r) & (3 >= nobs_r))]
+# depth_r_bin_2 = array_r[np.where(nobs_r > 3)]
+# depth_z_bin_1 = array_z[np.where((-1. < nobs_z) & (3 >= nobs_z))]
+# depth_z_bin_2 = array_z[np.where(nobs_z > 3)]
 
-
+# plt.title("Limiting Magnitude Distribution (gmag)")
+# plt.hist(depth_g_bin_1, bins=50, color='lightgreen', alpha=0.5, label='gobs < 3')
+# plt.hist(depth_g_bin_2, bins=50, color='darkgreen', alpha=0.5, label='gobs > 3')
+# plt.xlabel(r'$limiting$ $gmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.gca().invert_xaxis()
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (rmag)")
+# plt.hist(depth_r_bin_1, bins=50, color='indianred', alpha=0.5, label='robs < 3')
+# plt.hist(depth_r_bin_2, bins=50, color='darkred', alpha=0.5, label='robs > 3')
+# plt.xlabel(r'$limiting$ $rmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.gca().invert_xaxis()
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (zmag)")
+# plt.hist(depth_z_bin_1, bins=50, color='cornflowerblue', alpha=0.5, label='zobs < 3')
+# plt.hist(depth_z_bin_2, bins=50, color='darkblue', alpha=0.5, label='zobs > 3')
+# plt.xlabel(r'$limiting$ $zmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.gca().invert_xaxis()
+# plt.show()
 
 print('end program')
