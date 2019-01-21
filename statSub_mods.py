@@ -27,6 +27,7 @@ hdulist = fits.open('/Users/mtownsend/anaconda/Data/survey-dr7-specObj-dr14.fits
                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
 hdulist2 = fits.open('/Users/mtownsend/anaconda/Data/specObj-dr14.fits') # this is SDSS redshifts etc for LRGs
 hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010-dr7.fits') # this is one sweep file of the DECaLS data
+hdulist4 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p010-250p015-dr7.fits') # this is one sweep file of the DECaLS data
 
 # hdulist = fits.open('/Users/mindy/Research/Data/lrgProjectData/survey-dr5-specObj-dr14.fits') # this matches SDSS LRGs to DECaLS;
                                                                  # ONLY GIVES SOURCES THAT ARE IN SDSS AND DECALS
@@ -36,17 +37,28 @@ hdulist3 = fits.open('/Users/mtownsend/anaconda/Data/sweep-240p005-250p010-dr7.f
 
 SpecObj_data = hdulist[1].data
 SDSS_data = hdulist2[1].data
-DECaLS_data = hdulist3[1].data
+DECaLS_data1 = hdulist3[1].data
+DECaLS_data2 = hdulist4[1].data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
+id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+print('----------')
+id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
-ra_cut_LRG = ra_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
-dec_cut_LRG = dec_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
-gdepth_cut_LRG = gdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
-rdepth_cut_LRG = rdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
-zdepth_cut_LRG = zdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+ra_LRG = np.concatenate([ra_LRG1, ra_LRG2])
+ra_BKG = np.concatenate([ra_BKG1, ra_BKG2])
+dec_LRG = np.concatenate([dec_LRG1, dec_LRG2])
+dec_BKG = np.concatenate([dec_BKG1, dec_BKG2])
+z_LRG = np.concatenate([z_LRG1, z_LRG2])
+rmag_BKG = np.concatenate([rmag_BKG1, rmag_BKG2])
+color_BKG = np.concatenate([color_BKG1, color_BKG2])
+
+# ra_cut_LRG = ra_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+# dec_cut_LRG = dec_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+# gdepth_cut_LRG = gdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+# rdepth_cut_LRG = rdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
+# zdepth_cut_LRG = zdepth_LRG[np.where((ra_LRG > 242.) & (ra_LRG < 245.) & (dec_LRG > 7.5) & (dec_LRG < 9.))]
 
 # five_sig_g_flux_LRG = 5. / np.sqrt(gdepth_LRG)
 # five_sig_g_flux_BKG = 5. / np.sqrt(gdepth_BKG)
@@ -122,21 +134,43 @@ npixel = hp.nside2npix(nside)
 print('npixel: ', npixel)
 ra = np.concatenate([ra_LRG, ra_BKG])
 dec = np.concatenate([dec_LRG, dec_BKG])
-gmag = np.concatenate([gmag_LRG, gmag_BKG])
-rmag = np.concatenate([rmag_LRG, rmag_BKG])
-zmag = np.concatenate([zmag_LRG, zmag_BKG])
-galdepth_g = np.concatenate([gdepth_LRG, gdepth_BKG])
-galdepth_r = np.concatenate([rdepth_LRG, rdepth_BKG])
-galdepth_z = np.concatenate([zdepth_LRG, zdepth_BKG])
+# gmag = np.concatenate([gmag_LRG, gmag_BKG])
+# rmag = np.concatenate([rmag_LRG, rmag_BKG])
+# zmag = np.concatenate([zmag_LRG, zmag_BKG])
+
+# ra_cut = ra[np.where((gmag <= 24.15) & (rmag <= 23.35) & (zmag <= 22.48))]
+# dec_cut = dec[np.where((gmag <= 24.15) & (rmag <= 23.35) & (zmag <= 22.48))]
+
+# galdepth_g = np.concatenate([gdepth_LRG, gdepth_BKG])
+# galdepth_r = np.concatenate([rdepth_LRG, rdepth_BKG])
+# galdepth_z = np.concatenate([zdepth_LRG, zdepth_BKG])
 # five_sig_flux_g = np.concatenate([five_sig_g_flux_LRG, five_sig_g_flux_BKG])
 # five_sig_mag_g = np.concatenate([five_sig_g_mag_LRG, five_sig_g_mag_BKG])
 # five_sig_flux_r = np.concatenate([five_sig_r_flux_LRG, five_sig_r_flux_BKG])
 # five_sig_mag_r = np.concatenate([five_sig_r_mag_LRG, five_sig_r_mag_BKG])
 # five_sig_flux_z = np.concatenate([five_sig_z_flux_LRG, five_sig_z_flux_BKG])
 # five_sig_mag_z = np.concatenate([five_sig_z_mag_LRG, five_sig_z_mag_BKG])
-gobs = np.concatenate([gobs_LRG, gobs_BKG])
-robs = np.concatenate([robs_LRG, robs_BKG])
-zobs = np.concatenate([zobs_LRG, zobs_BKG])
+# gobs = np.concatenate([gobs_LRG, gobs_BKG])
+# robs = np.concatenate([robs_LRG, robs_BKG])
+# zobs = np.concatenate([zobs_LRG, zobs_BKG])
+
+# print('length gobs: ', len(gobs))
+# print('length gobs >= 2: ', len(gobs[np.where(gobs >= 2.)]))
+# print('length gobs >= 3: ', len(gobs[np.where(gobs >= 3.)]))
+# print('percentage gobs >= 2: ', (len(gobs[np.where(gobs >= 2.)]) / len(gobs)) * 100.)
+# print('percentage gobs >= 3: ', (len(gobs[np.where(gobs >= 3.)]) / len(gobs)) * 100.)
+#
+# print('length robs: ', len(robs))
+# print('length robs >= 2: ', len(robs[np.where(robs >= 2.)]))
+# print('length robs >= 3: ', len(robs[np.where(robs >= 3.)]))
+# print('percentage robs >= 2: ', (len(robs[np.where(robs >= 2.)]) / len(robs)) * 100.)
+# print('percentage robs >= 3: ', (len(robs[np.where(robs >= 3.)]) / len(robs)) * 100.)
+#
+# print('length zobs: ', len(zobs))
+# print('length zobs >= 2: ', len(zobs[np.where(zobs >= 2.)]))
+# print('length zobs >= 3: ', len(zobs[np.where(zobs >= 3.)]))
+# print('percentage zobs >= 2: ', (len(zobs[np.where(zobs >= 2.)]) / len(zobs)) * 100.)
+# print('percentage zobs >= 3: ', (len(zobs[np.where(zobs >= 3.)]) / len(zobs)) * 100.)
 
 
 # plt.title("Nobs Distribution")
@@ -150,12 +184,12 @@ zobs = np.concatenate([zobs_LRG, zobs_BKG])
 
 
 # print('galdepth: ', galdepth_g)
-print('length galdepth_g: ', len(galdepth_g))
-print('length galdepth_g ne 0: ', len(galdepth_g[np.where(galdepth_g > 0.)]))
-print('length galdepth_r: ', len(galdepth_r))
-print('length galdepth_r ne 0: ', len(galdepth_r[np.where(galdepth_r > 0.)]))
-print('length galdepth_z: ', len(galdepth_z))
-print('length galdepth_z ne 0: ', len(galdepth_z[np.where(galdepth_z > 0.)]))
+# print('length galdepth_g: ', len(galdepth_g))
+# print('length galdepth_g ne 0: ', len(galdepth_g[np.where(galdepth_g > 0.)]))
+# print('length galdepth_r: ', len(galdepth_r))
+# print('length galdepth_r ne 0: ', len(galdepth_r[np.where(galdepth_r > 0.)]))
+# print('length galdepth_z: ', len(galdepth_z))
+# print('length galdepth_z ne 0: ', len(galdepth_z[np.where(galdepth_z > 0.)]))
 # print('length ra: ', len(ra))
 # print('length dec: ', len(dec))
 # print('type of array: ', type(galdepth_g))
@@ -172,9 +206,9 @@ print('length galdepth_z ne 0: ', len(galdepth_z[np.where(galdepth_z > 0.)]))
 theta = []
 phi = []
 
-for i in range(len(ra)):
-    theta.append(np.radians(90 - dec[i]))
-    phi.append(np.radians(ra[i]))
+for i in range(len(ra_cut)):
+    theta.append(np.radians(90 - dec_cut[i]))
+    phi.append(np.radians(ra_cut[i]))
 
 print('length phi: ', len(phi))
 # Convert angles theta and phi to pixel numbers
@@ -191,7 +225,7 @@ print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 print('length map: ', len(mapp))
 
 # Plot mapp
-hp.gnomview(mapp, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (all)')
+hp.gnomview(mapp, xsize=250, ysize=250, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (gmag, rmag, zmag selected; nobs >= 2)')
 plt.show()
 
 pixorder = np.argsort(pixnums)
@@ -213,17 +247,17 @@ array_g = np.full(npixel, -1.)
 array_r = np.full(npixel, -1.)
 array_z = np.full(npixel, -1.)
 pix = []
-for i in range(len(pixcnts)-1):
-    inds = pixorder[pixcnts[i]:pixcnts[i+1]]
+# for i in range(len(pixcnts)-1):
+    # inds = pixorder[pixcnts[i]:pixcnts[i+1]]
     # print(type(inds[0]))
-    pix = pixnums[inds][0]
+    # pix = pixnums[inds][0]
     # print(pix)
     # array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
     # array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     # array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
-    nobs_g[pix] = np.median(gobs[inds])
-    nobs_r[pix] = np.median(robs[inds])
-    nobs_z[pix] = np.median(zobs[inds])
+    # nobs_g[pix] = np.median(gobs[inds])
+    # nobs_r[pix] = np.median(robs[inds])
+    # nobs_z[pix] = np.median(zobs[inds])
 
 # sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
 # reverse_sorted_g = sorted_array_g[::-1]
@@ -272,50 +306,50 @@ for i in range(len(pixcnts)-1):
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 # print('hpxinfo: ', hpxinfo)
 
-masked_map_g = np.zeros(len(nobs_g))
-masked_map_g[(nobs_g == -1.)] = 1
-
-mg = hp.ma(nobs_g)
-mg.mask = masked_map_g
-
-masked_map_r = np.zeros(len(nobs_r))
-masked_map_r[(nobs_r == -1.)] = 1
-
-mr = hp.ma(nobs_r)
-mr.mask = masked_map_r
-
-masked_map_z = np.zeros(len(nobs_z))
-masked_map_z[(nobs_z == -1.)] = 1
-
-mz = hp.ma(nobs_z)
-mz.mask = masked_map_z
+# masked_map_g = np.zeros(len(nobs_g))
+# masked_map_g[(nobs_g == -1.)] = 1
+#
+# mg = hp.ma(nobs_g)
+# mg.mask = masked_map_g
+#
+# masked_map_r = np.zeros(len(nobs_r))
+# masked_map_r[(nobs_r == -1.)] = 1
+#
+# mr = hp.ma(nobs_r)
+# mr.mask = masked_map_r
+#
+# masked_map_z = np.zeros(len(nobs_z))
+# masked_map_z[(nobs_z == -1.)] = 1
+#
+# mz = hp.ma(nobs_z)
+# mz.mask = masked_map_z
 
 # hp.gnomview(array_g, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='unmasked')
 # plt.show()
 
-hp.gnomview(mg, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs', cbar=None)
-fig = plt.gcf()
-ax = plt.gca()
-image = ax.get_images()[0]
-cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
-image.set_clim(vmax=5)
-plt.show()
-
-hp.gnomview(mr, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs', cbar=None)
-fig = plt.gcf()
-ax = plt.gca()
-image = ax.get_images()[0]
-cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
-image.set_clim(vmax=5)
-plt.show()
-
-hp.gnomview(mz, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs', cbar=None)
-fig = plt.gcf()
-ax = plt.gca()
-image = ax.get_images()[0]
-cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
-image.set_clim(vmax=5)
-plt.show()
+# hp.gnomview(mg, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs', cbar=None)
+# fig = plt.gcf()
+# ax = plt.gca()
+# image = ax.get_images()[0]
+# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+# image.set_clim(vmax=5)
+# plt.show()
+#
+# hp.gnomview(mr, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs', cbar=None)
+# fig = plt.gcf()
+# ax = plt.gca()
+# image = ax.get_images()[0]
+# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+# image.set_clim(vmax=5)
+# plt.show()
+#
+# hp.gnomview(mz, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs', cbar=None)
+# fig = plt.gcf()
+# ax = plt.gca()
+# image = ax.get_images()[0]
+# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+# image.set_clim(vmax=5)
+# plt.show()
 
 # hp.gnomview(array_r, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 2)')
 # plt.show()
