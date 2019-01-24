@@ -50,10 +50,8 @@ id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1,
 print('----------')
 id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
-ra_LRG = np.concatenate([ra_LRG1, ra_LRG2])
-ra_BKG = np.concatenate([ra_BKG1, ra_BKG2])
-dec_LRG = np.concatenate([dec_LRG1, dec_LRG2])
-dec_BKG = np.concatenate([dec_BKG1, dec_BKG2])
+ra = np.concatenate([ra_LRG1, ra_LRG2, ra_BKG1, ra_BKG2])
+dec = np.concatenate([dec_LRG1, dec_LRG2, dec_BKG1, dec_BKG2])
 z_LRG = np.concatenate([z_LRG1, z_LRG2])
 # gmag_LRG = np.concatenate([gmag_LRG1, gmag_LRG2])
 # gmag_BKG = np.concatenate([gmag_BKG1, gmag_BKG2])
@@ -68,9 +66,9 @@ galdepth_z = np.concatenate([zdepth_LRG1, zdepth_LRG2, zdepth_BKG1, zdepth_BKG2]
 gobs = np.concatenate([gobs_LRG1, gobs_LRG2, gobs_BKG1, gobs_BKG2])
 robs = np.concatenate([robs_LRG1, robs_LRG2, robs_BKG1, robs_BKG2])
 zobs = np.concatenate([zobs_LRG1, zobs_LRG2, zobs_BKG1, zobs_BKG2])
-flux_ivar_g = np.concatenate([flux_ivar_g_LRG1, flux_ivar_g_LRG2, flux_ivar_g_BKG1, flux_ivar_g_BKG2])
-flux_ivar_r = np.concatenate([flux_ivar_r_LRG1, flux_ivar_r_LRG2, flux_ivar_r_BKG1, flux_ivar_r_BKG2])
-flux_ivar_z = np.concatenate([flux_ivar_z_LRG1, flux_ivar_z_LRG2, flux_ivar_z_BKG1, flux_ivar_z_BKG2])
+gflux_ivar = np.concatenate([flux_ivar_g_LRG1, flux_ivar_g_LRG2, flux_ivar_g_BKG1, flux_ivar_g_BKG2])
+rflux_ivar = np.concatenate([flux_ivar_r_LRG1, flux_ivar_r_LRG2, flux_ivar_r_BKG1, flux_ivar_r_BKG2])
+zflux_ivar = np.concatenate([flux_ivar_z_LRG1, flux_ivar_z_LRG2, flux_ivar_z_BKG1, flux_ivar_z_BKG2])
 gflux = np.concatenate([gflux_LRG1, gflux_LRG2, gflux_BKG1, gflux_BKG2])
 rflux = np.concatenate([rflux_LRG1, rflux_LRG2, rflux_BKG1, rflux_BKG2])
 zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
@@ -78,8 +76,54 @@ zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
 
 print("end readdata")
 
-print(gflux)
-print(flux_ivar_g)
+print(len(gflux))
+print(len(rflux))
+print(len(zflux))
+print(len(ra))
+print(len(ra[np.where((gflux > 0.) & (rflux > 0.) & (zflux > 0.))]))
+
+# print(flux_ivar_g)
+print('---------')
+
+garray = []
+for i in range(len(gflux)):
+    if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
+        garray.append(-1)
+    else:
+        garray.append(gflux[i])
+
+garray = np.array(garray)
+print(len(garray))
+print(len(garray[np.where(garray == -1)]))
+print(len(garray[np.where(garray != -1)]))
+
+print('---------')
+
+rarray = []
+for i in range(len(rflux)):
+    if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
+        rarray.append(-1)
+    else:
+        rarray.append(rflux[i])
+
+rarray = np.array(rarray)
+print(len(rarray))
+print(len(rarray[np.where(rarray == -1)]))
+print(len(rarray[np.where(rarray != -1)]))
+
+print('---------')
+
+zarray = []
+for i in range(len(zflux)):
+    if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
+        zarray.append(-1)
+    else:
+        zarray.append(zflux[i])
+
+zarray = np.array(zarray)
+print(len(zarray))
+print(len(zarray[np.where(zarray == -1)]))
+print(len(zarray[np.where(zarray != -1)]))
 
 # ---------------------------------------------------------------------------------------------------------------------
 
