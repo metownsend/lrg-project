@@ -125,6 +125,20 @@ print(len(zarray))
 print(len(zarray[np.where(zarray == -1)]))
 print(len(zarray[np.where(zarray != -1)]))
 
+print('---------')
+
+r_nondetect = rarray[np.where((zarray != -1) & (rarray == -1))]
+g_nondetect = garray[np.where((zarray != -1) & (garray == -1))]
+
+print(len(r_nondetect))
+print(len(g_nondetect))
+
+print('---------')
+
+print(len(garray[np.where((garray < 0.) & (garray != -1))]))
+print(len(rarray[np.where((rarray < 0.) & (rarray != -1))]))
+print(len(zarray[np.where((zarray < 0.) & (zarray != -1))]))
+
 # ---------------------------------------------------------------------------------------------------------------------
 
 # plt.scatter(ra_BKG, dec_BKG, s=0.5, color='blue')
