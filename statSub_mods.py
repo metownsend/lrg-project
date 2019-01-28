@@ -42,24 +42,24 @@ DECaLS_data2 = hdulist4[1].data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
-# print('----------')
-# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
-
-id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
 print('----------')
-id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
+id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
+
+# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+# print('----------')
+# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
 ra = np.concatenate([ra_LRG1, ra_LRG2, ra_BKG1, ra_BKG2])
 dec = np.concatenate([dec_LRG1, dec_LRG2, dec_BKG1, dec_BKG2])
 z_LRG = np.concatenate([z_LRG1, z_LRG2])
-# gmag_LRG = np.concatenate([gmag_LRG1, gmag_LRG2])
-# gmag_BKG = np.concatenate([gmag_BKG1, gmag_BKG2])
-# rmag_LRG = np.concatenate([rmag_LRG1, rmag_LRG2])
-# rmag_BKG = np.concatenate([rmag_BKG1, rmag_BKG2])
-# zmag_LRG = np.concatenate([zmag_LRG1, zmag_LRG2])
-# zmag_BKG = np.concatenate([zmag_BKG1, zmag_BKG2])
-# color_BKG = np.concatenate([color_BKG1, color_BKG2])
+gmag_LRG = np.concatenate([gmag_LRG1, gmag_LRG2])
+gmag_BKG = np.concatenate([gmag_BKG1, gmag_BKG2])
+rmag_LRG = np.concatenate([rmag_LRG1, rmag_LRG2])
+rmag_BKG = np.concatenate([rmag_BKG1, rmag_BKG2])
+zmag_LRG = np.concatenate([zmag_LRG1, zmag_LRG2])
+zmag_BKG = np.concatenate([zmag_BKG1, zmag_BKG2])
+color_BKG = np.concatenate([color_BKG1, color_BKG2])
 galdepth_g = np.concatenate([gdepth_LRG1, gdepth_LRG2, gdepth_BKG1, gdepth_BKG2])
 galdepth_r = np.concatenate([rdepth_LRG1, rdepth_LRG2, rdepth_BKG1, rdepth_BKG2])
 galdepth_z = np.concatenate([zdepth_LRG1, zdepth_LRG2, zdepth_BKG1, zdepth_BKG2])
@@ -76,68 +76,68 @@ zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
 
 print("end readdata")
 
-print(len(gflux))
-print(len(rflux))
-print(len(zflux))
-print(len(ra))
-print(len(ra[np.where((gflux > 0.) & (rflux > 0.) & (zflux > 0.))]))
-
-# print(flux_ivar_g)
-print('---------')
-
-garray = []
-for i in range(len(gflux)):
-    if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
-        garray.append(-1)
-    else:
-        garray.append(gflux[i])
-
-garray = np.array(garray)
-print(len(garray))
-print(len(garray[np.where(garray == -1)]))
-print(len(garray[np.where(garray != -1)]))
-
-print('---------')
-
-rarray = []
-for i in range(len(rflux)):
-    if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
-        rarray.append(-1)
-    else:
-        rarray.append(rflux[i])
-
-rarray = np.array(rarray)
-print(len(rarray))
-print(len(rarray[np.where(rarray == -1)]))
-print(len(rarray[np.where(rarray != -1)]))
-
-print('---------')
-
-zarray = []
-for i in range(len(zflux)):
-    if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
-        zarray.append(-1)
-    else:
-        zarray.append(zflux[i])
-
-zarray = np.array(zarray)
-print(len(zarray))
-print(len(zarray[np.where(zarray == -1)]))
-print(len(zarray[np.where(zarray != -1)]))
-
-print('---------')
-
-r_nondetect = rarray[np.where((zarray != -1) & (rarray == -1))]
-g_nondetect = garray[np.where((zarray != -1) & (garray == -1))]
-
-print(len(r_nondetect))
-print(len(g_nondetect))
-
-print('---------')
-
-print(len(garray[np.where((garray < 0.) & (garray != -1))]))
-print(len(rarray[np.where((rarray < 0.) & (rarray != -1))]))
-print(len(zarray[np.where((zarray < 0.) & (zarray != -1))]))
+# print(len(gflux))
+# print(len(rflux))
+# print(len(zflux))
+# print(len(ra))
+# print(len(ra[np.where((gflux > 0.) & (rflux > 0.) & (zflux > 0.))]))
+#
+# # print(flux_ivar_g)
+# print('---------')
+#
+# garray = []
+# for i in range(len(gflux)):
+#     if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
+#         garray.append(-1)
+#     else:
+#         garray.append(gflux[i])
+#
+# garray = np.array(garray)
+# print(len(garray))
+# print(len(garray[np.where(garray == -1)]))
+# print(len(garray[np.where(garray != -1)]))
+#
+# print('---------')
+#
+# rarray = []
+# for i in range(len(rflux)):
+#     if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
+#         rarray.append(-1)
+#     else:
+#         rarray.append(rflux[i])
+#
+# rarray = np.array(rarray)
+# print(len(rarray))
+# print(len(rarray[np.where(rarray == -1)]))
+# print(len(rarray[np.where(rarray != -1)]))
+#
+# print('---------')
+#
+# zarray = []
+# for i in range(len(zflux)):
+#     if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
+#         zarray.append(-1)
+#     else:
+#         zarray.append(zflux[i])
+#
+# zarray = np.array(zarray)
+# print(len(zarray))
+# print(len(zarray[np.where(zarray == -1)]))
+# print(len(zarray[np.where(zarray != -1)]))
+#
+# print('---------')
+#
+# r_nondetect = rarray[np.where((zarray != -1) & (rarray == -1))]
+# g_nondetect = garray[np.where((zarray != -1) & (garray == -1))]
+#
+# print(len(r_nondetect))
+# print(len(g_nondetect))
+#
+# print('---------')
+#
+# print(len(garray[np.where((garray < 0.) & (garray != -1))]))
+# print(len(rarray[np.where((rarray < 0.) & (rarray != -1))]))
+# print(len(zarray[np.where((zarray < 0.) & (zarray != -1))]))
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -179,8 +179,8 @@ print('end nearNeighbor')
 
 # min_radius = 0.4
 # max_radius = 1.0
-# nside = 1024
-# npixel = hp.nside2npix(nside)
+nside = 1024
+npixel = hp.nside2npix(nside)
 # print('npixel: ', npixel)
 # ra = np.concatenate([ra_LRG, ra_BKG])
 # dec = np.concatenate([dec_LRG, dec_BKG])
@@ -240,39 +240,39 @@ print('end nearNeighbor')
 #     theta_cut_LRG.append(np.radians(90. - dec_cut_LRG[i]))
 #     phi_cut_LRG.append(np.radians(ra_cut_LRG[i]))
 
-# theta = []
-# phi = []
-#
-# for i in range(len(ra_cut)):
-#     theta.append(np.radians(90. - dec_cut[i]))
-#     phi.append(np.radians(ra_cut[i]))
-#
-# print('length phi: ', len(phi))
+theta = []
+phi = []
+
+for i in range(len(ra)):
+    theta.append(np.radians(90. - dec[i]))
+    phi.append(np.radians(ra[i]))
+
+print('length phi: ', len(phi))
 # Convert angles theta and phi to pixel numbers
-# pixnums = hp.ang2pix(nside, theta, phi, nest=True)
-# print('pixnums: ', pixnums)
-# print(pixnums[0])
-# print('length pixnums: ', len(pixnums))
+pixnums = hp.ang2pix(nside, theta, phi, nest=True)
+print('pixnums: ', pixnums)
+print(pixnums[0])
+print('length pixnums: ', len(pixnums))
 
 
 # Create a HEALPix map from pix
-# mapp = np.bincount(pixnums, minlength=npixel)
+mapp = np.bincount(pixnums, minlength=npixel)
 # print('map where ne 0: ', mapp[np.where(mapp > 0)])
 # print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 # print('length map: ', len(mapp))
 
 # Plot mapp
-# hp.gnomview(mapp, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (zmag selected; nobs >= 2)')
-# plt.show()
+hp.gnomview(mapp, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
+plt.show()
 
-# pixorder = np.argsort(pixnums)
-# # print('length pixorder: ', len(pixorder))
-# pixels, pixinverse, pixcnts = np.unique(pixnums, return_inverse=True, return_counts=True)
-# # print('length pixels: ', len(pixels))
-# # print('length pixinverse: ', len(pixinverse))
-# # print('length pixcnts: ', len(pixcnts))
-# pixcnts = np.insert(pixcnts, 0, 0)
-# pixcnts = np.cumsum(pixcnts)
+pixorder = np.argsort(pixnums)
+# print('length pixorder: ', len(pixorder))
+pixels, pixinverse, pixcnts = np.unique(pixnums, return_inverse=True, return_counts=True)
+# print('length pixels: ', len(pixels))
+# print('length pixinverse: ', len(pixinverse))
+# print('length pixcnts: ', len(pixcnts))
+pixcnts = np.insert(pixcnts, 0, 0)
+pixcnts = np.cumsum(pixcnts)
 
 # print(pixels)
 # print(pixcnts)
@@ -280,21 +280,31 @@ print('end nearNeighbor')
 # nobs_g = np.full(npixel, -1.)
 # nobs_r = np.full(npixel, -1.)
 # nobs_z = np.full(npixel, -1.)
-# array_g = np.full(npixel, -1.)
-# array_r = np.full(npixel, -1.)
-# array_z = np.full(npixel, -1.)
-# pix = []
-# for i in range(len(pixcnts)-1):
-#     inds = pixorder[pixcnts[i]:pixcnts[i+1]]
-#     # print(type(inds[0]))
-#     pix = pixnums[inds][0]
-#     # print(pix)
-#     array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
-#     array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
-#     array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
+array_g = np.full(npixel, -1.)
+array_r = np.full(npixel, -1.)
+array_z = np.full(npixel, -1.)
+pix = []
+for i in range(len(pixcnts)-1):
+    inds = pixorder[pixcnts[i]:pixcnts[i+1]]
+    # print(type(inds[0]))
+    pix = pixnums[inds][0]
+    # print(pix)
+    array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
+    array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
+    array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
 #     nobs_g[pix] = np.median(gobs[inds])
 #     nobs_r[pix] = np.median(robs[inds])
 #     nobs_z[pix] = np.median(zobs[inds])
+
+# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in g (nobs >= 2)')
+# plt.show()
+#
+# hp.gnomview(array_r, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in r (nobs >= 2)')
+# plt.show()
+#
+# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in z (nobs >= 2)')
+# plt.show()
+
 
 # sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
 # reverse_sorted_g = sorted_array_g[::-1]
@@ -343,50 +353,50 @@ print('end nearNeighbor')
 # print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
 # print('hpxinfo: ', hpxinfo)
 
-# masked_map_g = np.zeros(len(nobs_g))
-# masked_map_g[(nobs_g == -1.)] = 1
-#
-# mg = hp.ma(nobs_g)
-# mg.mask = masked_map_g
-#
-# masked_map_r = np.zeros(len(nobs_r))
-# masked_map_r[(nobs_r == -1.)] = 1
-#
-# mr = hp.ma(nobs_r)
-# mr.mask = masked_map_r
-#
-# masked_map_z = np.zeros(len(nobs_z))
-# masked_map_z[(nobs_z == -1.)] = 1
-#
-# mz = hp.ma(nobs_z)
-# mz.mask = masked_map_z
+masked_map_g = np.zeros(len(array_g))
+masked_map_g[(array_g == -1.)] = 1
 
-# hp.gnomview(array_g, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='unmasked')
+mg = hp.ma(array_g)
+mg.mask = masked_map_g
+
+masked_map_r = np.zeros(len(array_r))
+masked_map_r[(array_r == -1.)] = 1
+
+mr = hp.ma(array_r)
+mr.mask = masked_map_r
+
+masked_map_z = np.zeros(len(array_z))
+masked_map_z[(array_z == -1.)] = 1
+
+mz = hp.ma(array_z)
+mz.mask = masked_map_z
+
+# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='unmasked')
 # plt.show()
 
-# hp.gnomview(mg, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median gobs', cbar=None)
-# fig = plt.gcf()
-# ax = plt.gca()
-# image = ax.get_images()[0]
-# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+hp.gnomview(mg, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in g (nobs >= 2)', cbar=None)
+fig = plt.gcf()
+ax = plt.gca()
+image = ax.get_images()[0]
+cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
 # image.set_clim(vmax=5)
-# plt.show()
-#
-# hp.gnomview(mr, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median robs', cbar=None)
-# fig = plt.gcf()
-# ax = plt.gca()
-# image = ax.get_images()[0]
-# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+plt.show()
+
+hp.gnomview(mr, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in r (nobs >= 2)', cbar=None)
+fig = plt.gcf()
+ax = plt.gca()
+image = ax.get_images()[0]
+cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
 # image.set_clim(vmax=5)
-# plt.show()
-#
-# hp.gnomview(mz, xsize=210, ysize=160, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zobs', cbar=None)
-# fig = plt.gcf()
-# ax = plt.gca()
-# image = ax.get_images()[0]
-# cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
+plt.show()
+
+hp.gnomview(mz, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in z (nobs >= 2)', cbar=None)
+fig = plt.gcf()
+ax = plt.gca()
+image = ax.get_images()[0]
+cmap = fig.colorbar(image, ax=ax, orientation='horizontal', extend='max')
 # image.set_clim(vmax=5)
-# plt.show()
+plt.show()
 
 # hp.gnomview(array_r, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 2)')
 # plt.show()
