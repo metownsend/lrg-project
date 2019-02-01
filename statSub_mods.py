@@ -82,59 +82,98 @@ print("end readdata")
 # # print(flux_ivar_g)
 # print('---------')
 #
-# garray = []
-# for i in range(len(gflux)):
-#     if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
-#         garray.append(-1)
-#     else:
-#         garray.append(gflux[i])
+garray = []
+for i in range(len(gflux)):
+    if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
+        garray.append(-999)
+    else:
+        garray.append(gflux[i])
+
+garray = np.array(garray)
+print(len(garray))
+print('non-detections in g: ', len(garray[np.where(garray == -999)]))
+print('detections in g: ', len(garray[np.where(garray != -999)]))
+
+print('---------')
+
+rarray = []
+for i in range(len(rflux)):
+    if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
+        rarray.append(-999)
+    else:
+        rarray.append(rflux[i])
+
+rarray = np.array(rarray)
+print(len(rarray))
+print('non-detections in r: ', len(rarray[np.where(rarray == -999)]))
+print('detections in r: ', len(rarray[np.where(rarray != -999)]))
+
+print('---------')
+
+zarray = []
+for i in range(len(zflux)):
+    if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
+        zarray.append(-999)
+    else:
+        zarray.append(zflux[i])
+
+zarray = np.array(zarray)
+print(len(zarray))
+print('non-detections in z: ', len(zarray[np.where(zarray == -999)]))
+print('detections in z: ', len(zarray[np.where(zarray != -999)]))
+
+print('---------')
+
+r_nondetect = rarray[np.where((zarray != -999) & (rarray == -999))]
+g_nondetect = garray[np.where((zarray != -999) & (garray == -999))]
+
+print('non-detections in z and r: ', len(r_nondetect))
+print('non-detections in z and g: ', len(g_nondetect))
+
+print('---------')
+
+print(len(garray[np.where((garray < 0.) & (garray != -999))]))
+print(len(rarray[np.where((rarray < 0.) & (rarray != -999))]))
+print(len(zarray[np.where((zarray < 0.) & (zarray != -999))]))
+
+print('---------')
+
+# plt.scatter(zarray[np.where(zarray == -999)], rarray[np.where(zarray == -999)],  s=0.7, color='black', label='non-detections in z')
+# plt.scatter(zarray[np.where(zarray != -999)], rarray[np.where(zarray != -999)], s=0.5, color='red', label='detections in z')
+# plt.rcParams["figure.figsize"] = [15, 15]
+# plt.xlabel(r'$zflux$')
+# plt.ylabel(r'$rflux$')
+# plt.legend(loc="upper right", fontsize = 15)
+# plt.show()
 #
-# garray = np.array(garray)
-# print(len(garray))
-# print(len(garray[np.where(garray == -1)]))
-# print(len(garray[np.where(garray != -1)]))
+# plt.scatter(zarray[np.where(zarray == -999)], garray[np.where(zarray == -999)],  s=0.7, color='black', label='non-detections in z')
+# plt.scatter(zarray[np.where(zarray != -999)], garray[np.where(zarray != -999)], s=0.5, color='green', label='detections in z')
+# plt.rcParams["figure.figsize"] = [15, 15]
+# plt.xlabel(r'$zflux$')
+# plt.ylabel(r'$gflux$')
+# plt.legend(loc="upper right", fontsize = 15)
+# plt.show()
 #
-# print('---------')
+# # plt.title("Limiting Magnitude Distribution (gmag)")
+# plt.hist(garray[np.where((garray < 0.) & (garray != -999))], bins=50, color='grey', alpha=0.5)
+# plt.hist(garray[np.where(garray > 0.)], bins=50, color='green', alpha=0.5)
+# plt.xlabel(r'$gflux$')
+# plt.ylabel(r'$counts$')
+# plt.show()
 #
-# rarray = []
-# for i in range(len(rflux)):
-#     if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
-#         rarray.append(-1)
-#     else:
-#         rarray.append(rflux[i])
+# # plt.title("Limiting Magnitude Distribution (rmag)")
+# plt.hist(rarray[np.where((rarray < 0.) & (rarray != -999))], bins=50, color='grey', alpha=0.5)
+# plt.hist(rarray[np.where(rarray > 0.)], bins=50, color='red', alpha=0.5)
+# plt.xlabel(r'$rflux$')
+# plt.ylabel(r'$counts$')
+# plt.show()
 #
-# rarray = np.array(rarray)
-# print(len(rarray))
-# print(len(rarray[np.where(rarray == -1)]))
-# print(len(rarray[np.where(rarray != -1)]))
-#
-# print('---------')
-#
-# zarray = []
-# for i in range(len(zflux)):
-#     if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
-#         zarray.append(-1)
-#     else:
-#         zarray.append(zflux[i])
-#
-# zarray = np.array(zarray)
-# print(len(zarray))
-# print(len(zarray[np.where(zarray == -1)]))
-# print(len(zarray[np.where(zarray != -1)]))
-#
-# print('---------')
-#
-# r_nondetect = rarray[np.where((zarray != -1) & (rarray == -1))]
-# g_nondetect = garray[np.where((zarray != -1) & (garray == -1))]
-#
-# print(len(r_nondetect))
-# print(len(g_nondetect))
-#
-# print('---------')
-#
-# print(len(garray[np.where((garray < 0.) & (garray != -1))]))
-# print(len(rarray[np.where((rarray < 0.) & (rarray != -1))]))
-# print(len(zarray[np.where((zarray < 0.) & (zarray != -1))]))
+# # plt.title("Limiting Magnitude Distribution (zmag)")
+# plt.hist(zarray[np.where((zarray < 0.) & (zarray != -999))], bins=50, color='grey', alpha=0.5)
+# plt.hist(zarray[np.where(zarray > 0.)], bins=50, color='blue', alpha=0.5)
+# plt.xlabel(r'$zflux$')
+# plt.ylabel(r'$counts$')
+# plt.show()
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -322,30 +361,30 @@ cutlen_z = len(reverse_sorted_z) * 0.98
 nz = np.rint(cutlen_z)
 
 
-# ra98 = ra[np.where((gmag <= reverse_sorted_g[np.int64(ng)]) & (rmag <= reverse_sorted_r[np.int64(nr)]) & (zmag <= reverse_sorted_z[np.int64(nz)]))]
-# dec98 = dec[np.where((gmag <= reverse_sorted_g[np.int64(ng)]) & (rmag <= reverse_sorted_r[np.int64(nr)]) & (zmag <= reverse_sorted_z[np.int64(nz)]))]
-#
-# theta98 = []
-# phi98 = []
-#
-# for i in range(len(ra98)):
-#     theta98.append(np.radians(90. - dec98[i]))
-#     phi98.append(np.radians(ra98[i]))
-#
-# # Convert angles theta and phi to pixel numbers
-# pixnums98 = hp.ang2pix(nside, theta98, phi98, nest=True)
-#
-# # Create a HEALPix map from pix
-# density_map = np.bincount(pixnums98, minlength=npixel)
-#
-# masked_density = np.zeros(len(density_map))
-# masked_density[(density_map == -1.)] = 1
-# md = hp.ma(density_map)
-# md.mask = masked_density
-#
-# # Plot mapp
-# hp.gnomview(md, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (98)')
-# plt.show()
+ra98 = ra[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
+dec98 = dec[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
+
+theta98 = []
+phi98 = []
+
+for i in range(len(ra98)):
+    theta98.append(np.radians(90. - dec98[i]))
+    phi98.append(np.radians(ra98[i]))
+
+# Convert angles theta and phi to pixel numbers
+pixnums98 = hp.ang2pix(nside, theta98, phi98, nest=True)
+
+# Create a HEALPix map from pix
+density_map = np.bincount(pixnums98, minlength=npixel)
+
+masked_density = np.zeros(len(density_map))
+masked_density[(density_map == -1.)] = 1
+md = hp.ma(density_map)
+md.mask = masked_density
+
+# Plot mapp
+hp.gnomview(md, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (zmag selected; nobs >=2)')
+plt.show()
 
 
 
@@ -461,6 +500,7 @@ plt.title("Limiting Magnitude Distribution (gmag)")
 plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
 plt.xlabel(r'$limiting$ $gmag$')
 plt.ylabel(r'$counts$')
+plt.xlim(22., 26.)
 plt.gca().invert_xaxis()
 plt.axvline(x=reverse_sorted_g[np.int64(ng)] , linewidth=1, color='black')
 plt.text(24.1, 350, '{} mag'.format(np.around(reverse_sorted_g[np.int64(ng)], decimals=2)), fontsize=8)
@@ -471,6 +511,7 @@ plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
 plt.xlabel(r'$limiting$ $rmag$')
 plt.ylabel(r'$counts$')
 plt.gca().invert_xaxis()
+plt.xlim(21., 23.)
 plt.axvline(x=reverse_sorted_r[np.int64(nr)] , linewidth=1, color='black')
 plt.text(23.3, 550, '{} mag'.format(np.around(reverse_sorted_r[np.int64(nr)], decimals=2)), fontsize=8)
 plt.show()
@@ -479,6 +520,7 @@ plt.title("Limiting Magnitude Distribution (zmag)")
 plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
 plt.xlabel(r'$limiting$ $zmag$')
 plt.ylabel(r'$counts$')
+plt.xlim(19., 24.)
 plt.gca().invert_xaxis()
 plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
 plt.text(22.4, 450, '{} mag'.format(np.around(reverse_sorted_z[np.int64(nz)], decimals=2)), fontsize=8)
@@ -521,6 +563,7 @@ plt.show()
 # plt.xlabel(r'$limiting$ $gmag$')
 # plt.ylabel(r'$counts$')
 # plt.legend(loc='upper right')
+# plt.xlim(22., 26.)
 # plt.gca().invert_xaxis()
 # plt.show()
 #
@@ -530,6 +573,7 @@ plt.show()
 # plt.xlabel(r'$limiting$ $rmag$')
 # plt.ylabel(r'$counts$')
 # plt.legend(loc='upper right')
+# plt.xlim(21., 23.)
 # plt.gca().invert_xaxis()
 # plt.show()
 #
@@ -539,6 +583,7 @@ plt.show()
 # plt.xlabel(r'$limiting$ $zmag$')
 # plt.ylabel(r'$counts$')
 # plt.legend(loc='upper right')
+# plt.xlim(19., 24.)
 # plt.gca().invert_xaxis()
 # plt.show()
 
