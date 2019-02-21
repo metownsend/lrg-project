@@ -42,21 +42,19 @@ DECaLS_data2 = hdulist4[1].data
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
-print('----------')
-id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
+# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
-# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
-# print('----------')
-# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
+id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
 ra = np.concatenate([ra_LRG1, ra_LRG2, ra_BKG1, ra_BKG2])
 dec = np.concatenate([dec_LRG1, dec_LRG2, dec_BKG1, dec_BKG2])
 z_LRG = np.concatenate([z_LRG1, z_LRG2])
-gmag = np.concatenate([gmag_LRG1, gmag_LRG2, gmag_BKG1, gmag_BKG2])
-rmag = np.concatenate([rmag_LRG1, rmag_LRG2, rmag_BKG1, rmag_BKG2])
-zmag = np.concatenate([zmag_LRG1, zmag_LRG2, zmag_BKG1, zmag_BKG2])
-color_BKG = np.concatenate([color_BKG1, color_BKG2])
+# gmag = np.concatenate([gmag_LRG1, gmag_LRG2, gmag_BKG1, gmag_BKG2])
+# rmag = np.concatenate([rmag_LRG1, rmag_LRG2, rmag_BKG1, rmag_BKG2])
+# zmag = np.concatenate([zmag_LRG1, zmag_LRG2, zmag_BKG1, zmag_BKG2])
+# color_BKG = np.concatenate([color_BKG1, color_BKG2])
 galdepth_g = np.concatenate([gdepth_LRG1, gdepth_LRG2, gdepth_BKG1, gdepth_BKG2])
 galdepth_r = np.concatenate([rdepth_LRG1, rdepth_LRG2, rdepth_BKG1, rdepth_BKG2])
 galdepth_z = np.concatenate([zdepth_LRG1, zdepth_LRG2, zdepth_BKG1, zdepth_BKG2])
@@ -73,122 +71,76 @@ zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
 
 print("end readdata")
 
-# print(len(gflux))
-# print(len(rflux))
-# print(len(zflux))
-# print(len(ra))
-# print(len(ra[np.where((gflux > 0.) & (rflux > 0.) & (zflux > 0.))]))
+# -------------------------------------------------------------------------------------------------------------------
+
+zdetect = np.where((zflux_ivar > 6.) & ((gflux_ivar < 6.) | (rflux_ivar < 6.)))
+print(len(zflux))
+print(len(zflux[zdetect]))
+print(ra[np.where(zflux[zdetect])])
+print(dec[np.where(zflux[zdetect])])
+
+# # Attempt at finding non-detections
+# garray = []
+# for i in range(len(gflux)):
+#     if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
+#         garray.append(-999)
+#     else:
+#         garray.append(gflux[i])
 #
-# # print(flux_ivar_g)
+# garray = np.array(garray)
+# print(len(garray))
+# print('non-detections in g: ', len(garray[np.where(garray == -999)]))
+# print('detections in g: ', len(garray[np.where(garray != -999)]))
+#
 # print('---------')
 #
-garray = []
-for i in range(len(gflux)):
-    if ((gflux[i] > -3.*(gflux_ivar[i])**(-0.5)) & (gflux[i] < 3.*(gflux_ivar[i]**(-0.5)))):
-        garray.append(-999)
-    else:
-        garray.append(gflux[i])
-
-garray = np.array(garray)
-print(len(garray))
-print('non-detections in g: ', len(garray[np.where(garray == -999)]))
-print('detections in g: ', len(garray[np.where(garray != -999)]))
-
-print('---------')
-
-rarray = []
-for i in range(len(rflux)):
-    if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
-        rarray.append(-999)
-    else:
-        rarray.append(rflux[i])
-
-rarray = np.array(rarray)
-print(len(rarray))
-print('non-detections in r: ', len(rarray[np.where(rarray == -999)]))
-print('detections in r: ', len(rarray[np.where(rarray != -999)]))
-
-print('---------')
-
-zarray = []
-for i in range(len(zflux)):
-    if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
-        zarray.append(-999)
-    else:
-        zarray.append(zflux[i])
-
-zarray = np.array(zarray)
-print(len(zarray))
-print('non-detections in z: ', len(zarray[np.where(zarray == -999)]))
-print('detections in z: ', len(zarray[np.where(zarray != -999)]))
-
-print('---------')
-
-r_nondetect = rarray[np.where((zarray != -999) & (rarray == -999))]
-g_nondetect = garray[np.where((zarray != -999) & (garray == -999))]
-
-print('non-detections in z and r: ', len(r_nondetect))
-print('non-detections in z and g: ', len(g_nondetect))
-
-print('---------')
-
-print(len(garray[np.where((garray < 0.) & (garray != -999))]))
-print(len(rarray[np.where((rarray < 0.) & (rarray != -999))]))
-print(len(zarray[np.where((zarray < 0.) & (zarray != -999))]))
-
-print('---------')
-
-# plt.scatter(zarray[np.where(zarray == -999)], rarray[np.where(zarray == -999)],  s=0.7, color='black', label='non-detections in z')
-# plt.scatter(zarray[np.where(zarray != -999)], rarray[np.where(zarray != -999)], s=0.5, color='red', label='detections in z')
-# plt.rcParams["figure.figsize"] = [15, 15]
-# plt.xlabel(r'$zflux$')
-# plt.ylabel(r'$rflux$')
-# plt.legend(loc="upper right", fontsize = 15)
-# plt.show()
+# rarray = []
+# for i in range(len(rflux)):
+#     if ((rflux[i] > -3.*(rflux_ivar[i])**(-0.5)) & (rflux[i] < 3.*(rflux_ivar[i]**(-0.5)))):
+#         rarray.append(-999)
+#     else:
+#         rarray.append(rflux[i])
 #
-# plt.scatter(zarray[np.where(zarray == -999)], garray[np.where(zarray == -999)],  s=0.7, color='black', label='non-detections in z')
-# plt.scatter(zarray[np.where(zarray != -999)], garray[np.where(zarray != -999)], s=0.5, color='green', label='detections in z')
-# plt.rcParams["figure.figsize"] = [15, 15]
-# plt.xlabel(r'$zflux$')
-# plt.ylabel(r'$gflux$')
-# plt.legend(loc="upper right", fontsize = 15)
-# plt.show()
+# rarray = np.array(rarray)
+# print(len(rarray))
+# print('non-detections in r: ', len(rarray[np.where(rarray == -999)]))
+# print('detections in r: ', len(rarray[np.where(rarray != -999)]))
 #
-# # plt.title("Limiting Magnitude Distribution (gmag)")
-# plt.hist(garray[np.where((garray < 0.) & (garray != -999))], bins=50, color='grey', alpha=0.5)
-# plt.hist(garray[np.where(garray > 0.)], bins=50, color='green', alpha=0.5)
-# plt.xlabel(r'$gflux$')
-# plt.ylabel(r'$counts$')
-# plt.show()
+# print('---------')
 #
-# # plt.title("Limiting Magnitude Distribution (rmag)")
-# plt.hist(rarray[np.where((rarray < 0.) & (rarray != -999))], bins=50, color='grey', alpha=0.5)
-# plt.hist(rarray[np.where(rarray > 0.)], bins=50, color='red', alpha=0.5)
-# plt.xlabel(r'$rflux$')
-# plt.ylabel(r'$counts$')
-# plt.show()
+# zarray = []
+# for i in range(len(zflux)):
+#     if ((zflux[i] > -3.*(zflux_ivar[i])**(-0.5)) & (zflux[i] < 3.*(zflux_ivar[i]**(-0.5)))):
+#         zarray.append(-999)
+#     else:
+#         zarray.append(zflux[i])
 #
-# # plt.title("Limiting Magnitude Distribution (zmag)")
-# plt.hist(zarray[np.where((zarray < 0.) & (zarray != -999))], bins=50, color='grey', alpha=0.5)
-# plt.hist(zarray[np.where(zarray > 0.)], bins=50, color='blue', alpha=0.5)
-# plt.xlabel(r'$zflux$')
-# plt.ylabel(r'$counts$')
-# plt.show()
+# zarray = np.array(zarray)
+# print(len(zarray))
+# print('non-detections in z: ', len(zarray[np.where(zarray == -999)]))
+# print('detections in z: ', len(zarray[np.where(zarray != -999)]))
+#
+# print('---------')
+#
+# r_nondetect = rarray[np.where((zarray != -999) & (rarray == -999))]
+# g_nondetect = garray[np.where((zarray != -999) & (garray == -999))]
+#
+# print('non-detections in z and r: ', len(r_nondetect))
+# print('non-detections in z and g: ', len(g_nondetect))
+#
+# print('---------')
+#
+# print(len(garray[np.where((garray < 0.) & (garray != -999))]))
+# print(len(rarray[np.where((rarray < 0.) & (rarray != -999))]))
+# print(len(zarray[np.where((zarray < 0.) & (zarray != -999))]))
+#
+# print('---------')
 
-# ---------------------------------------------------------------------------------------------------------------------
-
-# plt.scatter(ra_BKG, dec_BKG, s=0.5, color='blue')
-# plt.scatter(ra_LRG, dec_LRG, s=0.5, color='red')
-# plt.rcParams["figure.figsize"] = [15, 15]
-# plt.xlabel(r'$RA$')
-# plt.ylabel(r'Dec')
-# plt.show()
-
-# ---------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------
 
 # DTT_Gyr, age_Gyr, zage_Gyr, DCMR_Mpc, DCMR_Gyr, DA_Mpc, DA_Gyr, kpc_DA, DL_Mpc, DL_Gyr, V_Gpc = cosmoCalcfunc(z_LRG)
 
-print("end cosmoCalc")
+# print("end cosmoCalc")
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -207,17 +159,15 @@ print("end cosmoCalc")
 #
 # distance_kpc, near, gal_tree = nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, color_BKG, xedges, yedges)
 
-print('end nearNeighbor')
+# print('end nearNeighbor')
 
 # ---------------------------------------------------------------------------------------------------------------------
 
-# Make HEALPix map
+# Make HEALPix map using just RA/Dec; end up with a density plot
 
-# min_radius = 0.4
-# max_radius = 1.0
 nside = 1024
 npixel = hp.nside2npix(nside)
-# print('npixel: ', npixel)
+
 # ra = np.concatenate([ra_LRG, ra_BKG])
 # dec = np.concatenate([dec_LRG, dec_BKG])
 # gmag = np.concatenate([gmag_LRG, gmag_BKG])
@@ -226,25 +176,6 @@ npixel = hp.nside2npix(nside)
 #
 # ra_cut = ra[np.where(zmag <= 22.48)]
 # dec_cut = dec[np.where(zmag <= 22.48)]
-
-# print('length gobs: ', len(gobs))
-# print('length gobs >= 2: ', len(gobs[np.where(gobs >= 2.)]))
-# print('length gobs >= 3: ', len(gobs[np.where(gobs >= 3.)]))
-# print('percentage gobs >= 2: ', (len(gobs[np.where(gobs >= 2.)]) / len(gobs)) * 100.)
-# print('percentage gobs >= 3: ', (len(gobs[np.where(gobs >= 3.)]) / len(gobs)) * 100.)
-#
-# print('length robs: ', len(robs))
-# print('length robs >= 2: ', len(robs[np.where(robs >= 2.)]))
-# print('length robs >= 3: ', len(robs[np.where(robs >= 3.)]))
-# print('percentage robs >= 2: ', (len(robs[np.where(robs >= 2.)]) / len(robs)) * 100.)
-# print('percentage robs >= 3: ', (len(robs[np.where(robs >= 3.)]) / len(robs)) * 100.)
-#
-# print('length zobs: ', len(zobs))
-# print('length zobs >= 2: ', len(zobs[np.where(zobs >= 2.)]))
-# print('length zobs >= 3: ', len(zobs[np.where(zobs >= 3.)]))
-# print('percentage zobs >= 2: ', (len(zobs[np.where(zobs >= 2.)]) / len(zobs)) * 100.)
-# print('percentage zobs >= 3: ', (len(zobs[np.where(zobs >= 3.)]) / len(zobs)) * 100.)
-
 
 # plt.title("Nobs Distribution")
 # plt.xlabel(r'$nobs$')
@@ -255,27 +186,7 @@ npixel = hp.nside2npix(nside)
 # plt.legend(loc="upper right", fontsize = 15)
 # plt.show()
 
-
-# print('galdepth: ', galdepth_g)
-# print('length galdepth_g: ', len(galdepth_g))
-# print('length galdepth_g ne 0: ', len(galdepth_g[np.where(galdepth_g > 0.)]))
-# print('length galdepth_r: ', len(galdepth_r))
-# print('length galdepth_r ne 0: ', len(galdepth_r[np.where(galdepth_r > 0.)]))
-# print('length galdepth_z: ', len(galdepth_z))
-# print('length galdepth_z ne 0: ', len(galdepth_z[np.where(galdepth_z > 0.)]))
-# print('length ra: ', len(ra))
-# print('length dec: ', len(dec))
-# print('type of array: ', type(galdepth_g))
-
-# Make HEALPix map
 # Convert ra/dec into theta/phi
-# theta_cut_LRG = []
-# phi_cut_LRG = []
-#
-# for i in range(len(ra_cut_LRG)):
-#     theta_cut_LRG.append(np.radians(90. - dec_cut_LRG[i]))
-#     phi_cut_LRG.append(np.radians(ra_cut_LRG[i]))
-
 theta = []
 phi = []
 
@@ -301,21 +212,16 @@ print('length pixnums: ', len(pixnums))
 # hp.gnomview(mapp, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
 # plt.show()
 
+# -------------------------------------------------------------------------------------------------------------------
+
+# This section maps various values of the galaxies into a HEALPix map so the result is basically a density map of
+# galaxy properties. In this code the new maps are array_g, array_r, and array_z.
+
 pixorder = np.argsort(pixnums)
-# print('length pixorder: ', len(pixorder))
 pixels, pixinverse, pixcnts = np.unique(pixnums, return_inverse=True, return_counts=True)
-# print('length pixels: ', len(pixels))
-# print('length pixinverse: ', len(pixinverse))
-# print('length pixcnts: ', len(pixcnts))
 pixcnts = np.insert(pixcnts, 0, 0)
 pixcnts = np.cumsum(pixcnts)
 
-# print(pixels)
-# print(pixcnts)
-
-# nobs_g = np.full(npixel, -1.)
-# nobs_r = np.full(npixel, -1.)
-# nobs_z = np.full(npixel, -1.)
 array_g = np.full(npixel, -1.)
 array_r = np.full(npixel, -1.)
 array_z = np.full(npixel, -1.)
@@ -335,68 +241,6 @@ for i in range(len(pixcnts)-1):
     array_r[pix] = np.median(rmag[inds])
     array_z[pix] = np.median(zmag[inds])
 
-# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in g (nobs >= 2)')
-# plt.show()
-#
-# hp.gnomview(array_r, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in r (nobs >= 2)')
-# plt.show()
-#
-# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Depth in z (nobs >= 2)')
-# plt.show()
-
-
-sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
-reverse_sorted_g = sorted_array_g[::-1]
-cutlen_g = len(reverse_sorted_g) * 0.98
-ng = np.rint(cutlen_g)
-
-sorted_array_r = np.sort(array_r[np.where(array_r != -1.)])
-reverse_sorted_r = sorted_array_r[::-1]
-cutlen_r = len(reverse_sorted_r) * 0.98
-nr = np.rint(cutlen_r)
-
-sorted_array_z = np.sort(array_z[np.where(array_z != -1.)])
-reverse_sorted_z = sorted_array_z[::-1]
-cutlen_z = len(reverse_sorted_z) * 0.98
-nz = np.rint(cutlen_z)
-
-
-ra98 = ra[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
-dec98 = dec[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
-
-theta98 = []
-phi98 = []
-
-for i in range(len(ra98)):
-    theta98.append(np.radians(90. - dec98[i]))
-    phi98.append(np.radians(ra98[i]))
-
-# Convert angles theta and phi to pixel numbers
-pixnums98 = hp.ang2pix(nside, theta98, phi98, nest=True)
-
-# Create a HEALPix map from pix
-density_map = np.bincount(pixnums98, minlength=npixel)
-
-masked_density = np.zeros(len(density_map))
-masked_density[(density_map == -1.)] = 1
-md = hp.ma(density_map)
-md.mask = masked_density
-
-# Plot mapp
-hp.gnomview(md, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (zmag selected; nobs >=2)')
-plt.show()
-
-
-
-# print(array_g[np.where(array_g > -999)])
-
-# print('length hpxinfo: ', len(hpxinfo))
-# print('pix: ', pix)
-# print('pixinverse: ', pixinverse)
-# galdepth_med = hpxinfo[pixorder]
-# print('length hpxinfo ne 0: ', len(hpxinfo[np.where(hpxinfo > 0)]))
-# print('hpxinfo: ', hpxinfo)
-
 masked_map_g = np.zeros(len(array_g))
 masked_map_g[(array_g == -1.)] = 1
 
@@ -414,9 +258,84 @@ masked_map_z[(array_z == -1.)] = 1
 
 mz = hp.ma(array_z)
 mz.mask = masked_map_z
-
-# hp.gnomview(array_g, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='unmasked')
+#
+# hp.gnomview(mg, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Median gmag (nobs >= 2)')
 # plt.show()
+#
+# hp.gnomview(mr, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Median rmag (nobs >= 2)')
+# plt.show()
+#
+# hp.gnomview(mz, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Median zmag (nobs >= 2)')
+# plt.show()
+
+# -------------------------------------------------------------------------------------------------------------------
+
+# Attempt to isolate only the top 2 percent of galaxies in whatever galaxy characteristic I'm looking at
+
+# sorted_array_g = np.sort(array_g[np.where(array_g != -1.)])
+# reverse_sorted_g = sorted_array_g[::-1]
+# cutlen_g = len(reverse_sorted_g) * 0.98
+# ng = np.rint(cutlen_g)
+#
+# sorted_array_r = np.sort(array_r[np.where(array_r != -1.)])
+# reverse_sorted_r = sorted_array_r[::-1]
+# cutlen_r = len(reverse_sorted_r) * 0.98
+# nr = np.rint(cutlen_r)
+#
+# sorted_array_z = np.sort(array_z[np.where(array_z != -1.)])
+# reverse_sorted_z = sorted_array_z[::-1]
+# cutlen_z = len(reverse_sorted_z) * 0.98
+# nz = np.rint(cutlen_z)
+#
+#
+# ra98 = ra[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
+# dec98 = dec[np.where(zmag >= reverse_sorted_z[np.int64(nz)])]
+#
+# theta98 = []
+# phi98 = []
+#
+# for i in range(len(ra98)):
+#     theta98.append(np.radians(90. - dec98[i]))
+#     phi98.append(np.radians(ra98[i]))
+#
+# # Convert angles theta and phi to pixel numbers
+# pixnums98 = hp.ang2pix(nside, theta98, phi98, nest=True)
+#
+# # Create a HEALPix map from pix
+# density_map = np.bincount(pixnums98, minlength=npixel)
+#
+# masked_density = np.zeros(len(density_map))
+# masked_density[(density_map == -1.)] = 1
+# md = hp.ma(density_map)
+# md.mask = masked_density
+#
+# # Plot mapp
+# hp.gnomview(md, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (zmag selected; nobs >=2)')
+# plt.show()
+
+# -------------------------------------------------------------------------------------------------------------------
+
+# Creates a mask that masks out pixels with no sources. -1 flag set when array_g, array_r, and array_z are initialized
+
+# masked_map_g = np.zeros(len(array_g))
+# masked_map_g[(array_g == -1.)] = 1
+#
+# mg = hp.ma(array_g)
+# mg.mask = masked_map_g
+#
+# masked_map_r = np.zeros(len(array_r))
+# masked_map_r[(array_r == -1.)] = 1
+#
+# mr = hp.ma(array_r)
+# mr.mask = masked_map_r
+#
+# masked_map_z = np.zeros(len(array_z))
+# masked_map_z[(array_z == -1.)] = 1
+#
+# mz = hp.ma(array_z)
+# mz.mask = masked_map_z
+
+# -------------------------------------------------------------------------------------------------------------------
 
 # hp.gnomview(mg, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Nobs in g', cbar=None)
 # fig = plt.gcf()
@@ -442,11 +361,6 @@ mz.mask = masked_map_z
 # # image.set_clim(vmax=5)
 # plt.show()
 
-# hp.gnomview(array_r, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median rmag depth (nobs >= 2)')
-# plt.show()
-
-# hp.gnomview(array_z, xsize=200, ysize=150, rot=(-116.5, 8.25), flip='geo', nest=True, title='median zmag depth (nobs >= 2)')
-# plt.show()
 
 # plt.scatter(nobs_g, array_g, s=0.5, c='green')
 # plt.xlabel(r'$gobs$')
@@ -496,35 +410,35 @@ mz.mask = masked_map_z
 # plt.title('zobs vs. number of sources (zmag; nobs >= 2)')
 # plt.show()
 
-plt.title("Limiting Magnitude Distribution (gmag)")
-plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
-plt.xlabel(r'$limiting$ $gmag$')
-plt.ylabel(r'$counts$')
-plt.xlim(22., 26.)
-plt.gca().invert_xaxis()
-plt.axvline(x=reverse_sorted_g[np.int64(ng)] , linewidth=1, color='black')
-plt.text(24.1, 350, '{} mag'.format(np.around(reverse_sorted_g[np.int64(ng)], decimals=2)), fontsize=8)
-plt.show()
-
-plt.title("Limiting Magnitude Distribution (rmag)")
-plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
-plt.xlabel(r'$limiting$ $rmag$')
-plt.ylabel(r'$counts$')
-plt.gca().invert_xaxis()
-plt.xlim(21., 23.)
-plt.axvline(x=reverse_sorted_r[np.int64(nr)] , linewidth=1, color='black')
-plt.text(23.3, 550, '{} mag'.format(np.around(reverse_sorted_r[np.int64(nr)], decimals=2)), fontsize=8)
-plt.show()
-
-plt.title("Limiting Magnitude Distribution (zmag)")
-plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
-plt.xlabel(r'$limiting$ $zmag$')
-plt.ylabel(r'$counts$')
-plt.xlim(19., 24.)
-plt.gca().invert_xaxis()
-plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
-plt.text(22.4, 450, '{} mag'.format(np.around(reverse_sorted_z[np.int64(nz)], decimals=2)), fontsize=8)
-plt.show()
+# plt.title("Limiting Magnitude Distribution (gmag)")
+# plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='green', alpha=0.5)
+# plt.xlabel(r'$limiting$ $gmag$')
+# plt.ylabel(r'$counts$')
+# plt.xlim(22., 26.)
+# plt.gca().invert_xaxis()
+# plt.axvline(x=reverse_sorted_g[np.int64(ng)] , linewidth=1, color='black')
+# plt.text(24.1, 350, '{} mag'.format(np.around(reverse_sorted_g[np.int64(ng)], decimals=2)), fontsize=8)
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (rmag)")
+# plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='red', alpha=0.5)
+# plt.xlabel(r'$limiting$ $rmag$')
+# plt.ylabel(r'$counts$')
+# plt.gca().invert_xaxis()
+# plt.xlim(21., 23.)
+# plt.axvline(x=reverse_sorted_r[np.int64(nr)] , linewidth=1, color='black')
+# plt.text(23.3, 550, '{} mag'.format(np.around(reverse_sorted_r[np.int64(nr)], decimals=2)), fontsize=8)
+# plt.show()
+#
+# plt.title("Limiting Magnitude Distribution (zmag)")
+# plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='blue', alpha=0.5)
+# plt.xlabel(r'$limiting$ $zmag$')
+# plt.ylabel(r'$counts$')
+# plt.xlim(19., 24.)
+# plt.gca().invert_xaxis()
+# plt.axvline(x=reverse_sorted_z[np.int64(nz)], linewidth=1, color='black')
+# plt.text(22.4, 450, '{} mag'.format(np.around(reverse_sorted_z[np.int64(nz)], decimals=2)), fontsize=8)
+# plt.show()
 
 # plt.scatter(zmag, gmag, s=0.5, c='purple')
 # plt.xlabel(r'$zmag$')
@@ -557,34 +471,31 @@ plt.show()
 # depth_z_bin_1 = array_z[np.where((-1. < nobs_z) & (3 >= nobs_z))]
 # depth_z_bin_2 = array_z[np.where(nobs_z > 3)]
 
-# plt.title("Limiting Magnitude Distribution (gmag)")
-# plt.hist(depth_g_bin_1, bins=50, color='lightgreen', alpha=0.5, label='gobs < 3')
-# plt.hist(depth_g_bin_2, bins=50, color='darkgreen', alpha=0.5, label='gobs > 3')
-# plt.xlabel(r'$limiting$ $gmag$')
-# plt.ylabel(r'$counts$')
-# plt.legend(loc='upper right')
-# plt.xlim(22., 26.)
+plt.title("Magnitude Distribution (median gmag per pixel)")
+plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='lightgreen', alpha=0.5, label='gobs >= 3')
+plt.xlabel(r'$gmag$')
+plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.xlim(17., 27.5)
 # plt.gca().invert_xaxis()
-# plt.show()
-#
-# plt.title("Limiting Magnitude Distribution (rmag)")
-# plt.hist(depth_r_bin_1, bins=50, color='indianred', alpha=0.5, label='robs < 3')
-# plt.hist(depth_r_bin_2, bins=50, color='darkred', alpha=0.5, label='robs > 3')
-# plt.xlabel(r'$limiting$ $rmag$')
-# plt.ylabel(r'$counts$')
-# plt.legend(loc='upper right')
-# plt.xlim(21., 23.)
+plt.show()
+
+plt.title("Magnitude Distribution (median rmag per pixel)")
+plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='indianred', alpha=0.5, label='robs >= 3')
+plt.xlabel(r'$rmag$')
+plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.xlim(16., 25.5)
 # plt.gca().invert_xaxis()
-# plt.show()
-#
-# plt.title("Limiting Magnitude Distribution (zmag)")
-# plt.hist(depth_z_bin_1, bins=50, color='cornflowerblue', alpha=0.5, label='zobs < 3')
-# plt.hist(depth_z_bin_2, bins=50, color='darkblue', alpha=0.5, label='zobs > 3')
-# plt.xlabel(r'$limiting$ $zmag$')
-# plt.ylabel(r'$counts$')
-# plt.legend(loc='upper right')
-# plt.xlim(19., 24.)
+plt.show()
+
+plt.title("Magnitude Distribution (median zmag per pixel)")
+plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='cornflowerblue', alpha=0.5, label='zobs >= 3')
+plt.xlabel(r'$$zmag$')
+plt.ylabel(r'$counts$')
+plt.legend(loc='upper right')
+plt.xlim(15.5, 24.)
 # plt.gca().invert_xaxis()
-# plt.show()
+plt.show()
 
 print('end program')

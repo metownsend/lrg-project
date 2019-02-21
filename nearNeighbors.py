@@ -25,8 +25,8 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, c
         dist.append((distance_kpc / kpc_DA[i]) * 1./3600.) 
 
     # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
-    zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
-    zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
+    zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # LRG sources
+    zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # EDR sources
 
     # Creates a tree of EDR sources
     gal_tree = KDTree(zip_list_BKG)
