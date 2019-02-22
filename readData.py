@@ -396,17 +396,17 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Number of images in z for all galaxies in DECaLS
     zobs_BKG = zobs_ALL[np.where(no_LRG_cut)]
 
-    # gmag_LRG = 22.5 - 2.5 * np.log10(gflux_LRG)
-    # rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
-    # zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
-    #
-    # color_LRG = gmag_LRG - rmag_LRG
-    #
-    # gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
-    # rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
-    # zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
-    #
-    # color_BKG = gmag_BKG - rmag_BKG
+    gmag_LRG = 22.5 - 2.5 * np.log10(gflux_LRG)
+    rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
+    zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
+
+    color_LRG = gmag_LRG - rmag_LRG
+
+    gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
+    rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
+    zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
+
+    color_BKG = gmag_BKG - rmag_BKG
 
     # depth cuts
 
@@ -430,15 +430,15 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # inverse variance cuts
     # inverse variance for only LRGs
-    flux_ivar_g_LRG = flux_ivar_g_ALL[np.where(idcut == 1)]
-    flux_ivar_r_LRG = flux_ivar_r_ALL[np.where(idcut == 1)]
-    flux_ivar_z_LRG = flux_ivar_z_ALL[np.where(idcut == 1)]
+    # flux_ivar_g_LRG = flux_ivar_g_ALL[np.where(idcut == 1)]
+    # flux_ivar_r_LRG = flux_ivar_r_ALL[np.where(idcut == 1)]
+    # flux_ivar_z_LRG = flux_ivar_z_ALL[np.where(idcut == 1)]
 
     # inverse variance for all galaxies in DECaLS
 
-    flux_ivar_g_BKG = flux_ivar_g_ALL[np.where(no_LRG_cut)]
-    flux_ivar_r_BKG = flux_ivar_r_ALL[np.where(no_LRG_cut)]
-    flux_ivar_z_BKG = flux_ivar_z_ALL[np.where(no_LRG_cut)]
+    # flux_ivar_g_BKG = flux_ivar_g_ALL[np.where(no_LRG_cut)]
+    # flux_ivar_r_BKG = flux_ivar_r_ALL[np.where(no_LRG_cut)]
+    # flux_ivar_z_BKG = flux_ivar_z_ALL[np.where(no_LRG_cut)]
 
     # plt.hist(gmag_BKG, bins=50, color='green', alpha=0.5)
     # plt.hist(rmag_BKG, bins=50, color='red', alpha=0.5)
@@ -453,8 +453,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # print("end readData")
 
-    # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
+    # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
 
 
 

@@ -1,6 +1,6 @@
 # Calculating local surface density and interlopers
 
-def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, color_BKG, xedges, yedges):
+def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, rmag_BKG, color_LRG, color_BKG, xedges, yedges):
     
     # ra_LRG,dec_LRG are RA/Dec at center of search radius (in this case, ra_LRG and dec_LRG)
     # ra_BKG,dec_BKG are RA/Dec of every other source
@@ -26,10 +26,13 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
 
     # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
     zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
-    zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
+    # zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
+    ra = np.concatenate([ra_LRG, ra_BKG])
+    dec = np.concatenate([dec_LRG, dec_BKG])
+    zip_list = list(zip(ra, dec))  # All sources
 
     # Creates a tree of background sources
-    gal_tree_r2 = KDTree(zip_list_BKG)
+    gal_tree = KDTree(zip_list)
 
     # returns a list of background sources that are within some radius r of an LRG
     nn_r2 = gal_tree_r2.query_radius(zip_list_LRG,r=dist_r2,count_only=True)
@@ -39,6 +42,15 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     # arrays could be empty
     ind_r2 = gal_tree_r2.query_radius(zip_list_LRG,r=dist_r2)
 
+    ind2list_r2 = []
+
+    ind2list_r2 = ind_r2.tolist()
+
+    index_r2 = []
+    for i in range(len(ind2list_r2)):
+        index_r2.append(ind2list_r2[i].tolist())
+
+
     # Distance from which we are looking for satellites around the LRGs
 #     distance_r3 = 10. # in Mpc
     distance_r3_kpc = distance_r3 * 10.**3. # in kpc
@@ -47,25 +59,34 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     for i in range(len(kpc_DA)):
         dist_r3.append((distance_r3_kpc / kpc_DA[i]) * 1./3600.) 
 
-    # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
-    zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
-    zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
+    # # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
+    # zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
+    # # zip_list_BKG = list(zip(ra_BKG, dec_BKG)) # Fake EDR sources
 
     # Creates a tree of EDR sources
-    gal_tree_r3 = KDTree(zip_list_BKG)
+    # gal_tree_r3 = KDTree(zip_list)
 
     # returns a list of EDR sources that are within some radius r of an LRG
-    nn_r3 = gal_tree_r3.query_radius(zip_list_LRG,r=dist_r3,count_only=True)
+    nn_r3 = gal_tree.query_radius(zip_list_LRG,r=dist_r3,count_only=True)
 
     # find indices of near neighbors
     # creates a list of arrays that include the indices of satellite galaxies per LRG. In general, some or all of these
     # arrays could be empty
-    ind_r3 = gal_tree_r3.query_radius(zip_list_LRG,r=dist_r3)
+    ind_r3 = gal_tree.query_radius(zip_list_LRG,r=dist_r3)
+
+    ind2list_r3 = []
+
+    ind2list_r3 = ind_r3.tolist()
+
+    index_r3 = []
+    for i in range(len(ind2list_r3)):
+        index_r3.append(ind2list_r3[i].tolist())
+
 
     annulus_ind = []
 
-    for i in range(len(ind_r3)):
-        l3 = [x for x in ind_r3[i] if x not in ind_r2[i]]
+    for i in range(len(index_r3)):
+        l3 = [x for x in index_r3[i] if x not in index_r2[i]]
         annulus_ind.append(l3)
 
     # print(len(new_ind[0]))
@@ -109,6 +130,8 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     # LOCAL_BKG is the list of 2D arrays of survey galaxies as a function of color and magnitude
     local_bkg = []
+    rmag = np.concatenate([rmag_LRG, rmag_BKG])
+    color = np.concatenate([color_LRG, color_BKG])
 
     for i in range(len(new_ind)):
         # Creates a zero array if there are no near neighbors
@@ -117,7 +140,7 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
             local_bkg.append(hist2d)
         # Creates a 2D histogram for satellite galaxies
         else:
-            hist2d, x_notuse, y_notuse = np.histogram2d(rmag_BKG[new_ind[i]], color_BKG[new_ind[i]], bins=(xedges, yedges), normed=False)
+            hist2d, x_notuse, y_notuse = np.histogram2d(rmag[new_ind[i]], color[new_ind[i]], bins=(xedges, yedges), normed=False)
             local_bkg.append(hist2d)
         
     # sigma is the surface density around individual LRGs. Each
@@ -135,8 +158,8 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
                  
     Nbkg = np.asarray(Nbkg)
     
-    return(numbkg, med_local, sigma, omega, Nbkg, r2, dist_r2, r3, dist_r3, zip_list_LRG, zip_list_BKG)  # returns number of galaxies in annulus for every LRG,
+    return(numbkg, med_local, sigma, omega, Nbkg, r2, dist_r2, r3, dist_r3)  # returns number of galaxies in annulus for every LRG,
                                                 # median number of galaxies in the annulus over all LRGs,
                                                 # the surface density sigma for each LRG, 
                                                 # the solid angle omega for each LRG, 
-                                                # and calculated arrray of background galaxies for each LRG
+                                                # and calculated array of background galaxies for each LRG
