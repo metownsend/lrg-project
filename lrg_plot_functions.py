@@ -34,7 +34,7 @@ def totalNsat(Nsat):
 	plt.xlabel(r'$Number$ $of$ $Satellite$ $Galaxies$', fontsize=15)
 	plt.ylabel(r'$counts$', fontsize=15)
 	# plt.show()
-
+	return(mediansat)
 
 # ----------------------------------------------------------------------------------------
 
