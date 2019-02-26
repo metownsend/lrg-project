@@ -18,11 +18,11 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
 
     # Distance from which we are looking for satellites around the LRGs
 #     distance_r2 = 2. # in Mpc
-    distance_r2_kpc = distance_r2 * 10.**3. # in kpc
+#     distance_r2_kpc = distance_r2 * 10.**3. # in kpc
 
-    dist_r2 = []
-    for i in range(len(kpc_DA)):
-        dist_r2.append((distance_r2_kpc / kpc_DA[i]) * 1./3600.) 
+    # dist_r2 = []
+    # for i in range(len(kpc_DA)):
+    #     dist_r2.append((distance_r2_kpc / kpc_DA[i]) * 1./3600.)
 
     # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
     zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
@@ -35,12 +35,12 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     gal_tree = KDTree(zip_list)
 
     # returns a list of background sources that are within some radius r of an LRG
-    nn_r2 = gal_tree.query_radius(zip_list_LRG,r=dist_r2,count_only=True)
+    nn_r2 = gal_tree.query_radius(zip_list_LRG,r=distance_r2,count_only=True)
 
     # find indices of near neighbors
     # creates a list of arrays that include the indices of satellite galaxies per LRG. In general, some or all of these
     # arrays could be empty
-    ind_r2 = gal_tree.query_radius(zip_list_LRG,r=dist_r2)
+    ind_r2 = gal_tree.query_radius(zip_list_LRG,r=distance_r2)
 
     ind2list_r2 = []
 
@@ -53,11 +53,11 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
 
     # Distance from which we are looking for satellites around the LRGs
 #     distance_r3 = 10. # in Mpc
-    distance_r3_kpc = distance_r3 * 10.**3. # in kpc
+#     distance_r3_kpc = distance_r3 * 10.**3. # in kpc
 
-    dist_r3 = []
-    for i in range(len(kpc_DA)):
-        dist_r3.append((distance_r3_kpc / kpc_DA[i]) * 1./3600.) 
+    # dist_r3 = []
+    # for i in range(len(kpc_DA)):
+    #     dist_r3.append((distance_r3_kpc / kpc_DA[i]) * 1./3600.)
 
     # # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
     # zip_list_LRG = list(zip(ra_LRG, dec_LRG)) # Fake LRG sources
@@ -67,12 +67,12 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     # gal_tree_r3 = KDTree(zip_list)
 
     # returns a list of EDR sources that are within some radius r of an LRG
-    nn_r3 = gal_tree.query_radius(zip_list_LRG,r=dist_r3,count_only=True)
+    nn_r3 = gal_tree.query_radius(zip_list_LRG, r=distance_r3, count_only=True)
 
     # find indices of near neighbors
     # creates a list of arrays that include the indices of satellite galaxies per LRG. In general, some or all of these
     # arrays could be empty
-    ind_r3 = gal_tree.query_radius(zip_list_LRG,r=dist_r3)
+    ind_r3 = gal_tree.query_radius(zip_list_LRG, r=distance_r3)
 
     ind2list_r3 = []
 
