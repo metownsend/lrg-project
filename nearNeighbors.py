@@ -59,16 +59,16 @@
 
 def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, rmag_BKG, color_LRG, color_BKG, xedges, yedges):
 
-    # distance == radius from LRG in which I look for near neighbors in degree
+    # distance == radius from LRG in which I look for near neighbors in Mpc
 
     import numpy as np
     from sklearn.neighbors import KDTree
 
-    # distance_kpc = distance * 10. ** 3.  # in kpc
+    distance_kpc = distance * 10. ** 3.  # in kpc
 
-    # dist = []
-    # for i in range(len(kpc_DA)):
-    #     dist.append((distance_kpc / kpc_DA[i]) * 1. / 3600.)
+    dist = []
+    for i in range(len(kpc_DA)):
+        dist.append((distance_kpc / kpc_DA[i]) * 1. / 3600.) # in degree
 
      # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
     zip_list0 = list(zip(ra_LRG, dec_LRG))  # LRG sources
@@ -81,12 +81,12 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, r
     gal_tree = KDTree(zip_list1)
 
     # returns a list of EDR sources that are within some radius r of an LRG
-    nn1 = gal_tree.query_radius(zip_list0, r=distance, count_only=True)
+    nn1 = gal_tree.query_radius(zip_list0, r=dist, count_only=True)
     # nn2 = gal_tree.query_radius(zip_list0, r=dist2, count_only=True)
 
 
     # find indices of near neighbors
-    ind = gal_tree.query_radius(zip_list0, r=distance)
+    ind = gal_tree.query_radius(zip_list0, r=dist)
 
     ind2list = []
     ind2list = ind.tolist()
@@ -120,3 +120,4 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, r
             near.append(hist2d)
 
     return (distance_kpc, near, gal_tree)
+    # return (near, gal_tree)

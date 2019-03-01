@@ -41,43 +41,42 @@ DECaLS_data1 = hdulist3[1].data
 DECaLS_data2 = hdulist4[1].data
 
 # ---------------------------------------------------------------------------------------------------------------------
+id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
-# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, rmag_BKG1, gmag_BKG1, zmag_BKG1, color_BKG1, rmag_LRG1, gmag_LRG1, zmag_LRG1, color_LRG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
-# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, rmag_BKG2, gmag_BKG2, zmag_BKG2, color_BKG2, rmag_LRG2, gmag_LRG2, zmag_LRG2, color_LRG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
-
-id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
-id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
+# id_ALL1, ra_LRG1, dec_LRG1, ra_BKG1, dec_BKG1, z_LRG1, gdepth_LRG1, rdepth_LRG1, zdepth_LRG1, gdepth_BKG1, rdepth_BKG1, zdepth_BKG1, gobs_LRG1, robs_LRG1, zobs_LRG1, gobs_BKG1, robs_BKG1, zobs_BKG1, flux_ivar_g_LRG1, flux_ivar_r_LRG1, flux_ivar_z_LRG1, flux_ivar_g_BKG1, flux_ivar_r_BKG1, flux_ivar_z_BKG1, gflux_LRG1, rflux_LRG1, zflux_LRG1, gflux_BKG1, rflux_BKG1, zflux_BKG1 = readData(SpecObj_data, SDSS_data, DECaLS_data1)
+# id_ALL2, ra_LRG2, dec_LRG2, ra_BKG2, dec_BKG2, z_LRG2, gdepth_LRG2, rdepth_LRG2, zdepth_LRG2, gdepth_BKG2, rdepth_BKG2, zdepth_BKG2, gobs_LRG2, robs_LRG2, zobs_LRG2, gobs_BKG2, robs_BKG2, zobs_BKG2, flux_ivar_g_LRG2, flux_ivar_r_LRG2, flux_ivar_z_LRG2, flux_ivar_g_BKG2, flux_ivar_r_BKG2, flux_ivar_z_BKG2, gflux_LRG2, rflux_LRG2, zflux_LRG2, gflux_BKG2, rflux_BKG2, zflux_BKG2 = readData(SpecObj_data, SDSS_data, DECaLS_data2)
 
 ra = np.concatenate([ra_LRG1, ra_LRG2, ra_BKG1, ra_BKG2])
 dec = np.concatenate([dec_LRG1, dec_LRG2, dec_BKG1, dec_BKG2])
 z_LRG = np.concatenate([z_LRG1, z_LRG2])
-# gmag = np.concatenate([gmag_LRG1, gmag_LRG2, gmag_BKG1, gmag_BKG2])
-# rmag = np.concatenate([rmag_LRG1, rmag_LRG2, rmag_BKG1, rmag_BKG2])
-# zmag = np.concatenate([zmag_LRG1, zmag_LRG2, zmag_BKG1, zmag_BKG2])
+gmag = np.concatenate([gmag_LRG1, gmag_LRG2, gmag_BKG1, gmag_BKG2])
+rmag = np.concatenate([rmag_LRG1, rmag_LRG2, rmag_BKG1, rmag_BKG2])
+zmag = np.concatenate([zmag_LRG1, zmag_LRG2, zmag_BKG1, zmag_BKG2])
 # color_BKG = np.concatenate([color_BKG1, color_BKG2])
-galdepth_g = np.concatenate([gdepth_LRG1, gdepth_LRG2, gdepth_BKG1, gdepth_BKG2])
-galdepth_r = np.concatenate([rdepth_LRG1, rdepth_LRG2, rdepth_BKG1, rdepth_BKG2])
-galdepth_z = np.concatenate([zdepth_LRG1, zdepth_LRG2, zdepth_BKG1, zdepth_BKG2])
-gobs = np.concatenate([gobs_LRG1, gobs_LRG2, gobs_BKG1, gobs_BKG2])
-robs = np.concatenate([robs_LRG1, robs_LRG2, robs_BKG1, robs_BKG2])
-zobs = np.concatenate([zobs_LRG1, zobs_LRG2, zobs_BKG1, zobs_BKG2])
-gflux_ivar = np.concatenate([flux_ivar_g_LRG1, flux_ivar_g_LRG2, flux_ivar_g_BKG1, flux_ivar_g_BKG2])
-rflux_ivar = np.concatenate([flux_ivar_r_LRG1, flux_ivar_r_LRG2, flux_ivar_r_BKG1, flux_ivar_r_BKG2])
-zflux_ivar = np.concatenate([flux_ivar_z_LRG1, flux_ivar_z_LRG2, flux_ivar_z_BKG1, flux_ivar_z_BKG2])
-gflux = np.concatenate([gflux_LRG1, gflux_LRG2, gflux_BKG1, gflux_BKG2])
-rflux = np.concatenate([rflux_LRG1, rflux_LRG2, rflux_BKG1, rflux_BKG2])
-zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
+# galdepth_g = np.concatenate([gdepth_LRG1, gdepth_LRG2, gdepth_BKG1, gdepth_BKG2])
+# galdepth_r = np.concatenate([rdepth_LRG1, rdepth_LRG2, rdepth_BKG1, rdepth_BKG2])
+# galdepth_z = np.concatenate([zdepth_LRG1, zdepth_LRG2, zdepth_BKG1, zdepth_BKG2])
+# gobs = np.concatenate([gobs_LRG1, gobs_LRG2, gobs_BKG1, gobs_BKG2])
+# robs = np.concatenate([robs_LRG1, robs_LRG2, robs_BKG1, robs_BKG2])
+# zobs = np.concatenate([zobs_LRG1, zobs_LRG2, zobs_BKG1, zobs_BKG2])
+# gflux_ivar = np.concatenate([flux_ivar_g_LRG1, flux_ivar_g_LRG2, flux_ivar_g_BKG1, flux_ivar_g_BKG2])
+# rflux_ivar = np.concatenate([flux_ivar_r_LRG1, flux_ivar_r_LRG2, flux_ivar_r_BKG1, flux_ivar_r_BKG2])
+# zflux_ivar = np.concatenate([flux_ivar_z_LRG1, flux_ivar_z_LRG2, flux_ivar_z_BKG1, flux_ivar_z_BKG2])
+# gflux = np.concatenate([gflux_LRG1, gflux_LRG2, gflux_BKG1, gflux_BKG2])
+# rflux = np.concatenate([rflux_LRG1, rflux_LRG2, rflux_BKG1, rflux_BKG2])
+# zflux = np.concatenate([zflux_LRG1, zflux_LRG2, zflux_BKG1, zflux_BKG2])
 
 
 print("end readdata")
 
 # -------------------------------------------------------------------------------------------------------------------
 
-zdetect = np.where((zflux_ivar > 6.) & ((gflux_ivar < 6.) | (rflux_ivar < 6.)))
-print(len(zflux))
-print(len(zflux[zdetect]))
-print(ra[np.where(zflux[zdetect])])
-print(dec[np.where(zflux[zdetect])])
+# zdetect = np.where((zflux_ivar > 6.) & ((gflux_ivar < 6.) | (rflux_ivar < 6.)))
+# print(len(zflux))
+# print(len(zflux[zdetect]))
+# print(ra[np.where(zflux[zdetect])])
+# print(dec[np.where(zflux[zdetect])])
 
 # # Attempt at finding non-detections
 # garray = []
@@ -174,8 +173,8 @@ npixel = hp.nside2npix(nside)
 # rmag = np.concatenate([rmag_LRG, rmag_BKG])
 # zmag = np.concatenate([zmag_LRG, zmag_BKG])
 #
-# ra_cut = ra[np.where(zmag <= 22.48)]
-# dec_cut = dec[np.where(zmag <= 22.48)]
+ra_cut = ra[np.where(zmag <= 21.5)]
+dec_cut = dec[np.where(zmag <= 21.5)]
 
 # plt.title("Nobs Distribution")
 # plt.xlabel(r'$nobs$')
@@ -190,9 +189,9 @@ npixel = hp.nside2npix(nside)
 theta = []
 phi = []
 
-for i in range(len(ra)):
-    theta.append(np.radians(90. - dec[i]))
-    phi.append(np.radians(ra[i]))
+for i in range(len(ra_cut)):
+    theta.append(np.radians(90. - dec_cut[i]))
+    phi.append(np.radians(ra_cut[i]))
 
 print('length phi: ', len(phi))
 # Convert angles theta and phi to pixel numbers
@@ -203,14 +202,20 @@ print('length pixnums: ', len(pixnums))
 
 
 # Create a HEALPix map from pix
-# mapp = np.bincount(pixnums, minlength=npixel)
+mapp = np.bincount(pixnums, minlength=npixel)
 # print('map where ne 0: ', mapp[np.where(mapp > 0)])
 # print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 # print('length map: ', len(mapp))
 
+masked_map = np.zeros(len(mapp))
+masked_map[(mapp == 0)] = 1
+
+m = hp.ma(mapp)
+m.mask = masked_map
+
 # Plot mapp
-# hp.gnomview(mapp, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
-# plt.show()
+hp.gnomview(m, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
+plt.show()
 
 # -------------------------------------------------------------------------------------------------------------------
 
@@ -237,9 +242,10 @@ for i in range(len(pixcnts)-1):
     # array_g[pix] = np.median(gobs[inds])
     # array_r[pix] = np.median(robs[inds])
     # array_z[pix] = np.median(zobs[inds])
-    array_g[pix] = np.median(gmag[inds])
-    array_r[pix] = np.median(rmag[inds])
-    array_z[pix] = np.median(zmag[inds])
+    # array_g[pix] = np.median(gmag[inds])
+    # array_r[pix] = np.median(rmag[inds])
+    # array_z[pix] = np.median(zmag[inds])
+
 
 masked_map_g = np.zeros(len(array_g))
 masked_map_g[(array_g == -1.)] = 1
@@ -471,31 +477,31 @@ mz.mask = masked_map_z
 # depth_z_bin_1 = array_z[np.where((-1. < nobs_z) & (3 >= nobs_z))]
 # depth_z_bin_2 = array_z[np.where(nobs_z > 3)]
 
-plt.title("Magnitude Distribution (median gmag per pixel)")
-plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='lightgreen', alpha=0.5, label='gobs >= 3')
-plt.xlabel(r'$gmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
-plt.xlim(17., 27.5)
-# plt.gca().invert_xaxis()
-plt.show()
-
-plt.title("Magnitude Distribution (median rmag per pixel)")
-plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='indianred', alpha=0.5, label='robs >= 3')
-plt.xlabel(r'$rmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
-plt.xlim(16., 25.5)
-# plt.gca().invert_xaxis()
-plt.show()
-
-plt.title("Magnitude Distribution (median zmag per pixel)")
-plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='cornflowerblue', alpha=0.5, label='zobs >= 3')
-plt.xlabel(r'$$zmag$')
-plt.ylabel(r'$counts$')
-plt.legend(loc='upper right')
-plt.xlim(15.5, 24.)
-# plt.gca().invert_xaxis()
-plt.show()
+# plt.title("Magnitude Distribution (median gmag per pixel)")
+# plt.hist(array_g[np.where(array_g != -1.)], bins=50, color='lightgreen', alpha=0.5, label='gobs >= 3')
+# plt.xlabel(r'$gmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.xlim(17., 27.5)
+# # plt.gca().invert_xaxis()
+# plt.show()
+#
+# plt.title("Magnitude Distribution (median rmag per pixel)")
+# plt.hist(array_r[np.where(array_r != -1.)], bins=50, color='indianred', alpha=0.5, label='robs >= 3')
+# plt.xlabel(r'$rmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.xlim(16., 25.5)
+# # plt.gca().invert_xaxis()
+# plt.show()
+#
+# plt.title("Magnitude Distribution (median zmag per pixel)")
+# plt.hist(array_z[np.where(array_z != -1.)], bins=50, color='cornflowerblue', alpha=0.5, label='zobs >= 3')
+# plt.xlabel(r'$$zmag$')
+# plt.ylabel(r'$counts$')
+# plt.legend(loc='upper right')
+# plt.xlim(15.5, 24.)
+# # plt.gca().invert_xaxis()
+# plt.show()
 
 print('end program')
