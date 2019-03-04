@@ -87,6 +87,7 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, r
 
     # find indices of near neighbors
     ind = gal_tree.query_radius(zip_list0, r=dist)
+    
 
     ind2list = []
     ind2list = ind.tolist()
