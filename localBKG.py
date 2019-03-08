@@ -1,6 +1,6 @@
 # Calculating local surface density and interlopers
 
-def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, rmag_BKG, color_LRG, color_BKG, xedges, yedges):
+def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, mag_BKG, color_LRG, color_BKG, xedges, yedges):
 # def localBKG_and_interlopers(distance_r2, distance_r3, kpc_DA, DCMR_Mpc ,ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_LRG, rmag_BKG, color_LRG, color_BKG, xedges, yedges):
 
     # ra_LRG,dec_LRG are RA/Dec at center of search radius (in this case, ra_LRG and dec_LRG)
@@ -141,7 +141,7 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     # LOCAL_BKG is the list of 2D arrays of survey galaxies as a function of color and magnitude
     local_bkg = []
-    rmag = np.concatenate([rmag_LRG, rmag_BKG])
+    mag = np.concatenate([mag_LRG, mag_BKG])
     color = np.concatenate([color_LRG, color_BKG])
 
     # Converts search radius to kpc
@@ -176,7 +176,7 @@ def localBKG_and_interlopers(distance_kpc, distance_r2, distance_r3, kpc_DA, ra_
             local_bkg.append(hist2d)
         # Creates a 2D histogram for satellite galaxies
         else:
-            hist2d, x_notuse, y_notuse = np.histogram2d(rmag[index_r3[i]], color[index_r3[i]], bins=(xedges, yedges), normed=False)
+            hist2d, x_notuse, y_notuse = np.histogram2d(mag[index_r3[i]], color[index_r3[i]], bins=(xedges, yedges), normed=False)
             local_bkg.append(hist2d)
 
     local_bkg = np.array(local_bkg)

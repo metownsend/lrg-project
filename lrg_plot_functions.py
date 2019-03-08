@@ -110,7 +110,7 @@ def totalNear(near):
 
 
 # Function to plot a CMD
-def cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges):
+def cmd(mag_BKG, color_BKG, mag_LRG, color_LRG, xedges, yedges):
 
 	import matplotlib.pyplot as plt
 	import numpy as np 
@@ -118,16 +118,16 @@ def cmd(rmag_BKG, color_BKG, rmag_LRG, color_LRG, xedges, yedges):
 	plot = fig, ax = plt.subplots(figsize=(10, 8))
 	ax.set_xticks(xedges, minor=False)
 	ax.set_yticks(yedges, minor=True)
-	ax.xaxis.grid(True, which='major')
-	ax.yaxis.grid(True, which='minor')
+	# ax.xaxis.grid(True, which='major')
+	# ax.yaxis.grid(True, which='minor')
 
-	plt.scatter(rmag_BKG, color_BKG, s = 1, marker = '+', color='red', label="Background")
-	plt.scatter(rmag_LRG, color_LRG, s = 1, marker = '*', color='blue', label='LRGs')
+	plt.scatter(mag_BKG, color_BKG, s = 1, marker = '+', color='red', label="Background")
+	plt.scatter(mag_LRG, color_LRG, s = 1, marker = '*', color='blue', label='LRGs')
 	plt.gca().invert_xaxis()
 	plt.title("Color-Magnitude Diagram", fontsize=15)
-	plt.xlabel(r'$r-mag$')
-	plt.ylabel(r'$(g-r)$ $color$')
-	plt.legend(loc='upper right')
+	plt.xlabel(r'$z-mag$')
+	plt.ylabel(r'$(r-z)$ $color$')
+	plt.legend(loc='upper right', prop={'size': 20})
 	# plt.show()
 
 
