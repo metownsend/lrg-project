@@ -400,17 +400,17 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
     zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
 
-    grcolor_LRG = gmag_LRG - rmag_LRG
-    rzcolor_LRG = rmag_LRG - zmag_LRG
-    gzcolor_LRG = gmag_LRG - zmag_LRG
+    color_LRG = gmag_LRG - rmag_LRG
+    # color_LRG = rmag_LRG - zmag_LRG
+    # gzcolor_LRG = gmag_LRG - zmag_LRG
 
     gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
     rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
     zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
 
-    grcolor_BKG = gmag_BKG - rmag_BKG
-    rzcolor_BKG = rmag_BKG - zmag_BKG
-    gzcolor_BKG = gmag_BKG - zmag_BKG
+    color_BKG = gmag_BKG - rmag_BKG
+    # color_BKG = rmag_BKG - zmag_BKG
+    # gzcolor_BKG = gmag_BKG - zmag_BKG
 
     # depth cuts
 
@@ -457,7 +457,9 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # print("end readData")
 
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
+
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
+    # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
 
 
