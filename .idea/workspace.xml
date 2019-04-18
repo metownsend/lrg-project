@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/localBKG_and_interlopersHEALPix-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/localBKG_and_interlopersHEALPix-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/nearNeighborHEALPix-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/nearNeighborHEALPix-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.ipynb" afterPath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.ipynb" />
-      <change beforePath="$PROJECT_DIR$/nearNeighborHEALPix.ipynb" afterPath="$PROJECT_DIR$/nearNeighborHEALPix.ipynb" />
-      <change beforePath="$PROJECT_DIR$/nearNeighbors.py" afterPath="$PROJECT_DIR$/nearNeighbors.py" />
-      <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
-    </list>
+    <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +48,7 @@
       <file leaf-file-name="localBKG.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1147">
+            <state relative-caret-position="3015">
               <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
               <folding />
             </state>
@@ -100,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -761,7 +752,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/localBKG.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1147">
+        <state relative-caret-position="3015">
           <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
           <folding />
         </state>
@@ -770,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
       </provider>
