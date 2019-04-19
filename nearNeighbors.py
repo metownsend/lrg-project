@@ -57,7 +57,7 @@
 
 
 
-def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, mag_BKG, color_LRG, color_BKG, xedges, yedges):
+def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color, xedges, yedges):
 
     # distance == radius from LRG in which I look for near neighbors in Mpc
 
@@ -106,8 +106,8 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, ma
         index[i] = [x for x in index[i] if x != i]
 
     near = []
-    mag = np.concatenate([mag_LRG, mag_BKG])
-    color = np.concatenate([color_LRG, color_BKG])
+    # mag = np.concatenate([mag_LRG, mag_BKG])
+    # color = np.concatenate([color_LRG, color_BKG])
 
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     for i in range(len(index)):
