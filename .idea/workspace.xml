@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Test-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_Test-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/statSub_Test.ipynb" afterPath="$PROJECT_DIR$/statSub_Test.ipynb" />
-      <change beforePath="$PROJECT_DIR$/statSub_modules.ipynb" afterPath="$PROJECT_DIR$/statSub_modules.ipynb" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/HEALPix_KDTree_comparison-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/HEALPix_KDTree_comparison-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/HEALPix_KDTree_comparison.ipynb" afterPath="$PROJECT_DIR$/HEALPix_KDTree_comparison.ipynb" />
+      <change beforePath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" afterPath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" />
+      <change beforePath="$PROJECT_DIR$/nearNeighborsHEALPix.py" afterPath="$PROJECT_DIR$/nearNeighborsHEALPix.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,21 +82,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearNeighbors.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="nearNeighbors.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
+            <state relative-caret-position="1060">
+              <caret line="122" column="58" lean-forward="true" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nearNeighborsHEALPix.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nearNeighborsHEALPix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nearNeighborsHEALPix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -105,8 +105,8 @@
       <file leaf-file-name="localBKG_and_interlopersHEALPix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+            <state relative-caret-position="1500">
+              <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -159,8 +159,8 @@
         <option value="$PROJECT_DIR$/lrg_plot_functions.py" />
         <option value="$PROJECT_DIR$/readData.py" />
         <option value="$PROJECT_DIR$/nearNeighbors.py" />
-        <option value="$PROJECT_DIR$/nearNeighborsHEALPix.py" />
         <option value="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" />
+        <option value="$PROJECT_DIR$/nearNeighborsHEALPix.py" />
       </list>
     </option>
   </component>
@@ -743,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="79" column="35" lean-forward="true" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/localBKG.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -761,16 +753,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        <state relative-caret-position="1500">
+          <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nearNeighborsHEALPix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="122" column="58" lean-forward="true" selection-start-line="122" selection-start-column="12" selection-end-line="122" selection-end-column="58" />
           <folding />
         </state>
       </provider>

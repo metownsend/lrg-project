@@ -13,11 +13,12 @@ def nearNeighborsHEALPix(distance_kpc, kpc_DA, ra_LRG, dec_LRG, nside, pixnums, 
     # color == relevant color for all sources
     # xedges, yedges = edges of bin for CMD
 
-    # HAS DEPENDENCIES ON PANDAS, ASTROPY_HEALPIX, and ASTROPY
+    # HAS DEPENDENCIES ON PANDAS, ASTROPY_HEALPIX, NUMPY, and ASTROPY
 
     from astropy import units as u
     from astropy_healpix import HEALPix
     import pandas as pd
+    import numpy as np
 
     # converts physical distance to degree
     dist = []
