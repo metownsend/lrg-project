@@ -64,7 +64,7 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color,
     import numpy as np
     from sklearn.neighbors import KDTree
 
-    distance_kpc = distance * 10. ** 3.  # in kpc
+    distance_kpc = distance * 10**3. # in kpc
 
     dist = []
     for i in range(len(kpc_DA)):
