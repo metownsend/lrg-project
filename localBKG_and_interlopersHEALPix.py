@@ -98,4 +98,4 @@ def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_L
     for i in range(len(omega)):
         Nbkg.append((sigma[i] * omega[i]))
 
-    return (Nbkg, indices,omega, localBKG)
+    return (Nbkg, indices, omega, localBKG)
