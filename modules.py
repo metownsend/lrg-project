@@ -139,7 +139,7 @@ print('end nearNeighbor')
 inner_dist = 0.4 # in deg
 outer_dist = 0.5 # in deg
 
-Nbkg, indices, localBKG = localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, rmag, color, xedges, yedges, distance_kpc, DA_Mpc)
+Nbkg, indices, localBKG = localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, rmag, color, xedges, yedges, distance_kpc, kpc_DA)
 
 print("end bkg")
 
