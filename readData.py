@@ -182,6 +182,22 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     zflux_MATCHED = []
     zflux_MATCHED = SpecObj_data.field('FLUX_Z')
 
+    # flux from WISE channel 1
+    w1flux_MATCHED = []
+    w1flux_MATCHED = SpecObj_data.field('flux_w1')
+
+    # flux from WISE channel 2
+    w2flux_MATCHED = []
+    w2flux_MATCHED = SpecObj_data.field('flux_w2')
+
+    # flux from WISE channel 3
+    w3flux_MATCHED = []
+    w3flux_MATCHED = SpecObj_data.field('flux_w3')
+
+    # flux from WISE channel 4
+    w4flux_MATCHED = []
+    w4flux_MATCHED = SpecObj_data.field('flux_w4')
+
     # nobs == number of images that contribute to the central pixel
     # nobs_g
     gobs_MATCHED = []
@@ -258,6 +274,22 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     zflux_ALL = []
     zflux_ALL = DECaLS_data.field('FLUX_Z')
 
+    # flux from WISE channel 1
+    w1flux_ALL = []
+    w1flux_ALL = DECaLS_data.field('flux_w1')
+
+    # flux from WISE channel 2
+    w2flux_ALL = []
+    w2flux_ALL = DECaLS_data.field('flux_w2')
+
+    # flux from WISE channel 3
+    w3flux_ALL = []
+    w3flux_ALL = DECaLS_data.field('flux_w3')
+
+    # flux from WISE channel 4
+    w4flux_ALL = []
+    w4flux_ALL = DECaLS_data.field('flux_w4')
+
     # nobs == number of images that contribute to the central pixel
     # nobs_g
     gobs_ALL = []
@@ -303,7 +335,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Make cuts to separate LRGs and background galaxies
 
     # Selects only LRGs (with other cuts)
-    LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (zflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
+    LRG_cut = ((gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (zobs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (zflux_MATCHED > 0.) & (w1flux_MATCHED > 0.) & (w2flux_MATCHED > 0.) & (w3flux_MATCHED > 0.) & (w4flux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
     # LRG_cut = ((gobs_MATCHED >= 2.) & (robs_MATCHED >= 2.) & (zobs_MATCHED >= 2.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
 
 
@@ -352,7 +384,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # Cut out LRGs
     # no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 3.) & (robs_ALL >= 3.) & (zobs_ALL >= 3.) & (gflux_ALL > 0.) & (rflux_ALL > 0.) & (zflux_ALL > 0.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
-    no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 2.) & (robs_ALL >= 2.) & (zobs_ALL >= 2.) & (gflux_ALL > 0.) & (rflux_ALL > 0.) & (zflux_ALL > 0.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
+    no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 2.) & (robs_ALL >= 2.) & (zobs_ALL >= 2.) & (gflux_ALL > 0.) & (rflux_ALL > 0.) & (zflux_ALL > 0.) & (w1flux_ALL > 0.) & (w2flux_ALL > 0.) & (w3flux_ALL > 0.) & (w4flux_ALL > 0.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
     # no_LRG_cut = ((idcut == 0) & (gobs_ALL >= 2.) & (robs_ALL >= 2.) & (zobs_ALL >= 2.) & ((gal_type_ALL == 'SIMP') | (gal_type_ALL == "DEV") | (gal_type_ALL == "EXP") | (gal_type_ALL == "REX")) & (ra_ALL >= 241) & (ra_ALL <= 246) & (dec_ALL >= 6.5) & (dec_ALL <= 11.5))
 
     # Flux cuts
@@ -366,14 +398,38 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Flux in g for only LRGs
     zflux_LRG = zflux_ALL[np.where(idcut == 1)]
 
-    # Flux in g for all galaxies in DECaLS
+    # flux in W1 for only LRGs
+    w1flux_LRG = w1flux_ALL[np.where(idcut == 1)]
+
+    # flux in W2 for only LRGs
+    w2flux_LRG = w2flux_ALL[np.where(idcut == 1)]
+
+    # flux in W3 for only LRGs
+    w3flux_LRG = w3flux_ALL[np.where(idcut == 1)]
+
+    # flux in W4 for only LRGs
+    w4flux_LRG = w4flux_ALL[np.where(idcut == 1)]
+
+    # Flux in g for non-LRGs
     gflux_BKG = gflux_ALL[np.where(no_LRG_cut)]
 
-    # Flux in r for all galaxies in DECaLS
+    # Flux in r for non-LRGs
     rflux_BKG = rflux_ALL[np.where(no_LRG_cut)]
 
-    # Flux in z for all galaxies in DECaLS
+    # Flux in z for non-LRGs
     zflux_BKG = zflux_ALL[np.where(no_LRG_cut)]
+
+    # flux in W1 for non-LRGs
+    w1flux_BKG = w1flux_ALL[np.where(no_LRG_cut)]
+
+    # flux in W2 for non-LRGs
+    w2flux_BKG = w2flux_ALL[np.where(no_LRG_cut)]
+
+    # flux in W3 for  non-LRGs
+    w3flux_BKG = w3flux_ALL[np.where(no_LRG_cut)]
+
+    # flux in W4 for non-LRGs
+    w4flux_BKG = w4flux_ALL[np.where(no_LRG_cut)]
 
 
     # Obs cuts
@@ -396,21 +452,21 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Number of images in z for all galaxies in DECaLS
     zobs_BKG = zobs_ALL[np.where(no_LRG_cut)]
 
-    gmag_LRG = 22.5 - 2.5 * np.log10(gflux_LRG)
-    rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
-    zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
-
-    color_LRG = gmag_LRG - rmag_LRG
-    # color_LRG = rmag_LRG - zmag_LRG
-    # gzcolor_LRG = gmag_LRG - zmag_LRG
-
-    gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
-    rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
-    zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
-
-    color_BKG = gmag_BKG - rmag_BKG
-    # color_BKG = rmag_BKG - zmag_BKG
-    # gzcolor_BKG = gmag_BKG - zmag_BKG
+    # gmag_LRG = 22.5 - 2.5 * np.log10(gflux_LRG)
+    # rmag_LRG = 22.5 - 2.5 * np.log10(rflux_LRG)
+    # zmag_LRG = 22.5 - 2.5 * np.log10(zflux_LRG)
+    #
+    # color_LRG = gmag_LRG - rmag_LRG
+    # # color_LRG = rmag_LRG - zmag_LRG
+    # # gzcolor_LRG = gmag_LRG - zmag_LRG
+    #
+    # gmag_BKG = 22.5 - 2.5 * np.log10(gflux_BKG)
+    # rmag_BKG = 22.5 - 2.5 * np.log10(rflux_BKG)
+    # zmag_BKG = 22.5 - 2.5 * np.log10(zflux_BKG)
+    #
+    # color_BKG = gmag_BKG - rmag_BKG
+    # # color_BKG = rmag_BKG - zmag_BKG
+    # # gzcolor_BKG = gmag_BKG - zmag_BKG
 
     # depth cuts
 
@@ -458,7 +514,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # print("end readData")
 
 
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG
+    # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
 
