@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/readData.py" afterPath="$PROJECT_DIR$/readData.py" />
       <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
     </list>
@@ -18,8 +17,8 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="40" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="34" selection-end-column="40" />
+            <state relative-caret-position="-18616">
+              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readData.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="428" column="47" lean-forward="true" selection-start-line="428" selection-start-column="47" selection-end-line="428" selection-end-column="47" />
+            <state relative-caret-position="368">
+              <caret line="337" column="81" lean-forward="false" selection-start-line="337" selection-start-column="81" selection-end-line="337" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -70,7 +69,7 @@
       <file leaf-file-name="modules.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2063">
+            <state relative-caret-position="1740">
               <caret line="139" column="25" lean-forward="false" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="25" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -92,18 +91,18 @@
       <file leaf-file-name="localBKG_and_interlopersHEALPix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lrg_sum_functions.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lrg_sum_functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lrg_sum_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3705">
-              <caret line="247" column="50" lean-forward="false" selection-start-line="247" selection-start-column="50" selection-end-line="247" selection-end-column="50" />
+            <state relative-caret-position="834">
+              <caret line="533" column="130" lean-forward="true" selection-start-line="533" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,7 +162,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="156" />
+    <option name="x" value="155" />
     <option name="y" value="23" />
     <option name="width" value="2073" />
     <option name="height" value="1266" />
@@ -329,7 +328,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="156" y="23" width="2073" height="1266" extended-state="0" />
+    <frame x="155" y="23" width="2073" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -676,14 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lrg_sum_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3705">
-          <caret line="247" column="50" lean-forward="false" selection-start-line="247" selection-start-column="50" selection-end-line="247" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nearNeighborsHEALPix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -708,25 +699,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="40" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="34" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        <state relative-caret-position="1275">
+          <caret line="85" column="38" lean-forward="false" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2063">
+        <state relative-caret-position="1740">
           <caret line="139" column="25" lean-forward="false" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="25" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -736,8 +719,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="428" column="47" lean-forward="true" selection-start-line="428" selection-start-column="47" selection-end-line="428" selection-end-column="47" />
+        <state relative-caret-position="368">
+          <caret line="337" column="81" lean-forward="false" selection-start-line="337" selection-start-column="81" selection-end-line="337" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18616">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lrg_sum_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="533" column="130" lean-forward="true" selection-start-line="533" selection-start-column="0" selection-end-line="534" selection-end-column="0" />
           <folding />
         </state>
       </provider>
