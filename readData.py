@@ -1,4 +1,3 @@
-
 # from astropy.io import fits
 # from astropy.table import Table
 # import numpy as np
@@ -27,14 +26,9 @@
 # DECaLS_data = hdulist3[1].data
 
 
-
-
-
-
 # A function to read in data from the Legacy Surveys and SDSS
 
 def readData(SpecObj_data, SDSS_data, DECaLS_data):
-
     from astropy.io import fits
     from astropy.table import Table
     import numpy as np
@@ -44,7 +38,6 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     from pythonds.basic.stack import Stack
     from sklearn.neighbors import KDTree
     import healpy as hp
-
 
     # Put data in arrays
 
@@ -64,6 +57,10 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Redshift of galaxies according to sdss
     z = []
     z = SDSS_data.field('Z')
+
+    # Unique ID for sources in SDSS
+    specobjid = []
+    specobjid = SDSS_data.field('SPECOBJID')
 
     # Class of object
     gal_class = []
@@ -93,8 +90,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     def divideBy2(decNumber):
 
-    # from pythonds.basic.stack import Stack
-    # import numpy as np
+        # from pythonds.basic.stack import Stack
+        # import numpy as np
 
         np.vectorize(decNumber)
         remstack = Stack()
@@ -112,11 +109,10 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
         return binString
 
-
     # Function to find LOWZ targets
     divideBy2Vec = np.vectorize(divideBy2)
 
-    a = divideBy2Vec(targets) # gives binary in string form
+    a = divideBy2Vec(targets)  # gives binary in string form
 
     b = []
     c = []
@@ -328,7 +324,6 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     flux_ivar_r_ALL = DECaLS_data.field('flux_ivar_r')
     flux_ivar_z_ALL = DECaLS_data.field('flux_ivar_z')
 
-
     id_ALL = []
 
     for i in range(len(objid_ALL)):
@@ -348,7 +343,6 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # Selects only LRGs (with other cuts
     # LRG_cut = ((gobs_MATCHED >= 2.) & (robs_MATCHED >= 2.) & (zobs_MATCHED >= 2.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (zflux_MATCHED > 0.) & (w1flux_MATCHED > 0.) & (w2flux_MATCHED > 0.) & (w3flux_MATCHED > 0.) & (w4flux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
     LRG_cut = ((gobs_MATCHED >= 2.) & (robs_MATCHED >= 2.) & (zobs_MATCHED >= 2.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
-
 
     print(type(LRG_cut))
     # id_LRG = []
@@ -375,6 +369,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     z_lrg = []
     plate_lrg = []
     tile_lrg = []
+    specobjid_lrg = []
     # mjd_lrg = []
     ra_lrg = []
     dec_lrg = []
@@ -385,6 +380,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
             dec_lrg.append(dec_MATCHED[np.where(id_MATCHED == id_ALL[i])])
             plate_lrg.append(plate[np.where(id_MATCHED == id_ALL[i])])
             tile_lrg.append(tile[np.where(id_MATCHED == id_ALL[i])])
+            specobjid_lrg.append(specobjid[np.where(id_MATCHED == id_ALL[i])])
             # mjd_lrg.append(mjd[np.where(id_MATCHED == id_ALL[i])])
 
     print('length of z_lrg:', len(z_lrg))
@@ -398,6 +394,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     plate_LRG = np.concatenate(plate_lrg)
     tile_lrg = np.array(tile_lrg)
     tile_LRG = np.concatenate(tile_lrg)
+    # specobjid_lrg = np.array(specobjid_lrg)
+    # specobjid_LRG = np.concatenate(specobjid_lrg)
     # mjd_lrg = np.array(mjd_lrg)
     # mjd_LRG = np.concatenate(mjd_lrg)
 
@@ -453,7 +451,6 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # flux in W4 for non-LRGs
     w4flux_BKG = w4flux_ALL[np.where(no_LRG_cut)]
-
 
     # Obs cuts
 
@@ -536,13 +533,10 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # print("end readData")
 
-
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG , plate_LRG, tile_LRG
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG, plate_LRG, tile_LRG, specobjid_LRG, idcut
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
-
-
 
 # id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG = readData(SpecObj_data, SDSS_data, DECaLS_data)
 
