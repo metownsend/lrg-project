@@ -50,6 +50,17 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # Read in data from SDSS file
 
+    # SDSS IDs useful for searching SDSS Science Archive Server
+
+    plate = []
+    plate = SDSS_data.field('PLATE')
+
+    tile = []
+    tile = SDSS_data.field('TILE')
+    #
+    # mjd = []
+    # mjd = SDSS_data.file('MJD')
+
     # Redshift of galaxies according to sdss
     z = []
     z = SDSS_data.field('Z')
@@ -362,6 +373,9 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     print('length of idcut = 0 (is not an LRG in DECaLS-only file):', len(idcut[np.where(idcut == 0)]))
 
     z_lrg = []
+    plate_lrg = []
+    tile_lrg = []
+    # mjd_lrg = []
     ra_lrg = []
     dec_lrg = []
     for i in range(len(id_ALL)):
@@ -369,6 +383,9 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
             z_lrg.append(z[np.where(id_MATCHED == id_ALL[i])])
             ra_lrg.append(ra_MATCHED[np.where(id_MATCHED == id_ALL[i])])
             dec_lrg.append(dec_MATCHED[np.where(id_MATCHED == id_ALL[i])])
+            plate_lrg.append(plate[np.where(id_MATCHED == id_ALL[i])])
+            tile_lrg.append(tile[np.where(id_MATCHED == id_ALL[i])])
+            # mjd_lrg.append(mjd[np.where(id_MATCHED == id_ALL[i])])
 
     print('length of z_lrg:', len(z_lrg))
     z_lrg = np.array(z_lrg)
@@ -377,6 +394,12 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     ra_LRG = np.concatenate(ra_lrg)
     dec_lrg = np.array(dec_lrg)
     dec_LRG = np.concatenate(dec_lrg)
+    plate_lrg = np.array(plate_lrg)
+    plate_LRG = np.concatenate(plate_lrg)
+    tile_lrg = np.array(tile_lrg)
+    tile_LRG = np.concatenate(tile_lrg)
+    # mjd_lrg = np.array(mjd_lrg)
+    # mjd_LRG = np.concatenate(mjd_lrg)
 
     # LRG_cut = ((id_cut_LRG == 1) & (gobs_MATCHED >= 3.) & (robs_MATCHED >= 3.) & (gflux_MATCHED > 0.) & (rflux_MATCHED > 0.) & (objid_MATCHED > -1) & (lrg == 1) & ((gal_type_MATCHED == 'SIMP') | (gal_type_MATCHED == "DEV") | (gal_type_MATCHED == "EXP") | (gal_type_MATCHED == "REX")) & (ra_MATCHED >= 241) & (ra_MATCHED <= 246) & (dec_MATCHED >= 6.5) & (dec_MATCHED <= 11.5) & (gal_class == 'GALAXY') & (spec == 1 ) & (zwarn_noqso == 0) & (class_noqso == 'GALAXY') & ((survey == 'sdss') | (survey == 'boss')))
     # & (brickid_LRG == brickid_ALL)
@@ -514,7 +537,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # print("end readData")
 
 
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG , plate_LRG, tile_LRG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
