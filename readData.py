@@ -373,6 +373,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     # mjd_lrg = []
     ra_lrg = []
     dec_lrg = []
+    objid_lrg = []
+    brickid_lrg = []
     for i in range(len(id_ALL)):
         if (idcut[i] == 1):
             z_lrg.append(z[np.where(id_MATCHED == id_ALL[i])])
@@ -382,6 +384,8 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
             tile_lrg.append(tile[np.where(id_MATCHED == id_ALL[i])])
             specobjid_lrg.append(specobjid[np.where(id_MATCHED == id_ALL[i])])
             # mjd_lrg.append(mjd[np.where(id_MATCHED == id_ALL[i])])
+            objid_lrg.append(objid_MATCHED[np.where(id_MATCHED == id_ALL[i])])
+            brickid_lrg.append(brickid_MATCHED[np.where(id_MATCHED == id_ALL[i])])
 
     print('length of z_lrg:', len(z_lrg))
     z_lrg = np.array(z_lrg)
@@ -394,8 +398,12 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
     plate_LRG = np.concatenate(plate_lrg)
     tile_lrg = np.array(tile_lrg)
     tile_LRG = np.concatenate(tile_lrg)
-    # specobjid_lrg = np.array(specobjid_lrg)
-    # specobjid_LRG = np.concatenate(specobjid_lrg)
+    specobjid_lrg = np.array(specobjid_lrg)
+    specobjid_LRG = np.concatenate(specobjid_lrg)
+    objid_lrg = np.array(objid_lrg)
+    objid_LRG = np.concatenate(objid_lrg)
+    brickid_lrg = np.array(brickid_lrg)
+    brickid_LRG = np.concatenate(brickid_lrg)
     # mjd_lrg = np.array(mjd_lrg)
     # mjd_LRG = np.concatenate(mjd_lrg)
 
@@ -533,7 +541,7 @@ def readData(SpecObj_data, SDSS_data, DECaLS_data):
 
     # print("end readData")
 
-    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG, plate_LRG, tile_LRG, specobjid_LRG, idcut
+    return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG, w1flux_LRG, w2flux_LRG, w3flux_LRG, w4flux_LRG, w1flux_BKG, w2flux_BKG, w3flux_BKG, w4flux_BKG, plate_LRG, tile_LRG, specobjid_LRG, objid_LRG, brickid_LRG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, color_BKG, rmag_LRG, gmag_LRG, zmag_LRG, color_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, rmag_BKG, gmag_BKG, zmag_BKG, grcolor_BKG, rzcolor_BKG, gzcolor_BKG, rmag_LRG, gmag_LRG, zmag_LRG, grcolor_LRG, rzcolor_LRG, gzcolor_LRG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
     # return id_ALL, ra_LRG, dec_LRG, ra_BKG, dec_BKG, z_LRG, gdepth_LRG, rdepth_LRG, zdepth_LRG, gdepth_BKG, rdepth_BKG, zdepth_BKG, gobs_LRG, robs_LRG, zobs_LRG, gobs_BKG, robs_BKG, zobs_BKG, flux_ivar_g_LRG, flux_ivar_r_LRG, flux_ivar_z_LRG, flux_ivar_g_BKG, flux_ivar_r_BKG, flux_ivar_z_BKG, gflux_LRG, rflux_LRG, zflux_LRG, gflux_BKG, rflux_BKG, zflux_BKG
