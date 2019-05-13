@@ -121,8 +121,8 @@ def cmd(mag_BKG, color_BKG, mag_LRG, color_LRG, xedges, yedges):
 	# ax.xaxis.grid(True, which='major')
 	# ax.yaxis.grid(True, which='minor')
 
-	plt.scatter(mag_BKG, color_BKG, s = 1, marker = '+', color='red', label="Background")
-	plt.scatter(mag_LRG, color_LRG, s = 1, marker = '*', color='blue', label='LRGs')
+	plt.scatter(mag_BKG, color_BKG, s = 1, marker = '+', color='blue', label="Background")
+	plt.scatter(mag_LRG, color_LRG, s = 1, marker = '*', color='red', label='LRGs')
 	plt.gca().invert_xaxis()
 	plt.title("Color-Magnitude Diagram", fontsize=15)
 	plt.xlabel(r'$z-mag$')

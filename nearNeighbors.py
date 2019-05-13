@@ -57,7 +57,7 @@
 
 
 
-def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color, xedges, yedges):
+def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color1, color2, edges):
 
     # distance == radius from LRG in which I look for near neighbors in Mpc
 
@@ -112,13 +112,15 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color,
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     for i in range(len(index)):
         if len(index[i]) == 0:
-            hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
-            near.append(hist2d)
+            hist3d = np.zeros((len(edges[0]) - 1, len(edges[1]) - 1, len(edges[2] - 1)))
+            # hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
+            near.append(hist3d)
         else:
 
-            hist2d, x_notuse, y_notuse = np.histogram2d(mag[index[i]], color[index[i]], bins=(xedges, yedges),
+            # hist2d, x_notuse, y_notuse = np.histogram2d(mag[index[i]], color[index[i]], bins=(xedges, yedges), normed=False)
+            hist3d, edges_nouse = np.histogramdd((mag[index[i]], color1[index[i]], color2[index[i]]), bins=(edges[0], edges[1], edges[2]),
                                                         normed=False)
-            near.append(hist2d)
+            near.append(hist3d)
 
     return (distance_kpc, near, gal_tree, dist, index, num)
     # return (near, gal_tree)
