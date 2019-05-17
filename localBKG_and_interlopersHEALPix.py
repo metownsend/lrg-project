@@ -77,7 +77,7 @@ def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_L
             # hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
             localBKG.append(hist2d)
         else:
-            hist3d, edges_nouse = np.histogramdd((mag[indices[i]], color1[indices[i]], color2[indices[i]]), bins=(edges[0], edges[1], edges[2]), normed = False)
+            hist3d, edges_nouse = np.histogramdd((color1[indices[i]], mag[indices[i]], color2[indices[i]]), bins=(edges[0], edges[1], edges[2]), normed = False)
             # hist2d, x_notuse, y_notuse = np.histogram2d(mag[indices[i]], color[indices[i]], bins=(xedges, yedges), normed=False)
             localBKG.append(hist3d)
 

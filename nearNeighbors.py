@@ -118,7 +118,7 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color1
         else:
 
             # hist2d, x_notuse, y_notuse = np.histogram2d(mag[index[i]], color[index[i]], bins=(xedges, yedges), normed=False)
-            hist3d, edges_nouse = np.histogramdd((mag[index[i]], color1[index[i]], color2[index[i]]), bins=(edges[0], edges[1], edges[2]),
+            hist3d, edges_nouse = np.histogramdd((color1[index[i]], mag[index[i]], color2[index[i]]), bins=(edges[0], edges[1], edges[2]),
                                                         density=False)
             near.append(hist3d)
 
