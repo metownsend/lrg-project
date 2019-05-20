@@ -21,7 +21,7 @@ import healpy as hp
 from nearNeighborsHEALPix import *
 from localBKG_and_interlopersHEALPix import *
 import healpy as hpy
-import mpl_scatter_density
+from plotHistogramProjections3D import *
 
 # Reads in data files for use in readData.py
 
@@ -132,7 +132,7 @@ column = 10
 # color = np.concatenate([color_LRG, color_BKG])
 # creates histogram for survey sources; excludes LRGs
 # H, xedges, yedges = np.histogram2d(rmag, color, normed=False)
-H1, edges = np.histogramdd((zmag, rzcolor, grcolor), bins=10, normed=False)
+H1, edges = np.histogramdd((rzcolor, zmag, grcolor), bins=50, density=False)
 # print("xedges: ", xedges)
 # print("yedges: ", yedges)
 
@@ -193,39 +193,20 @@ print(Nsat.shape)
 
 print("end Nsat")
 
-totalNear(near)
+# totalNear(near)
 
-plt.show()
+# plt.show()
 
-totalNbkg(Nbkg)
+# totalNbkg(Nbkg)
 
-plt.show()
+# plt.show()
 
 # totalNsat(Nsat)
-from scipy import stats
 
-sumsat = []
+# print("end Nsat")
 
-# Sum up number of satellite galaxies for every LRG
-for i in range(len(Nsat)):
-    sumsat.append(np.sum(Nsat[i]))
+# function to plot a metric shit-ton of 2D projections of 3D histograms
 
-meansat = np.mean(sumsat)
-print("mean number of satellites is", meansat)
+plotHistogramProjections3D(Nsat, edges)
 
-mediansat = np.median(sumsat)
-print("median number of satellites is", mediansat)
-
-sdsat = np.std(sumsat)
-print("standard deviation of satellites is", sdsat)
-
-sterr = stats.sem(sumsat)
-print("standard error is", sterr)
-
-plt.rcParams["figure.figsize"] = [10, 8]
-plt.title("Histogram of the Number of Satellite Galaxies", fontsize=15)
-plt.hist(sumsat, bins=100)
-plt.axvline(linewidth=1, color='r')
-plt.xlabel(r'$Number$ $of$ $Satellite$ $Galaxies$', fontsize=15)
-plt.ylabel(r'$counts$', fontsize=15)
-plt.show()
+print("end program")
