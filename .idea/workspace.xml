@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj0.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj0.jpeg" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj1.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj1.jpeg" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj10.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj10.jpeg" />
@@ -2015,7 +2016,6 @@
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj997.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj997.jpeg" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj998.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj998.jpeg" />
       <change beforePath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj999.jpeg" afterPath="$PROJECT_DIR$/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj999.jpeg" />
-      <change beforePath="$PROJECT_DIR$/modules.py" afterPath="$PROJECT_DIR$/modules.py" />
       <change beforePath="$PROJECT_DIR$/plotHistogramProjections3D.py" afterPath="$PROJECT_DIR$/plotHistogramProjections3D.py" />
       <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
     </list>
@@ -2031,8 +2031,8 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="879">
-              <caret line="262" column="33" lean-forward="false" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="33" />
+            <state relative-caret-position="373">
+              <caret line="378" column="79" lean-forward="false" selection-start-line="378" selection-start-column="79" selection-end-line="378" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -2041,8 +2041,8 @@
       <file leaf-file-name="plotHistogramProjections3D.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+            <state relative-caret-position="556">
+              <caret line="43" column="126" lean-forward="false" selection-start-line="43" selection-start-column="126" selection-end-line="43" selection-end-column="126" />
               <folding />
             </state>
           </provider>
@@ -2081,8 +2081,8 @@
       <file leaf-file-name="modules.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-457">
-              <caret line="134" column="60" lean-forward="false" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
+            <state relative-caret-position="256">
+              <caret line="190" column="16" lean-forward="true" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -2741,24 +2741,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="879">
-          <caret line="262" column="33" lean-forward="false" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="33" />
+        <state relative-caret-position="373">
+          <caret line="378" column="79" lean-forward="false" selection-start-line="378" selection-start-column="79" selection-end-line="378" selection-end-column="79" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="50" lean-forward="false" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+        <state relative-caret-position="556">
+          <caret line="43" column="126" lean-forward="false" selection-start-line="43" selection-start-column="126" selection-end-line="43" selection-end-column="126" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-457">
-          <caret line="134" column="60" lean-forward="false" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
+        <state relative-caret-position="256">
+          <caret line="190" column="16" lean-forward="true" selection-start-line="190" selection-start-column="16" selection-end-line="190" selection-end-column="16" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
