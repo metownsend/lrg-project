@@ -207,6 +207,6 @@ print("end Nsat")
 
 # function to plot a metric shit-ton of 2D projections of 3D histograms
 
-plotHistogramProjections3D(Nsat, edges)
+plotHistogramProjections3D(Nbkg, edges)
 
 print("end program")

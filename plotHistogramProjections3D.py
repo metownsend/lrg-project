@@ -15,7 +15,7 @@ def plotHistogramProjections3D(H, edges):
 
         # plot 2D histograms using matshow; 3 plots per image
         f, axarr = plt.subplots(1, 3, figsize=(15, 10))
-        f.suptitle("Nsat 2D Projections")
+        f.suptitle("Interloper 2D Projections")
 
         im1 = axarr[0].matshow(rz_vs_zmag, aspect='equal', extent=[edges[1][0], edges[1][len(edges[1]) - 1], edges[0][0], edges[0][len(edges[0]) - 1]])
         axarr[0].set_title("(r-z) vs zmag", pad=5)
@@ -41,5 +41,5 @@ def plotHistogramProjections3D(H, edges):
         f.subplots_adjust(wspace=0.8)
 
         # save image with incrementing file name
-        plt.savefig('/Users/mtownsend/anaconda/GitHub/lrg-project/Plots/LRG_science_plots/HistProjections/NsatProjections/Nsat3Dproj{}.jpeg'.format(i))
+        plt.savefig('/Users/mtownsend/anaconda/GitHub/lrg-project/Plots/LRG_science_plots/HistProjections/NbkgProjections/Nbkg3Dproj{}.jpeg'.format(i))
         # plt.show()
