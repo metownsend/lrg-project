@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/statSub_forReal-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
-    </list>
+    <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +14,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="1860">
               <caret line="124" column="83" lean-forward="false" selection-start-line="124" selection-start-column="83" selection-end-line="124" selection-end-column="83" />
               <folding />
             </state>
@@ -739,7 +736,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="1860">
           <caret line="124" column="83" lean-forward="false" selection-start-line="124" selection-start-column="83" selection-end-line="124" selection-end-column="83" />
           <folding />
         </state>
