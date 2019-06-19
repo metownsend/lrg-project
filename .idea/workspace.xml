@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/plotHistogramProjections3D.py" afterPath="$PROJECT_DIR$/plotHistogramProjections3D.py" />
       <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +17,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="90">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plotHistogramProjections3D.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="plotHistogramProjections3D.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+            <state relative-caret-position="120">
+              <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -64,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="makeCutoutTableFunc.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="makeCutoutTableFunc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/makeCutoutTableFunc.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
@@ -109,8 +109,8 @@
       <file leaf-file-name="localBKG_and_interlopersHEALPix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="79" column="87" lean-forward="false" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
+            <state relative-caret-position="172">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,8 +160,8 @@
         <option value="$PROJECT_DIR$/modules.py" />
         <option value="$PROJECT_DIR$/round_half_up.py" />
         <option value="$PROJECT_DIR$/chooseSatellites.py" />
-        <option value="$PROJECT_DIR$/plotHistogramProjections3D.py" />
         <option value="$PROJECT_DIR$/scatterOverplot.py" />
+        <option value="$PROJECT_DIR$/plotHistogramProjections3D.py" />
       </list>
     </option>
   </component>
@@ -671,14 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="79" column="87" lean-forward="false" selection-start-line="79" selection-start-column="87" selection-end-line="79" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
@@ -713,14 +705,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chooseSatellites.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -739,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
@@ -749,6 +733,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="142" lean-forward="false" selection-start-line="39" selection-start-column="142" selection-end-line="39" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
