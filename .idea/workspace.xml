@@ -18,7 +18,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="1200">
               <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
               <folding />
             </state>
@@ -167,7 +167,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="253" />
+    <option name="x" value="252" />
     <option name="y" value="23" />
     <option name="width" value="2073" />
     <option name="height" value="1266" />
@@ -333,7 +333,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="253" y="23" width="2073" height="1266" extended-state="0" />
+    <frame x="252" y="23" width="2073" height="1266" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20440403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -740,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="1200">
           <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
           <folding />
         </state>
