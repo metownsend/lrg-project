@@ -57,7 +57,8 @@
 
 
 
-def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color1, color2, edges):
+def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, mag_BKG, color1_LRG, color1_BKG, color2_LRG, color2_BKG, edges):
+# def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color, xedges, yedges):
 
     # distance == radius from LRG in which I look for near neighbors in Mpc
 
@@ -96,31 +97,39 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color1
     for i in range(len(ind2list)):
         index.append(ind2list[i].tolist())
 
-    # Array that gives actual number of near neighbors for every LRG
-    num = []
+    # # Array that gives actual number of near neighbors for every LRG
+    # num = []
+    #
+    # for i in range(len(ind)):
+    #     num.append(len(ind[i]))
 
-    for i in range(len(ind)):
-        num.append(len(ind[i]))
-
+    # index1 = []
     for i in range(len(index)):
         index[i] = [x for x in index[i] if x != i]
 
+    # Array that gives actual number of near neighbors for every LRG
+    num = []
+
+    for i in range(len(index1)):
+        num.append(len(index1[i]))
+
     near = []
-    # mag = np.concatenate([mag_LRG, mag_BKG])
-    # color = np.concatenate([color_LRG, color_BKG])
+    mag = np.concatenate([mag_LRG, mag_BKG])
+    color1 = np.concatenate([color1_LRG, color1_BKG])
+    color2 = np.concatenate([color2_LRG, color2_BKG])
 
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
-    for i in range(len(index)):
-        if len(index[i]) == 0:
+    for i in range(len(index1)):
+        if len(index1[i]) == 0:
             hist3d = np.zeros((len(edges[0]) - 1, len(edges[1]) - 1, len(edges[2] - 1)))
             # hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
             near.append(hist3d)
         else:
 
-            # hist2d, x_notuse, y_notuse = np.histogram2d(mag[index[i]], color[index[i]], bins=(xedges, yedges), normed=False)
+            # hist2d, x_notuse, y_notuse = np.histogram2d(mag[index1[i]], color[index1[i]], bins=(xedges, yedges), normed=False)
             hist3d, edges_nouse = np.histogramdd((color1[index[i]], mag[index[i]], color2[index[i]]), bins=(edges[0], edges[1], edges[2]),
                                                         density=False)
             near.append(hist3d)
 
-    return (distance_kpc, near, gal_tree, dist, index, num)
+    return (distance_kpc, near, gal_tree, dist, index1, nn1)
     # return (near, gal_tree)

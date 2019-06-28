@@ -1,6 +1,6 @@
 # A function to calculate the local background around LRGs and calculate the expected number of interloper galaxies
 
-def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, mag, color1, color2, edges, distance_kpc, kpc_DA):
+def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, mag_LRG, mag_BKG, color1_LRG, color1_BKG, color2_LRG, color2_BKG, edges, distance_kpc, kpc_DA):
 
     # inner_dist == inner radius of annulus used to define the background
     # outer_dist == outer radius of annulus used to define the background
@@ -70,12 +70,16 @@ def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_L
 
     localBKG = []
 
+    mag = np.concatenate([mag_LRG, mag_BKG])
+    color1 = np.concatenate([color1_LRG, color1_BKG])
+    color2 = np.concatenate([color2_LRG, color2_BKG])
+
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     for i in range(len(indices)):
         if len(indices[i]) == 0:
             hist3d = np.zeros((len(edges[0]) - 1, len(edges[1]) - 1, len(edges[2] - 1)))
             # hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
-            localBKG.append(hist2d)
+            localBKG.append(hist3d)
         else:
             hist3d, edges_nouse = np.histogramdd((color1[indices[i]], mag[indices[i]], color2[indices[i]]), bins=(edges[0], edges[1], edges[2]), normed = False)
             # hist2d, x_notuse, y_notuse = np.histogram2d(mag[indices[i]], color[indices[i]], bins=(xedges, yedges), normed=False)
