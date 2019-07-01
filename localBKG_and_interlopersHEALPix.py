@@ -1,6 +1,6 @@
 # A function to calculate the local background around LRGs and calculate the expected number of interloper galaxies
 
-def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, mag_LRG, mag_BKG, color1_LRG, color1_BKG, color2_LRG, color2_BKG, edges, distance_kpc, kpc_DA):
+def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_LRG, pixnums, mag, color1, color2, edges, distance_kpc, kpc_DA):
 
     # inner_dist == inner radius of annulus used to define the background
     # outer_dist == outer radius of annulus used to define the background
@@ -70,9 +70,9 @@ def localBKG_and_interlopersHEALPix(nside, inner_dist, outer_dist, ra_LRG, dec_L
 
     localBKG = []
 
-    mag = np.concatenate([mag_LRG, mag_BKG])
-    color1 = np.concatenate([color1_LRG, color1_BKG])
-    color2 = np.concatenate([color2_LRG, color2_BKG])
+    # mag = np.concatenate([mag_LRG, mag_BKG])
+    # color1 = np.concatenate([color1_LRG, color1_BKG])
+    # color2 = np.concatenate([color2_LRG, color2_BKG])
 
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
     for i in range(len(indices)):

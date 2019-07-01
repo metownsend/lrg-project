@@ -57,7 +57,7 @@
 
 
 
-def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, mag_BKG, color1_LRG, color1_BKG, color2_LRG, color2_BKG, edges):
+def nearNeighbor(distance, kpc_DA, ra, dec, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color1, color2, edges):
 # def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag, color, xedges, yedges):
 
     # distance == radius from LRG in which I look for near neighbors in Mpc
@@ -73,8 +73,8 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, ma
 
      # Creates a list of ordered pairs; zips ra and dec together so they can be fed into KDTree
     zip_list0 = list(zip(ra_LRG, dec_LRG))  # LRG sources
-    ra = np.concatenate([ra_LRG, ra_BKG])
-    dec = np.concatenate([dec_LRG, dec_BKG])
+    # ra = np.concatenate([ra_LRG, ra_BKG])
+    # dec = np.concatenate([dec_LRG, dec_BKG])
     zip_list1 = list(zip(ra, dec))  # All sources
 
 
@@ -110,17 +110,17 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, ma
     # Array that gives actual number of near neighbors for every LRG
     num = []
 
-    for i in range(len(index1)):
-        num.append(len(index1[i]))
+    for i in range(len(index)):
+        num.append(len(index[i]))
 
     near = []
-    mag = np.concatenate([mag_LRG, mag_BKG])
-    color1 = np.concatenate([color1_LRG, color1_BKG])
-    color2 = np.concatenate([color2_LRG, color2_BKG])
+    # mag = np.concatenate([mag_LRG, mag_BKG])
+    # color1 = np.concatenate([color1_LRG, color1_BKG])
+    # color2 = np.concatenate([color2_LRG, color2_BKG])
 
     # Creates one list of number of near neighbors for every LRG (number of lists = number of LRGs)
-    for i in range(len(index1)):
-        if len(index1[i]) == 0:
+    for i in range(len(index)):
+        if len(index[i]) == 0:
             hist3d = np.zeros((len(edges[0]) - 1, len(edges[1]) - 1, len(edges[2] - 1)))
             # hist2d = np.zeros((len(xedges) - 1, len(yedges) - 1))
             near.append(hist3d)
@@ -131,5 +131,5 @@ def nearNeighbor(distance, kpc_DA, ra_LRG, dec_LRG, ra_BKG, dec_BKG, mag_LRG, ma
                                                         density=False)
             near.append(hist3d)
 
-    return (distance_kpc, near, gal_tree, dist, index1, nn1)
+    return (distance_kpc, near, gal_tree, dist, index, nn1)
     # return (near, gal_tree)
