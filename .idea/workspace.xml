@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a125dd-c0b0-475d-84bb-73fd0be18915" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index_check.ipynb" afterPath="$PROJECT_DIR$/index_check.ipynb" />
-      <change beforePath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" afterPath="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" />
-      <change beforePath="$PROJECT_DIR$/nearNeighbors.py" afterPath="$PROJECT_DIR$/nearNeighbors.py" />
       <change beforePath="$PROJECT_DIR$/statSub_forReal.ipynb" afterPath="$PROJECT_DIR$/statSub_forReal.ipynb" />
-      <change beforePath="$PROJECT_DIR$/validation.ipynb" afterPath="$PROJECT_DIR$/validation.ipynb" />
+      <change beforePath="$PROJECT_DIR$/statSub_mods.py" afterPath="$PROJECT_DIR$/statSub_mods.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +17,7 @@
       <file leaf-file-name="lrg_plot_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
+            <state relative-caret-position="0">
               <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
               <folding />
             </state>
@@ -38,31 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="round_half_up.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/round_half_up.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="plotHistogramProjections3D.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plotHistogramProjections3D.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
               <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scatterOverplot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scatterOverplot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -81,8 +57,8 @@
       <file leaf-file-name="nearNeighbors.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="83" column="75" lean-forward="true" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
+            <state relative-caret-position="1245">
+              <caret line="83" column="75" lean-forward="false" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -91,8 +67,8 @@
       <file leaf-file-name="readData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6375">
-              <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="535" column="30" lean-forward="true" selection-start-line="535" selection-start-column="30" selection-end-line="535" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -108,11 +84,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="localBKG_and_interlopersHEALPix.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="localBKG_and_interlopersHEALPix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="26" column="111" lean-forward="true" selection-start-line="26" selection-start-column="111" selection-end-line="26" selection-end-column="111" />
+            <state relative-caret-position="175">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statSub_mods.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/statSub_mods.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1961">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,7 +137,6 @@
         <option value="$PROJECT_DIR$/localBKG.ipynb" />
         <option value="$PROJECT_DIR$/statSub_Mark2.py" />
         <option value="$PROJECT_DIR$/HEALPixPlots.py" />
-        <option value="$PROJECT_DIR$/statSub_mods.py" />
         <option value="$PROJECT_DIR$/localBKG.py" />
         <option value="$PROJECT_DIR$/nearNeighborsHEALPix.py" />
         <option value="$PROJECT_DIR$/readData.py" />
@@ -164,6 +149,7 @@
         <option value="$PROJECT_DIR$/plotHistogramProjections3D.py" />
         <option value="$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py" />
         <option value="$PROJECT_DIR$/nearNeighbors.py" />
+        <option value="$PROJECT_DIR$/statSub_mods.py" />
       </list>
     </option>
   </component>
@@ -209,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.modules">
+  <component name="RunManager" selected="Python.statSub_mods">
     <configuration name="HEALPixPlots" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,8 +295,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.modules" />
-        <item index="1" class="java.lang.String" itemvalue="Python.statSub_mods" />
+        <item index="0" class="java.lang.String" itemvalue="Python.statSub_mods" />
+        <item index="1" class="java.lang.String" itemvalue="Python.modules" />
         <item index="2" class="java.lang.String" itemvalue="Python.HEALPixPlots" />
         <item index="3" class="java.lang.String" itemvalue="Python.readData" />
         <item index="4" class="java.lang.String" itemvalue="Python.findRadius" />
@@ -631,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statSub_mods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3075">
-          <caret line="224" column="30" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HEALPixPlots.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -663,13 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="38" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="211" column="20" lean-forward="false" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -707,7 +679,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lrg_plot_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
+        <state relative-caret-position="0">
           <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
           <folding />
         </state>
@@ -717,14 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6375">
-          <caret line="425" column="0" lean-forward="false" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -739,16 +703,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nearNeighbors.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="83" column="75" lean-forward="true" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
+        <state relative-caret-position="1245">
+          <caret line="83" column="75" lean-forward="false" selection-start-line="83" selection-start-column="75" selection-end-line="83" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/localBKG_and_interlopersHEALPix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="26" column="111" lean-forward="true" selection-start-line="26" selection-start-column="111" selection-end-line="26" selection-end-column="111" />
+        <state relative-caret-position="175">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="211" column="20" lean-forward="false" selection-start-line="211" selection-start-column="20" selection-end-line="211" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="535" column="30" lean-forward="true" selection-start-line="535" selection-start-column="30" selection-end-line="535" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statSub_mods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1961">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
