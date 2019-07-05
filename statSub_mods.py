@@ -195,8 +195,8 @@ npixel = hp.nside2npix(nside)
 # rmag = np.concatenate([rmag_LRG, rmag_BKG])
 # zmag = np.concatenate([zmag_LRG, zmag_BKG])
 #
-ra_cut = ra[np.where(zmag <= 21.5)]
-dec_cut = dec[np.where(zmag <= 21.5)]
+# ra_cut = ra[np.where(zmag <= 21.5)]
+# dec_cut = dec[np.where(zmag <= 21.5)]
 
 # plt.title("Nobs Distribution")
 # plt.xlabel(r'$nobs$')
@@ -229,14 +229,14 @@ mapp = np.bincount(pixnums, minlength=npixel)
 # print('length map == 0: ', len(mapp[np.where(mapp == 0)]))
 # print('length map: ', len(mapp))
 
-masked_map = np.zeros(len(mapp))
-masked_map[(mapp == 0)] = 1
-
-m = hp.ma(mapp)
-m.mask = masked_map
+# masked_map = np.zeros(len(mapp))
+# masked_map[(mapp == 0)] = 1
+#
+# m = hp.ma(mapp)
+# m.mask = masked_map
 
 # Plot mapp
-hp.gnomview(m, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
+hp.gnomview(mapp, xsize=225, ysize=225, rot=(-116.5, 9.), flip='geo', nest=True, title='Density Map (nobs >= 2)')
 plt.show()
 
 # -------------------------------------------------------------------------------------------------------------------
@@ -257,8 +257,8 @@ for i in range(len(pixcnts)-1):
     inds = pixorder[pixcnts[i]:pixcnts[i+1]]
     # print(type(inds[0]))
     pix = pixnums[inds][0]
-    print(pix)
-    array_z[pix] = zmag[inds]
+    # print(pix)
+    array_z[pix] = np.median(zmag[inds])
     # array_g[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_g[inds]))) - 9.)
     # array_r[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_r[inds]))) - 9.)
     # array_z[pix] = -2.5*(np.log10(5. / np.sqrt(np.median(galdepth_z[inds]))) - 9.)
@@ -334,13 +334,13 @@ pixnums98 = hp.ang2pix(nside, theta98, phi98, nest=True)
 # Create a HEALPix map from pix
 density_map = np.bincount(pixnums98, minlength=npixel)
 
-masked_density = np.zeros(len(density_map))
-masked_density[(density_map == -1.)] = 1
-md = hp.ma(density_map)
-md.mask = masked_density
+# masked_density = np.zeros(len(density_map))
+# masked_density[(density_map == -1.)] = 1
+# md = hp.ma(density_map)
+# md.mask = masked_density
 
 # Plot mapp
-hp.gnomview(md, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (zmag selected; nobs >=2)')
+hp.gnomview(density_map, xsize=225, ysize=225, rot=(-116.5, 8.25), flip='geo', nest=True, title='Density Map (zmag selected; nobs >=2)')
 plt.show()
 
 # -------------------------------------------------------------------------------------------------------------------
